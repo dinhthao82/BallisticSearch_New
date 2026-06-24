@@ -1,0 +1,34 @@
+{
+  "title": "APL Reports",
+  "subtitle": "Search Automated Potential Link reports",
+  "filter": {
+    "title": "Filters",
+    "apl_ID": "APL ID",
+    "apl_IDPlaceholder": "Enter APL IDs (one per line or comma-separated)",
+    "caseIncident": "Case/Incident",
+    "caseIncidentPlaceholder": "Enter case numbers",
+    "createdDate": "Created Date",
+    "dateFrom": "From",
+    "dateTo": "To",
+    "reportStatus": "Report Status",
+    "agencyScope": "Agency Scope"
+  },
+  "column": {
+    "apl_ID": "APL ID",
+    "assessor": "Assessor",
+    "caseIncident": "Case/Incident",
+    "cartridgeCase": "Cartridge Case",
+    "type": "Type",
+    "createdDateTime": "Created Date/Time",
+    "reportStatus": "Status"
+  },
+  "status": {
+    "pending": "Pending",
+    "inProcess": "In Process",
+    "closed": "Closed"
+  },
+  "actions": {
+    "openReport": "Open Report",
+    "preview": "Preview"
+  }
+}

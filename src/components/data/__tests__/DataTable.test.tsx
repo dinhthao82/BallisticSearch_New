@@ -56,8 +56,8 @@ describe('DataTable', () => {
     const nameHeader = screen.getByText('Name').closest('th');
     if (!nameHeader) throw new Error('Name header not found');
 
-    // Initially unsorted (no aria-sort)
-    expect(nameHeader.getAttribute('aria-sort')).toBeNull();
+    // Initially unsorted ("none")
+    expect(nameHeader.getAttribute('aria-sort')).toBe('none');
 
     fireEvent.click(nameHeader);
     expect(nameHeader.getAttribute('aria-sort')).toBe('ascending');

@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
+import './i18n/i18n';
 
 async function enableMocking(): Promise<void> {
   if (import.meta.env['VITE_USE_MOCK'] !== 'true') return;

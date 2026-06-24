@@ -67,19 +67,22 @@ export function DataTable<T>({
               {hg.headers.map((h) => {
                 const sortDir = h.column.getIsSorted();
                 const canSort = enableSorting && h.column.getCanSort();
+                const ariaSort =
+                  sortDir === 'asc'
+                    ? 'ascending'
+                    : sortDir === 'desc'
+                      ? 'descending'
+                      : 'none';
+                const thProps: React.ComponentProps<typeof Table.Th> = {
+                  key: h.id,
+                  'aria-sort': ariaSort,
+                };
+                if (canSort) {
+                  thProps.onClick = h.column.getToggleSortingHandler();
+                  thProps.className = classes.sortable;
+                }
                 return (
-                  <Table.Th
-                    key={h.id}
-                    onClick={canSort ? h.column.getToggleSortingHandler() : undefined}
-                    className={canSort ? classes.sortable : undefined}
-                    aria-sort={
-                      sortDir === 'asc'
-                        ? 'ascending'
-                        : sortDir === 'desc'
-                          ? 'descending'
-                          : undefined
-                    }
-                  >
+                  <Table.Th {...thProps}>
                     <span className={classes.headerCell}>
                       {flexRender(h.column.columnDef.header, h.getContext())}
                       {canSort && (

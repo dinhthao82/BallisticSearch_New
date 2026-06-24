@@ -20,11 +20,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "exactOptionalPropertyTypes": true,
     "noUncheckedIndexedAccess": true,
 
-    /* Path aliases */
-    "baseUrl": ".",
+    /* Path aliases (TS 5.x resolves paths relative to tsconfig dir, no baseUrl needed) */
     "paths": {
       "@/*": ["./src/*"]
     }

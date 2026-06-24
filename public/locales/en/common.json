@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "BIQ V5.1",
+    "subtitle": "Ballistics IQ"
+  },
+  "button": {
+    "search": "Search",
+    "reset": "Reset",
+    "cancel": "Cancel",
+    "export": "Export",
+    "save": "Save",
+    "ok": "OK",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "login": "Login",
+    "logout": "Logout",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "state": {
+    "loading": "Loading...",
+    "empty": "No results found",
+    "error": "Something went wrong"
+  },
+  "common": {
+    "username": "Username",
+    "password": "Password",
+    "role": "Role",
+    "from": "From",
+    "to": "To",
+    "rowsPerPage": "Rows per page",
+    "showing": "Showing {{from}}–{{to}} of {{total}}"
+  },
+  "validation": {
+    "required": "This field is required",
+    "tooShort": "Too short",
+    "tooLong": "Too long"
+  }
+}
