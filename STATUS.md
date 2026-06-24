@@ -26,7 +26,7 @@
 - [x] Step 10 — DataTable (TanStack Table)
 - [x] Step 11 — Pagination component
 - [x] Step 12 — MSW mock + APL search handler (47 rows)
-- [ ] Step 13 — Ky HTTP client + TanStack Query
+- [x] Step 13 — Ky HTTP client + TanStack Query
 - [ ] Step 14 — i18n setup + locale JSON
 - [ ] Step 15 — Loading/Empty/Error states + POC-2 milestone
 
