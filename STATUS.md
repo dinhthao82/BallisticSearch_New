@@ -9,8 +9,8 @@
 
 ## Mission POC-1: Bootstrap (1/8)
 
-- [x] Step 1 — Create folder + git init + GitHub remote (commit 96549de)
-- [ ] Step 2 — Vite + React 18 + TS strict scaffold
+- [x] Step 1 — Create folder + git init + GitHub remote (commit 9bc11f7)
+- [x] Step 2 — Vite + React 18 + TS strict scaffold (commit pending)
 - [ ] Step 3 — Install core dependencies
 - [ ] Step 4 — ESLint + Prettier + Husky + lint-staged
 - [ ] Step 5 — Vitest + Playwright config
@@ -52,6 +52,12 @@
 ## Issues / Blockers
 
 - (none)
+
+## Metrics tracking
+
+| Step | Bundle initial (gzip) | Notes |
+|---|---|---|
+| Step 2 | ~46 KB | React + ReactDOM only (no Mantine yet) |
 
 ## Decisions log
 
