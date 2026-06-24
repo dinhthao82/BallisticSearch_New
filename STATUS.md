@@ -10,7 +10,7 @@
 ## Mission POC-1: Bootstrap (1/8)
 
 - [x] Step 1 — Create folder + git init + GitHub remote (commit 9bc11f7)
-- [x] Step 2 — Vite + React 18 + TS strict scaffold (commit pending)
+- [x] Step 2 — Vite + React 18 + TS strict scaffold (commit 6473388)
 - [ ] Step 3 — Install core dependencies
 - [ ] Step 4 — ESLint + Prettier + Husky + lint-staged
 - [ ] Step 5 — Vitest + Playwright config

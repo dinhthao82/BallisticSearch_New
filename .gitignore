@@ -46,6 +46,9 @@ lerna-debug.log*
 !.env.development
 !.env.example
 
+# TypeScript build info
+*.tsbuildinfo
+
 # Misc
 *.bak
 *.tmp
