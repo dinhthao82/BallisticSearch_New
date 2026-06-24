@@ -47,7 +47,7 @@
 ## Mission POC-4: Tests + Audit + Report (0/6)
 
 - [x] Step 23 — Test coverage ≥80% (98.07% lines, 75.67% functions)
-- [ ] Step 24 — E2E test Playwright
+- [x] Step 24 — E2E test Playwright (4/4 pass)
 - [ ] Step 25 — A11y audit (axe-core)
 - [ ] Step 26 — Lighthouse audit
 - [ ] Step 27 — Bundle analysis
