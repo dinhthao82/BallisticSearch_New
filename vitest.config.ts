@@ -16,6 +16,7 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'html', 'json'],
       reportsDirectory: './coverage',
+      include: ['src/**/*.{ts,tsx}'],
       exclude: [
         'node_modules/**',
         'dist/**',
@@ -24,12 +25,19 @@ export default defineConfig({
         'src/test/**',
         'src/main.tsx',
         'src/vite-env.d.ts',
+        // Pure shell wrappers — exercised by integration / E2E only:
+        'src/App.tsx',
+        'src/i18n/i18n.ts',
+        'src/api/client.ts',
+        'src/theme/cssVars.css',
+        // Layout shell + AppShell + nav — covered by Playwright E2E (Step 24)
+        'src/routes/ProtectedLayout.tsx',
       ],
       thresholds: {
-        lines: 70,
-        branches: 60,
+        lines: 80,
+        branches: 70,
         functions: 70,
-        statements: 70,
+        statements: 80,
       },
     },
   },
