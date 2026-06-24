@@ -37,7 +37,7 @@
 - [x] Step 16 — APL filter Zod schema
 - [x] Step 17 — SearchAPLFilter form (RHF + Zod)
 - [x] Step 18 — SearchAPLResults table
-- [ ] Step 19 — SearchAPLPage shell wired
+- [x] Step 19 — SearchAPLPage shell wired
 - [ ] Step 20 — Sort columns client-side
 - [ ] Step 21 — Side-by-side visual comparison
 - [ ] Step 22 — Polish + POC-3 milestone
