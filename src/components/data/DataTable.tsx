@@ -59,7 +59,10 @@ export function DataTable<T>({
   }
 
   return (
-    <ScrollArea className={classes.scrollArea}>
+    <ScrollArea
+      className={classes.scrollArea}
+      viewportProps={{ tabIndex: 0, 'aria-label': 'Result table scroll area' }}
+    >
       <Table className={classes.table} striped highlightOnHover withTableBorder>
         <Table.Thead className={classes.stickyHeader}>
           {table.getHeaderGroups().map((hg) => (

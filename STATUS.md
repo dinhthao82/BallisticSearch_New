@@ -48,7 +48,7 @@
 
 - [x] Step 23 — Test coverage ≥80% (98.07% lines, 75.67% functions)
 - [x] Step 24 — E2E test Playwright (4/4 pass)
-- [ ] Step 25 — A11y audit (axe-core)
+- [x] Step 25 — A11y audit (axe-core, 3/3 pass, 0 critical/serious)
 - [ ] Step 26 — Lighthouse audit
 - [ ] Step 27 — Bundle analysis
 - [ ] Step 28 — POC_RESULT.md + v0.1.0-poc tag

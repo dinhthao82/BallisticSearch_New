@@ -48,6 +48,14 @@ export function Pagination({
           onChange={onPageChange}
           size="sm"
           siblings={1}
+          getControlProps={(control) => {
+            // a11y: Mantine's arrow controls lack inner text. Provide aria-labels.
+            if (control === 'first') return { 'aria-label': 'Go to first page' };
+            if (control === 'last') return { 'aria-label': 'Go to last page' };
+            if (control === 'next') return { 'aria-label': 'Go to next page' };
+            if (control === 'previous') return { 'aria-label': 'Go to previous page' };
+            return {};
+          }}
           withEdges
         />
       </Group>

@@ -3,7 +3,17 @@
  * Keeps parity with legacy BS-6159 _defaultSettings.scss for any
  * pages that still use plain CSS.
  */
+/* WCAG 2.1 AA: override Mantine's default dimmed (#868e96, 3.32 contrast)
+   to grayDarker #6a6a6a (5.74 contrast on white). `!important` needed
+   because Mantine sets this in :root with similar specificity. */
+:root,
+html,
+[data-mantine-color-scheme] {
+  --mantine-color-dimmed: #6a6a6a !important;
+}
+
 :root {
+
   --primary-color: #435d7d;
   --primary-color-dark: #304e72;
   --primary-color-light: #6f86ae;

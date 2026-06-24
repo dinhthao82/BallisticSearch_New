@@ -32,4 +32,10 @@ export const mantineTheme = createTheme({
   },
   defaultRadius: tokens.radius.base,
   headings: { fontFamily: tokens.font.family },
+  // WCAG 2.1 AA fix: Mantine default dimmed (#868e96) has 3.32 contrast on
+  // white. Use darker gray to reach ≥4.5 ratio (matches BS-6159
+  // --gray-darker #6a6a6a → 5.74 contrast).
+  other: {
+    dimmedColor: tokens.color.grayDarker,
+  },
 });
