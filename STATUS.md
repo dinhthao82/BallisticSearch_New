@@ -25,7 +25,7 @@
 - [x] Step 9 — Layout components (PageBody, DataFilter, DataResult, BoxFilter)
 - [x] Step 10 — DataTable (TanStack Table)
 - [x] Step 11 — Pagination component
-- [ ] Step 12 — MSW mock + APL search handler
+- [x] Step 12 — MSW mock + APL search handler (47 rows)
 - [ ] Step 13 — Ky HTTP client + TanStack Query
 - [ ] Step 14 — i18n setup + locale JSON
 - [ ] Step 15 — Loading/Empty/Error states + POC-2 milestone
@@ -65,3 +65,6 @@
 ## Decisions log
 
 - 2026-06-24: gh CLI not installed → using manual git remote add (fallback per plan)
+- 2026-06-24: MSW v2 + happy-dom fetch ReadableStream incompat → unit
+  test mockData/handler shape only; full fetch integration verified in
+  Step 13 via Ky
