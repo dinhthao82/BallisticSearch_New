@@ -15,7 +15,7 @@
 - [x] Step 4 — ESLint + Prettier + Husky + lint-staged
 - [x] Step 5 — Vitest + Playwright config
 - [x] Step 6 — Design tokens port from BS-6159
-- [ ] Step 7 — Router + ProtectedLayout + Login placeholder
+- [x] Step 7 — Router + ProtectedLayout + Login placeholder
 - [ ] Step 8 — Bundle baseline + POC-1 milestone
 
 ## Mission POC-2: Components + MSW (0/7)
@@ -58,6 +58,7 @@
 | Step   | Bundle initial (gzip) | Notes                                  |
 | ------ | --------------------- | -------------------------------------- |
 | Step 2 | ~46 KB                | React + ReactDOM only (no Mantine yet) |
+| Step 7 | ~123 KB               | + Mantine + Router + QueryClient + Zustand |
 
 ## Decisions log
 
