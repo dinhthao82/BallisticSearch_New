@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { MantineProvider } from '@mantine/core';
 import { I18nextProvider } from 'react-i18next';
@@ -102,5 +102,19 @@ describe('SearchAPLResults', () => {
   it('shows loading state', () => {
     renderResults([], true);
     expect(screen.getByTestId('data-table-loading')).toBeInTheDocument();
+  });
+
+  it('inherits client-side sort from DataTable: clicking APL ID header toggles aria-sort', () => {
+    renderResults();
+    const aplHeader = screen.getByText('APL ID').closest('th');
+    if (!aplHeader) throw new Error('APL ID header not found');
+
+    expect(aplHeader.getAttribute('aria-sort')).toBe('none');
+
+    fireEvent.click(aplHeader);
+    expect(aplHeader.getAttribute('aria-sort')).toBe('ascending');
+
+    fireEvent.click(aplHeader);
+    expect(aplHeader.getAttribute('aria-sort')).toBe('descending');
   });
 });

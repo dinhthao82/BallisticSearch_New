@@ -38,7 +38,7 @@
 - [x] Step 17 — SearchAPLFilter form (RHF + Zod)
 - [x] Step 18 — SearchAPLResults table
 - [x] Step 19 — SearchAPLPage shell wired
-- [ ] Step 20 — Sort columns client-side
+- [x] Step 20 — Sort columns client-side
 - [ ] Step 21 — Side-by-side visual comparison
 - [ ] Step 22 — Polish + POC-3 milestone
 
