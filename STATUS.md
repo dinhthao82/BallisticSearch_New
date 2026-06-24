@@ -13,7 +13,7 @@
 - [x] Step 2 — Vite + React 18 + TS strict scaffold (commit 6473388)
 - [x] Step 3 — Install core dependencies (20 runtime + 23 dev)
 - [x] Step 4 — ESLint + Prettier + Husky + lint-staged
-- [ ] Step 5 — Vitest + Playwright config
+- [x] Step 5 — Vitest + Playwright config
 - [ ] Step 6 — Design tokens port from BS-6159
 - [ ] Step 7 — Router + ProtectedLayout + Login placeholder
 - [ ] Step 8 — Bundle baseline + POC-1 milestone
