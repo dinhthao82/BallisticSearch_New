@@ -1,0 +1,30 @@
+.boxFilter {
+  padding: 1rem;
+  background-color: var(--white-color, #ffffff);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-effect-1, 0 2px 4px rgba(0, 0, 0, 0.16));
+  color: var(--primary-color, #435d7d);
+}
+
+.boxFilterTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-color, #d6dee8);
+}
+
+.boxFilterTitle h3 {
+  font-size: var(--font-size-base, 0.875rem);
+  font-weight: 600;
+  color: var(--primary-color, #435d7d);
+  margin: 0;
+}
+
+.boxFilterContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+}

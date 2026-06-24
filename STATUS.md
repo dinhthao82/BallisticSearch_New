@@ -22,7 +22,7 @@
 
 ## Mission POC-2: Components + MSW (0/7)
 
-- [ ] Step 9 — Layout components (PageBody, DataFilter, DataResult, BoxFilter)
+- [x] Step 9 — Layout components (PageBody, DataFilter, DataResult, BoxFilter)
 - [ ] Step 10 — DataTable (TanStack Table)
 - [ ] Step 11 — Pagination component
 - [ ] Step 12 — MSW mock + APL search handler
