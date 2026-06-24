@@ -39,8 +39,10 @@
 - [x] Step 18 — SearchAPLResults table
 - [x] Step 19 — SearchAPLPage shell wired
 - [x] Step 20 — Sort columns client-side
-- [ ] Step 21 — Side-by-side visual comparison
-- [ ] Step 22 — Polish + POC-3 milestone
+- [x] Step 21 — Side-by-side visual comparison
+- [x] Step 22 — Polish + POC-3 milestone
+
+🎯 **MISSION POC-3 COMPLETE** (7/7 steps)
 
 ## Mission POC-4: Tests + Audit + Report (0/6)
 
@@ -64,6 +66,7 @@
 | Step 2 | ~46 KB                | React + ReactDOM only (no Mantine yet) |
 | Step 7 | ~123 KB               | + Mantine + Router + QueryClient + Zustand |
 | Step 15 | ~144 KB              | + i18n + Ky + TanStack Table + feedback (MSW lazy +96KB dev only) |
+| Step 22 | ~220 KB              | + SearchAPLPage (filter form RHF/Zod + results table + pagination wired) |
 
 ## Decisions log
 

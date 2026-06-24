@@ -24,5 +24,9 @@ module.exports = {
       { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
     ],
     'react/prop-types': 'off',
+    // React Compiler informational warnings about 3rd-party hooks
+    // (TanStack Table returns functions not memoizable). We don't use
+    // React Compiler — safe to suppress noise.
+    'react-hooks/incompatible-library': 'off',
   },
 };

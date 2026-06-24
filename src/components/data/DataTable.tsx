@@ -73,8 +73,7 @@ export function DataTable<T>({
                     : sortDir === 'desc'
                       ? 'descending'
                       : 'none';
-                const thProps: React.ComponentProps<typeof Table.Th> = {
-                  key: h.id,
+                const thProps: Omit<React.ComponentProps<typeof Table.Th>, 'children'> = {
                   'aria-sort': ariaSort,
                 };
                 if (canSort) {
@@ -82,7 +81,7 @@ export function DataTable<T>({
                   thProps.className = classes.sortable;
                 }
                 return (
-                  <Table.Th {...thProps}>
+                  <Table.Th key={h.id} {...thProps}>
                     <span className={classes.headerCell}>
                       {flexRender(h.column.columnDef.header, h.getContext())}
                       {canSort && (
