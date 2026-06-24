@@ -11,7 +11,7 @@
 
 - [x] Step 1 — Create folder + git init + GitHub remote (commit 9bc11f7)
 - [x] Step 2 — Vite + React 18 + TS strict scaffold (commit 6473388)
-- [ ] Step 3 — Install core dependencies
+- [x] Step 3 — Install core dependencies (20 runtime + 23 dev)
 - [ ] Step 4 — ESLint + Prettier + Husky + lint-staged
 - [ ] Step 5 — Vitest + Playwright config
 - [ ] Step 6 — Design tokens port from BS-6159
