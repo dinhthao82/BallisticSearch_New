@@ -1,0 +1,47 @@
+/**
+ * CSS variables mirror src/theme/tokens.ts.
+ * Keeps parity with legacy BS-6159 _defaultSettings.scss for any
+ * pages that still use plain CSS.
+ */
+:root {
+  --primary-color: #435d7d;
+  --primary-color-dark: #304e72;
+  --primary-color-light: #6f86ae;
+  --primary-color-focus: #80bdff;
+  --success-color: #258f59;
+  --danger-color: #bd2130;
+  --warning-color: #f7be38;
+  --gray-darker: #6a6a6a;
+  --gray-color: #d6dee8;
+  --white-darker: #f0f0f0;
+  --white-color: #ffffff;
+  --black-color: #1a1a1a;
+
+  --table-subheader-bg: #f5f5f5;
+  --table-row-even: #f7f7f7;
+  --table-row-selected-bg: #435d7d;
+  --table-row-selected-text: #ffffff;
+  --table-row-focus: #eaf2fb;
+
+  --btn-confirm-bg: #435d7d;
+  --btn-confirm-text: #ffffff;
+  --btn-cancel-bg: #ffffff;
+  --btn-cancel-text: #435d7d;
+
+  --popup-header-bg: #435d7d;
+  --popup-header-text: #ffffff;
+  --popup-body-bg: #f4f7fb;
+
+  --font-size-base: 0.875rem;
+  --font-size-title: 1.5rem;
+  --font-size-small: 0.75rem;
+  --fontname:
+    Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --border-radius-base: 4px;
+  --border-radius-button: 4px;
+
+  --shadow-effect-1: 0 2px 4px rgba(0, 0, 0, 0.16);
+  --shadow-effect-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-bottom-only: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
