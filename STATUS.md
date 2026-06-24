@@ -24,7 +24,7 @@
 
 - [x] Step 9 — Layout components (PageBody, DataFilter, DataResult, BoxFilter)
 - [x] Step 10 — DataTable (TanStack Table)
-- [ ] Step 11 — Pagination component
+- [x] Step 11 — Pagination component
 - [ ] Step 12 — MSW mock + APL search handler
 - [ ] Step 13 — Ky HTTP client + TanStack Query
 - [ ] Step 14 — i18n setup + locale JSON
