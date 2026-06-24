@@ -35,7 +35,7 @@
 ## Mission POC-3: SearchAPLProcess Page (0/7)
 
 - [x] Step 16 — APL filter Zod schema
-- [ ] Step 17 — SearchAPLFilter form (RHF + Zod)
+- [x] Step 17 — SearchAPLFilter form (RHF + Zod)
 - [ ] Step 18 — SearchAPLResults table
 - [ ] Step 19 — SearchAPLPage shell wired
 - [ ] Step 20 — Sort columns client-side
