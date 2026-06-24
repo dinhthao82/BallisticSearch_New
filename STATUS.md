@@ -28,7 +28,9 @@
 - [x] Step 12 — MSW mock + APL search handler (47 rows)
 - [x] Step 13 — Ky HTTP client + TanStack Query
 - [x] Step 14 — i18n setup + locale JSON
-- [ ] Step 15 — Loading/Empty/Error states + POC-2 milestone
+- [x] Step 15 — Loading/Empty/Error states + POC-2 milestone
+
+🎯 **MISSION POC-2 COMPLETE** (7/7 steps)
 
 ## Mission POC-3: SearchAPLProcess Page (0/7)
 
@@ -61,6 +63,7 @@
 | ------ | --------------------- | -------------------------------------- |
 | Step 2 | ~46 KB                | React + ReactDOM only (no Mantine yet) |
 | Step 7 | ~123 KB               | + Mantine + Router + QueryClient + Zustand |
+| Step 15 | ~144 KB              | + i18n + Ky + TanStack Table + feedback (MSW lazy +96KB dev only) |
 
 ## Decisions log
 

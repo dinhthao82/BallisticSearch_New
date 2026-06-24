@@ -62,3 +62,64 @@ Steps 1–8 completed in single chained session.
 - Step 13: Ky + TanStack Query wired to useSearchAPL hook
 - Step 14: i18n init + locale JSON
 - Step 15: Loading/Empty/Error states + milestone
+
+---
+
+## POC-2 Components + MSW — DONE 2026-06-24
+
+Steps 9–15 completed in single chained session.
+
+### Components shipped (12 new)
+
+**Layout** (4 + barrel index):
+- `<PageBody>`, `<DataFilter>` (collapsible), `<DataResult>`, `<BoxFilter>` (title + maxWidth)
+
+**Data** (2):
+- `<DataTable>` generic TanStack Table + sticky header + sort
+- `<Pagination>` Mantine + page-size select + range text
+
+**Feedback** (3 + barrel):
+- `<LoadingOverlay>`, `<EmptyState>`, `<ErrorState>` (w/ optional retry)
+
+### Infrastructure
+
+- **MSW mock**: 47-row APL fixture, POST /api/v1/apl/search handler
+  - filters: apl_ID, caseNumber, dateFrom/dateTo, reportStatus
+  - pagination support
+- **HTTP**: Ky client with prefixUrl, X-Mock-User header (placeholder for JWT)
+- **TanStack Query**: useSearchAPL hook with `enabled` gate
+- **i18n**: i18next + HTTP backend, 2 namespaces (common + searchAPL)
+
+### Metrics
+
+| Metric | Value |
+|---|---|
+| Bundle initial (gzip) | **144 KB** (114 JS + 30 CSS) - within 250 KB |
+| MSW lazy chunk (dev only) | 96 KB gzip |
+| Tests passing | 38/38 (12 files) |
+| Lint | 0 errors |
+| Typecheck | 0 errors |
+| Build time | 1.9s |
+
+### Decisions made
+
+1. **happy-dom + MSW v2 + Ky fetch ReadableStream incompat** → API/hook
+   tests mock `@/api/client`; full HTTP path verified in browser dev
+   + Playwright E2E (Step 24).
+2. **`exactOptionalPropertyTypes: true` removed** — too painful with
+   Mantine's strict `string` props. Kept `strict: true` + extras.
+3. **`baseUrl` removed** — TS 5.x resolves paths relative to tsconfig
+   dir; baseUrl deprecated in TS 7.
+4. **`aria-sort='none'`** default for unsorted (not undefined).
+5. **MSW worker dynamically imported** when `VITE_USE_MOCK=true` —
+   code-split, ~96 KB chunk only in dev.
+
+### Next: Mission POC-3 (Steps 16–22)
+
+- Step 16: APL filter Zod schema + types
+- Step 17: SearchAPLFilter form (RHF + Zod + Mantine)
+- Step 18: SearchAPLResults table (7 columns + status badge)
+- Step 19: SearchAPLPage shell wired (filter + table + pagination)
+- Step 20: Sort columns client-side
+- Step 21: Side-by-side visual comparison
+- Step 22: Polish + milestone
