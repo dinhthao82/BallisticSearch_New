@@ -16,7 +16,9 @@
 - [x] Step 5 — Vitest + Playwright config
 - [x] Step 6 — Design tokens port from BS-6159
 - [x] Step 7 — Router + ProtectedLayout + Login placeholder
-- [ ] Step 8 — Bundle baseline + POC-1 milestone
+- [x] Step 8 — Bundle baseline + POC-1 milestone
+
+🎯 **MISSION POC-1 COMPLETE** (8/8 steps)
 
 ## Mission POC-2: Components + MSW (0/7)
 
