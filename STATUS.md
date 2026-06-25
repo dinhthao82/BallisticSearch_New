@@ -75,7 +75,7 @@
 
 ### W2: BIQ Primitives (Steps 33-36)
 
-- [ ] Step 33 — BIQButton + BIQInput
+- [x] Step 33 — BIQButton + BIQInput (2 SearchAPL Button usages migrated; 8 new tests, 79 total)
 - [ ] Step 34 — BIQTextarea + BIQSelect
 - [ ] Step 35 — BIQCheckbox + BIQRadio + BIQSwitch + BIQBadge
 - [ ] Step 36 — Migrate SearchAPL to BIQ primitives

@@ -1,9 +1,10 @@
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Textarea, Button, Stack, Group, Checkbox } from '@mantine/core';
+import { Textarea, Stack, Group, Checkbox } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useTranslation } from 'react-i18next';
 import { IconSearch } from '@tabler/icons-react';
+import { BIQButton } from '@/components/primitives';
 import { searchAPLFilterSchema, type SearchAPLFilterValues } from './schema';
 
 interface SearchAPLFilterProps {
@@ -94,20 +95,12 @@ export function SearchAPLFilter({
         />
 
         <Group mt="md">
-          <Button
-            type="submit"
-            loading={isSubmitting}
-            leftSection={<IconSearch size={16} />}
-          >
+          <BIQButton type="submit" loading={isSubmitting} leftSection={<IconSearch size={16} />}>
             {t('common:button.search', 'Search')}
-          </Button>
-          <Button
-            type="button"
-            variant="default"
-            onClick={() => reset({ reportStatus: [] })}
-          >
+          </BIQButton>
+          <BIQButton type="button" variant="default" onClick={() => reset({ reportStatus: [] })}>
             {t('common:button.reset', 'Reset')}
-          </Button>
+          </BIQButton>
         </Group>
       </Stack>
     </form>
