@@ -191,6 +191,24 @@ export const handlers = [
     return HttpResponse.json({ items: filtered, total: filtered.length });
   }),
 
+  http.post('/api/v1/email/send', async ({ request }) => {
+    const body = (await request.json()) as {
+      to?: string[];
+      cc?: string[];
+      subject?: string;
+      body?: string;
+    };
+    const to = body.to ?? [];
+    if (to.length === 0) {
+      return HttpResponse.json({ error: 'At least one recipient required' }, { status: 400 });
+    }
+    return HttpResponse.json({
+      messageId: `MSG-${Date.now().toString(36).toUpperCase()}`,
+      recipients: to.length + (body.cc?.length ?? 0),
+      acknowledged: true,
+    });
+  }),
+
   http.post('/api/v1/case-number/submit', async ({ request }) => {
     const body = (await request.json()) as {
       caseNumber?: string;
