@@ -31,6 +31,11 @@ describe('BIQCheckbox', () => {
     expect(screen.getByLabelText('Alpha')).toBeChecked();
     expect(screen.getByLabelText('Bravo')).not.toBeChecked();
   });
+
+  it('exposes Indicator and Card subcomponents', () => {
+    expect(BIQCheckbox.Indicator).toBeDefined();
+    expect(BIQCheckbox.Card).toBeDefined();
+  });
 });
 
 describe('BIQRadio', () => {
