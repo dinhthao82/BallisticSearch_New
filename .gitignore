@@ -49,6 +49,11 @@ lerna-debug.log*
 # TypeScript build info
 *.tsbuildinfo
 
+# Lighthouse reports
+lighthouse-*.report.html
+lighthouse-*.report.json
+preview.log
+
 # Misc
 *.bak
 *.tmp
