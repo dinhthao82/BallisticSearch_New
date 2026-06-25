@@ -21,11 +21,14 @@ describe('MSW APL mock fixtures', () => {
     }
   });
 
-  it('handlers registers POST /api/v1/apl/search route', () => {
+  it('handlers registers POST /apl/search + GET location/* routes', () => {
     // MSW v2 stores route info on handler.info
-    expect(handlers).toHaveLength(1);
-    const h = handlers[0] as { info: { method: string; path: string } };
-    expect(h.info.method).toBe('POST');
-    expect(h.info.path).toContain('apl/search');
+    expect(handlers).toHaveLength(4);
+    const infos = handlers.map((h) => (h as { info: { method: string; path: string } }).info);
+    expect(infos[0]?.method).toBe('POST');
+    expect(infos[0]?.path).toContain('apl/search');
+    expect(infos[1]?.path).toContain('location/countries');
+    expect(infos[2]?.path).toContain('location/states');
+    expect(infos[3]?.path).toContain('location/cities');
   });
 });

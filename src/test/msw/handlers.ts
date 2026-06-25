@@ -1,6 +1,36 @@
 import { http, HttpResponse } from 'msw';
 import { mockAPLData, type APLItem } from './mockData';
 
+// Minimal cascading location dataset for BIQLocationFilter dev/test runs.
+// Real systems would source these from the backend reference data service.
+const LOCATIONS: Record<string, Record<string, string[]>> = {
+  US: {
+    CA: ['Los Angeles', 'San Francisco', 'San Diego'],
+    NY: ['New York City', 'Buffalo'],
+    TX: ['Houston', 'Austin', 'Dallas'],
+  },
+  CA: {
+    ON: ['Toronto', 'Ottawa'],
+    BC: ['Vancouver', 'Victoria'],
+  },
+  VN: {
+    HN: ['Hanoi'],
+    HCM: ['Ho Chi Minh City'],
+  },
+};
+
+const COUNTRY_NAMES: Record<string, string> = {
+  US: 'United States',
+  CA: 'Canada',
+  VN: 'Vietnam',
+};
+
+const STATE_NAMES: Record<string, Record<string, string>> = {
+  US: { CA: 'California', NY: 'New York', TX: 'Texas' },
+  CA: { ON: 'Ontario', BC: 'British Columbia' },
+  VN: { HN: 'Ha Noi', HCM: 'Ho Chi Minh' },
+};
+
 interface SearchAPLBody {
   apl_ID?: string;
   caseNumber?: string;
@@ -40,9 +70,7 @@ export const handlers = [
     // Filter by report status
     if (body.reportStatus && body.reportStatus.length > 0) {
       const statusSet = new Set(body.reportStatus.map((s) => s.toLowerCase()));
-      items = items.filter((i) =>
-        statusSet.has(i.reportStatus.toLowerCase().replace(/\s+/g, ''))
-      );
+      items = items.filter((i) => statusSet.has(i.reportStatus.toLowerCase().replace(/\s+/g, '')));
     }
 
     const total = items.length;
@@ -57,5 +85,29 @@ export const handlers = [
       page,
       pageSize,
     });
+  }),
+
+  http.get('/api/v1/location/countries', () => {
+    return HttpResponse.json(
+      Object.keys(LOCATIONS).map((code) => ({ code, name: COUNTRY_NAMES[code] ?? code }))
+    );
+  }),
+
+  http.get('/api/v1/location/states', ({ request }) => {
+    const url = new URL(request.url);
+    const country = url.searchParams.get('country') ?? '';
+    const states = LOCATIONS[country];
+    if (!states) return HttpResponse.json([]);
+    return HttpResponse.json(
+      Object.keys(states).map((code) => ({ code, name: STATE_NAMES[country]?.[code] ?? code }))
+    );
+  }),
+
+  http.get('/api/v1/location/cities', ({ request }) => {
+    const url = new URL(request.url);
+    const country = url.searchParams.get('country') ?? '';
+    const state = url.searchParams.get('state') ?? '';
+    const cities = LOCATIONS[country]?.[state] ?? [];
+    return HttpResponse.json(cities.map((name) => ({ code: name, name })));
   }),
 ];
