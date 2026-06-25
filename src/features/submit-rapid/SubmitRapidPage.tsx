@@ -9,6 +9,7 @@ import {
   rapidBallisticsSchema,
   type RapidBallisticsInput,
 } from './schema';
+import { PhotoUpload } from './PhotoUpload';
 import { useSubmitRapid } from './useSubmitRapid';
 
 export default function SubmitRapidPage() {
@@ -109,7 +110,22 @@ export default function SubmitRapidPage() {
             error={errors.comment?.message}
           />
 
-          {/* Photos input arrives in Step 66 */}
+          <Controller
+            control={control}
+            name="photos"
+            render={({ field }) => (
+              <PhotoUpload
+                value={field.value}
+                onChange={(files) => field.onChange(files)}
+                error={
+                  errors.photos?.message ??
+                  (Array.isArray(errors.photos)
+                    ? errors.photos.find((e) => e?.message)?.message
+                    : undefined)
+                }
+              />
+            )}
+          />
 
           <Group justify="flex-end" gap="sm" mt="md">
             <BIQButton
