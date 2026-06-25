@@ -337,6 +337,19 @@ export const handlers = [
     return HttpResponse.json({ jobId: `PMR-${Date.now().toString(36).toUpperCase()}` });
   }),
 
+  http.get('/api/v1/preview-analysis', ({ request }) => {
+    const url = new URL(request.url);
+    const caseNumber = url.searchParams.get('caseNumber') ?? 'W-UNKNOWN';
+    return HttpResponse.json({
+      caseNumber,
+      items: [
+        { id: 'IT-1', caseNumber, type: 'BC', thumbnail: 's3://it1.jpg', notes: 'Front view' },
+        { id: 'IT-2', caseNumber, type: 'CC', thumbnail: 's3://it2.jpg', notes: 'Side view' },
+        { id: 'IT-3', caseNumber, type: 'PL', thumbnail: 's3://it3.jpg', notes: 'Macro detail' },
+      ],
+    });
+  }),
+
   http.get('/api/v1/gallery-map', () =>
     HttpResponse.json({
       items: [

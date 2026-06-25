@@ -68,6 +68,10 @@ const VCCPage = lazy(() => import('@/features/vcc/VCCPage'));
 const ProbeMatchesInfoPage = lazy(() => import('@/features/probe-face/ProbeMatchesInfoPage'));
 const SearchFaceInfoPage = lazy(() => import('@/features/probe-face/SearchFaceInfoPage'));
 const QuickSearchPage = lazy(() => import('@/features/quick-search/QuickSearchPage'));
+const PreviewAnalysisPage = lazy(() => import('@/features/image-editor/PreviewAnalysisPage'));
+const ImageComparePage = lazy(() => import('@/features/image-editor/ImageComparePage'));
+const Image2DComparePage = lazy(() => import('@/features/image-editor/Image2DComparePage'));
+const ImageStandardizePage = lazy(() => import('@/features/image-editor/ImageStandardizePage'));
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -382,6 +386,38 @@ export default function App() {
                 element={
                   <Lazy>
                     <QuickSearchPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="preview-analysis"
+                element={
+                  <Lazy>
+                    <PreviewAnalysisPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="image-compare"
+                element={
+                  <Lazy>
+                    <ImageComparePage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="image-2d-compare"
+                element={
+                  <Lazy>
+                    <Image2DComparePage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="image-standardize"
+                element={
+                  <Lazy>
+                    <ImageStandardizePage />
                   </Lazy>
                 }
               />
