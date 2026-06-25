@@ -170,6 +170,45 @@ Master plan: 29/80 missions ≈ 36%.
 
 ---
 
+## Wave C: Trivials + Maps + Auth Shape (0/24)
+
+**Plan**: WAVE_C_EXECUTION.md
+**Target tag**: v0.4.0-pre-core
+
+### W12: 4 non-map trivials (Steps 69-77)
+- [ ] Step 69 — M-037 EditVCC_Redirect
+- [ ] Step 70 — M-039 AuditingContract page + GET handler
+- [ ] Step 71 — M-039 tests
+- [ ] Step 72 — M-041 ComposeEmail shell + schema
+- [ ] Step 73 — M-041 form + submit
+- [ ] Step 74 — M-041 tests
+- [ ] Step 75 — M-042 UploadBullet shell + schema
+- [ ] Step 76 — M-042 form + upload
+- [ ] Step 77 — M-042 tests
+
+### W13: BIQMap + 4 maps (Steps 78-86)
+- [ ] Step 78 — BIQMap primitive (react-leaflet)
+- [ ] Step 79 — M-034 MapOfAgencies page
+- [ ] Step 80 — M-034 tests
+- [ ] Step 81 — M-035 MapOfGalleries page
+- [ ] Step 82 — M-035 tests
+- [ ] Step 83 — M-043 MapIt_Gallery page
+- [ ] Step 84 — M-043 tests
+- [ ] Step 85 — M-044 MapIt_Potential page
+- [ ] Step 86 — M-044 tests
+
+### W14: Login + HomePage (Steps 87-91)
+- [ ] Step 87 — M-045 Login full form
+- [ ] Step 88 — M-045 tests
+- [ ] Step 89 — M-046 HomePage dashboard
+- [ ] Step 90 — M-046 tests
+- [ ] Step 91 — Cross-page E2E
+
+### W15: Milestone (Step 92)
+- [ ] Step 92 — WAVE_C_RESULT.md + v0.4.0-pre-core tag
+
+---
+
 ## Issues / Blockers
 
 - (none)
