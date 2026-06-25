@@ -45,6 +45,9 @@ const ContractManagementPage = lazy(() => import('@/features/agency-mgmt/Contrac
 const ManageSharingAgenciesPage = lazy(
   () => import('@/features/agency-mgmt/ManageSharingAgenciesPage')
 );
+const AuditAllTransactionsPage = lazy(() => import('@/features/audit/AuditAllTransactionsPage'));
+const LoginAuditingPage = lazy(() => import('@/features/audit/LoginAuditingPage'));
+const InformationAuditingPage = lazy(() => import('@/features/audit/InformationAuditingPage'));
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -191,6 +194,30 @@ export default function App() {
                 element={
                   <Lazy>
                     <ManageSharingAgenciesPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="audit-all-transactions"
+                element={
+                  <Lazy>
+                    <AuditAllTransactionsPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="login-auditing"
+                element={
+                  <Lazy>
+                    <LoginAuditingPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="information-auditing"
+                element={
+                  <Lazy>
+                    <InformationAuditingPage />
                   </Lazy>
                 }
               />

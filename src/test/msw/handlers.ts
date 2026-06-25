@@ -5,6 +5,11 @@ import { mockCSAData } from '@/features/search-csa/mockData';
 import { mockQAData } from '@/features/search-qa/mockData';
 import { mockUserData } from '@/features/user-mgmt/mockData';
 import { mockAgencyData, mockSharingAgencies } from '@/features/agency-mgmt/mockData';
+import {
+  mockTransactionData,
+  mockLoginAuditData,
+  mockInfoAuditData,
+} from '@/features/audit/mockData';
 
 // Minimal cascading location dataset for BIQLocationFilter dev/test runs.
 // Real systems would source these from the backend reference data service.
@@ -147,6 +152,41 @@ export const handlers = [
   }),
 
   http.get('/api/v1/sharing/agencies', () => HttpResponse.json({ items: mockSharingAgencies })),
+
+  http.get('/api/v1/audit/transactions', ({ request }) => {
+    const url = new URL(request.url);
+    const search = url.searchParams.get('search')?.toLowerCase() ?? '';
+    let items = [...mockTransactionData];
+    if (search) {
+      items = items.filter(
+        (i) =>
+          i.user.toLowerCase().includes(search) ||
+          i.action.toLowerCase().includes(search) ||
+          i.resource.toLowerCase().includes(search)
+      );
+    }
+    return HttpResponse.json({ items, total: items.length });
+  }),
+
+  http.get('/api/v1/audit/logins', ({ request }) => {
+    const url = new URL(request.url);
+    const search = url.searchParams.get('search')?.toLowerCase() ?? '';
+    let items = [...mockLoginAuditData];
+    if (search) items = items.filter((i) => i.user.toLowerCase().includes(search));
+    return HttpResponse.json({ items, total: items.length });
+  }),
+
+  http.get('/api/v1/audit/information', ({ request }) => {
+    const url = new URL(request.url);
+    const search = url.searchParams.get('search')?.toLowerCase() ?? '';
+    let items = [...mockInfoAuditData];
+    if (search) {
+      items = items.filter(
+        (i) => i.user.toLowerCase().includes(search) || i.action.toLowerCase().includes(search)
+      );
+    }
+    return HttpResponse.json({ items, total: items.length });
+  }),
 
   http.post('/api/v1/agency-managers', async ({ request }) => {
     const body = await request.json();
