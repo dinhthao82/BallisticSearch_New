@@ -118,10 +118,7 @@ export const handlers = [
       requestor?: string;
     };
     if (!body.caseNumber || !body.caseNumber.trim()) {
-      return HttpResponse.json(
-        { error: 'caseNumber is required' },
-        { status: 400 }
-      );
+      return HttpResponse.json({ error: 'caseNumber is required' }, { status: 400 });
     }
     return HttpResponse.json({
       auditId: `AUD-${Date.now().toString(36).toUpperCase()}`,
