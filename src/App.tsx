@@ -62,6 +62,8 @@ const DetectionInfoPage = lazy(() => import('@/features/galleries/DetectionInfoP
 const SummaryPotentialLinksPage = lazy(
   () => import('@/features/galleries/SummaryPotentialLinksPage')
 );
+const UserProfilesPage = lazy(() => import('@/features/user-profile/UserProfilesPage'));
+const GalleryMapPage = lazy(() => import('@/features/gallery-map/GalleryMapPage'));
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -328,6 +330,22 @@ export default function App() {
                 element={
                   <Lazy>
                     <SummaryPotentialLinksPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="user-profile"
+                element={
+                  <Lazy>
+                    <UserProfilesPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="gallery-map"
+                element={
+                  <Lazy>
+                    <GalleryMapPage />
                   </Lazy>
                 }
               />

@@ -236,6 +236,50 @@ export const handlers = [
     return HttpResponse.json({ ...d, potentialId: id });
   }),
 
+  http.post('/api/v1/user/password', async ({ request }) => {
+    void (await request.json());
+    return HttpResponse.json({ ok: true });
+  }),
+
+  http.post('/api/v1/user/mfa/verify', async ({ request }) => {
+    const body = (await request.json()) as { otpCode?: string };
+    if (body.otpCode !== '123456') {
+      return HttpResponse.json({ error: 'Invalid OTP' }, { status: 400 });
+    }
+    return HttpResponse.json({ enabled: true });
+  }),
+
+  http.get('/api/v1/gallery-map', () =>
+    HttpResponse.json({
+      items: [
+        {
+          galleryId: 'GAL-001',
+          name: 'Gallery North',
+          lat: 47.6062,
+          lng: -122.3321,
+          imageThumbnails: ['s3://thumb1.jpg', 's3://thumb2.jpg', 's3://thumb3.jpg'],
+          itemCount: 1532,
+        },
+        {
+          galleryId: 'GAL-002',
+          name: 'Gallery South',
+          lat: 29.7604,
+          lng: -95.3698,
+          imageThumbnails: ['s3://thumb4.jpg', 's3://thumb5.jpg'],
+          itemCount: 894,
+        },
+        {
+          galleryId: 'GAL-003',
+          name: 'Gallery East',
+          lat: 39.9526,
+          lng: -75.1652,
+          imageThumbnails: ['s3://thumb6.jpg'],
+          itemCount: 2103,
+        },
+      ],
+    })
+  ),
+
   http.get('/api/v1/audit/information', ({ request }) => {
     const url = new URL(request.url);
     const search = url.searchParams.get('search')?.toLowerCase() ?? '';
