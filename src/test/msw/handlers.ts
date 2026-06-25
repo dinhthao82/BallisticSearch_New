@@ -238,6 +238,28 @@ export const handlers = [
     });
   }),
 
+  http.post('/api/v1/auth/login', async ({ request }) => {
+    const body = (await request.json()) as {
+      username?: string;
+      password?: string;
+      rememberMe?: boolean;
+    };
+    if (!body.username || !body.password) {
+      return HttpResponse.json({ error: 'Username and password are required' }, { status: 400 });
+    }
+    // Mock: accept any credentials, grant Admin (POC behavior). Real auth
+    // arrives with the backend integration mission.
+    return HttpResponse.json({
+      token: 'mock.jwt.token.' + Date.now().toString(36),
+      user: {
+        id: '1',
+        username: body.username,
+        role: 'Admin',
+        displayName: body.username,
+      },
+    });
+  }),
+
   http.get('/api/v1/map/agencies', () => {
     return HttpResponse.json({
       items: [
