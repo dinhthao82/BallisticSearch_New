@@ -84,6 +84,24 @@ const QUICK_ACTIONS: QuickAction[] = [
     description: 'Geographic view of gallery locations',
     icon: IconMap,
   },
+  {
+    to: '/app/user-management',
+    label: 'User Management',
+    description: 'Admins, examiners, agency users (tabbed admin view)',
+    icon: IconClipboardList,
+  },
+  {
+    to: '/app/dashboard-vcc',
+    label: 'Dashboard — VCC',
+    description: 'VCC metrics + by-agency rollup + recent activity',
+    icon: IconReport,
+  },
+  {
+    to: '/app/audit-all-transactions',
+    label: 'Audit Log',
+    description: 'All system transactions w/ search',
+    icon: IconClipboardList,
+  },
 ];
 
 export default function HomePage() {

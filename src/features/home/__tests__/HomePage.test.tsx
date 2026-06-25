@@ -30,10 +30,10 @@ describe('HomePage', () => {
     expect(screen.getByText(/welcome, jdoe/i)).toBeInTheDocument();
   });
 
-  it('renders 11 quick-action cards', () => {
+  it('renders 14 quick-action cards', () => {
     render(ui(<HomePage />));
     const cards = screen.getAllByTestId('home-quick-action');
-    expect(cards).toHaveLength(11);
+    expect(cards).toHaveLength(14);
   });
 
   it('quick-action cards link to expected routes', () => {
