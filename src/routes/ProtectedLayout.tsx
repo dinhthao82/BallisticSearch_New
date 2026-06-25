@@ -40,6 +40,9 @@ export default function ProtectedLayout() {
         <Button component={Link} to="/app/search-apl" variant="subtle" fullWidth justify="start">
           Search APL Process
         </Button>
+        <Button component={Link} to="/app/case-number" variant="subtle" fullWidth justify="start">
+          Case Number Inquiry
+        </Button>
       </AppShell.Navbar>
 
       <AppShell.Main>

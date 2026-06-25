@@ -110,4 +110,22 @@ export const handlers = [
     const cities = LOCATIONS[country]?.[state] ?? [];
     return HttpResponse.json(cities.map((name) => ({ code: name, name })));
   }),
+
+  http.post('/api/v1/case-number/submit', async ({ request }) => {
+    const body = (await request.json()) as {
+      caseNumber?: string;
+      purpose?: string;
+      requestor?: string;
+    };
+    if (!body.caseNumber || !body.caseNumber.trim()) {
+      return HttpResponse.json(
+        { error: 'caseNumber is required' },
+        { status: 400 }
+      );
+    }
+    return HttpResponse.json({
+      auditId: `AUD-${Date.now().toString(36).toUpperCase()}`,
+      acknowledged: true,
+    });
+  }),
 ];
