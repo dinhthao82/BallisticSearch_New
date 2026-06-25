@@ -80,11 +80,14 @@ describe('Hook: useSearchAPL', () => {
     expect(result.current.data?.items).toHaveLength(1);
   });
 
-  it('passes filter as queryKey', async () => {
+  it('passes filter as queryKey + forwards AbortSignal from useQuery', async () => {
     const { result } = renderHook(() => useSearchAPL({ caseNumber: 'W' }, true), {
       wrapper: makeWrapper(),
     });
     await waitFor(() => expect(result.current.isSuccess).toBe(true));
-    expect(api.post).toHaveBeenCalledWith('apl/search', { json: { caseNumber: 'W' } });
+    expect(api.post).toHaveBeenCalledWith(
+      'apl/search',
+      expect.objectContaining({ json: { caseNumber: 'W' }, signal: expect.any(AbortSignal) })
+    );
   });
 });

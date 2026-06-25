@@ -86,7 +86,9 @@
 
 - [x] Step 37 — Analyze EIQ_LoadingUI legacy (docs/migration/loading-overlay.md)
 - [x] Step 38 — Build BIQLoadingOverlay (8 new tests, 103 total; LoadingOverlay aliases BIQLoadingOverlay)
-- [ ] Step 39 — Wire to SearchAPL + tests
+- [x] Step 39 — Wire to SearchAPL + tests (real cancel via queryClient.cancelQueries + AbortSignal; 104 tests pass)
+
+🎯 **MISSION W3 COMPLETE** (3/3 steps)
 
 ### W4: Modal + ConfirmDialog (Steps 40-42)
 

@@ -28,19 +28,22 @@ export interface APLSearchResult {
   pageSize: number;
 }
 
-export async function searchAPL(filter: APLFilter): Promise<APLSearchResult> {
-  return api.post('apl/search', { json: filter }).json<APLSearchResult>();
+export async function searchAPL(filter: APLFilter, signal?: AbortSignal): Promise<APLSearchResult> {
+  return api.post('apl/search', { json: filter, signal }).json<APLSearchResult>();
 }
+
+export const APL_SEARCH_QUERY_KEY = ['apl', 'search'] as const;
 
 /**
  * TanStack Query wrapper. `enabled` gate: query only fires when caller
  * explicitly enables (e.g. after first Search click) to avoid redundant
- * initial fetch.
+ * initial fetch. AbortSignal is forwarded so queryClient.cancelQueries
+ * (used by BIQLoadingOverlay's onCancel) aborts the in-flight ky request.
  */
 export function useSearchAPL(filter: APLFilter, enabled = false) {
   return useQuery<APLSearchResult, Error>({
-    queryKey: ['apl', 'search', filter],
-    queryFn: () => searchAPL(filter),
+    queryKey: [...APL_SEARCH_QUERY_KEY, filter],
+    queryFn: ({ signal }) => searchAPL(filter, signal),
     enabled,
     staleTime: 30_000,
     gcTime: 5 * 60_000,

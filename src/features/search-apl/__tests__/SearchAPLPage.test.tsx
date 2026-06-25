@@ -106,4 +106,27 @@ describe('SearchAPLPage (integration)', () => {
       expect(screen.getByTestId('pagination')).toBeInTheDocument();
     });
   });
+
+  it('shows BIQLoadingOverlay with Cancel while fetching; clicking Cancel hides it', async () => {
+    const { api } = await import('@/api/client');
+    const apiMock = api.post as ReturnType<typeof vi.fn>;
+    // Replace the instant-resolve mock with a pending promise so isFetching
+    // stays true long enough for the assertions / interaction.
+    apiMock.mockImplementationOnce(() => ({
+      json: vi.fn(() => new Promise(() => {})),
+    }));
+
+    renderPage();
+    const form = screen.getByTestId('search-apl-filter');
+    fireEvent.submit(form);
+
+    const cancelBtn = await screen.findByTestId('biq-loading-overlay-cancel');
+    expect(screen.getByTestId('biq-loading-overlay')).toBeInTheDocument();
+
+    fireEvent.click(cancelBtn);
+
+    await waitFor(() => {
+      expect(screen.queryByTestId('biq-loading-overlay')).not.toBeInTheDocument();
+    });
+  });
 });

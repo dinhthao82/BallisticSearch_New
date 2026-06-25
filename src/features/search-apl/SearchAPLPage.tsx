@@ -1,10 +1,11 @@
 import { useState, useCallback } from 'react';
 import { Title, Stack, Group, Text } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
+import { useQueryClient } from '@tanstack/react-query';
 import { PageBody, DataFilter, DataResult, BoxFilter } from '@/components/layout';
 import { Pagination } from '@/components/data/Pagination';
-import { ErrorState } from '@/components/feedback';
-import { useSearchAPL } from '@/api/apl';
+import { BIQLoadingOverlay, ErrorState } from '@/components/feedback';
+import { useSearchAPL, APL_SEARCH_QUERY_KEY } from '@/api/apl';
 import type { APLFilter } from '@/api/apl';
 import { SearchAPLFilter } from './SearchAPLFilter';
 import { SearchAPLResults } from './SearchAPLResults';
@@ -12,6 +13,7 @@ import { toApiFilter, type SearchAPLFilterValues } from './schema';
 
 export default function SearchAPLPage() {
   const { t } = useTranslation('searchAPL');
+  const queryClient = useQueryClient();
   const [filter, setFilter] = useState<APLFilter>({ page: 1, pageSize: 25 });
   const [enabled, setEnabled] = useState(false);
 
@@ -31,8 +33,18 @@ export default function SearchAPLPage() {
     setFilter((f) => ({ ...f, page: 1, pageSize }));
   }, []);
 
+  const handleCancel = useCallback(() => {
+    void queryClient.cancelQueries({ queryKey: [...APL_SEARCH_QUERY_KEY] });
+    setEnabled(false);
+  }, [queryClient]);
+
   return (
     <PageBody>
+      <BIQLoadingOverlay
+        visible={isFetching}
+        message={t('common:state.loading')}
+        onCancel={handleCancel}
+      />
       <DataFilter>
         <BoxFilter title={t('filter.title')}>
           <SearchAPLFilter onSubmit={handleSubmit} isSubmitting={isFetching} />
@@ -58,9 +70,7 @@ export default function SearchAPLPage() {
             />
           )}
 
-          {!isError && (
-            <SearchAPLResults items={data?.items ?? []} isLoading={isFetching} />
-          )}
+          {!isError && <SearchAPLResults items={data?.items ?? []} isLoading={isFetching} />}
 
           {data && data.items.length > 0 && (
             <Pagination
