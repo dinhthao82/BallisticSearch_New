@@ -200,3 +200,58 @@ docs/screenshots/README.md                 (placeholder)
 - Step 26: Lighthouse audit
 - Step 27: Bundle analysis + size budget check
 - Step 28: POC_RESULT.md final report + v0.1.0-poc tag
+
+---
+
+## POC-4 Quality + Audits + Final Report — DONE 2026-06-25
+
+Steps 23–28 completed.
+
+### Quality gates achieved
+
+| Gate | Result | Target |
+|---|---|---|
+| Unit tests | 69/69 passing | ≥1 |
+| E2E tests | 7/7 passing (4 happy path + 3 a11y) | ≥1 |
+| Test coverage (lines) | 98.07% | ≥80% |
+| Test coverage (functions) | 75.67% | ≥70% |
+| Lighthouse Performance | 96 | ≥85 |
+| Lighthouse Accessibility | 98 | ≥90 |
+| Lighthouse Best Practices | 100 | ≥90 |
+| WCAG 2.1 AA critical/serious | 0/0 | 0/0 |
+| Bundle initial gzip | 250 KB | ≤250 KB |
+| Build time | 4.9s | ≤30s |
+| TypeScript strict, no `any` | 0 violations | 0 |
+
+### Fixes applied during quality pass
+
+- Mantine `--mantine-color-dimmed` override (#868e96 → #6a6a6a) — WCAG AA contrast
+- Pagination edge buttons `getControlProps` — aria-labels for first/last/prev/next
+- DataTable ScrollArea `viewportProps.tabIndex=0` — keyboard focusable
+
+### Files added in POC-4
+
+```
+e2e/
+├── search-apl.spec.ts          (4 happy path E2E)
+└── a11y.spec.ts                (3 axe-core audits)
+
+docs/
+├── LIGHTHOUSE.md               (P:96 A:98 BP:100)
+└── BUNDLE.md                   (250 KB prod, ~10x smaller vs legacy)
+
+POC_RESULT.md                   (decision document for user)
+
+src/features/login/__tests__/LoginPage.test.tsx
+src/store/__tests__/userStore.test.ts
+```
+
+### Final POC verdict
+
+**GO recommended.** All gates met or exceeded.
+
+Cost actual: ~$6.5 (vs $8-15 estimate, 56% of mid-estimate).
+Wall-clock: 2 days (vs 3-5 estimate).
+Tag: v0.1.0-poc.
+
+🎉 POC complete.
