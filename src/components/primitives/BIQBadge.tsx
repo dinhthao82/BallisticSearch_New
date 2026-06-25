@@ -1,14 +1,15 @@
 import { forwardRef } from 'react';
-import { Badge, type BadgeProps } from '@mantine/core';
+import { Badge, type BadgeProps, type MantineColor } from '@mantine/core';
 
-/**
- * APL/legacy report-status color map.
- * Extracted from SearchAPLResults.tsx (POC Step 18 / Step 21 visual parity).
- * Keys cover both display strings ('Pending', 'In Process', 'Closed') and
- * lowercase ids ('pending', 'inProcess', 'closed') so callers can pass
- * either form without normalizing first.
- */
-export const BIQ_STATUS_COLOR: Readonly<Record<string, string>> = Object.freeze({
+export type BIQStatus =
+  | 'Pending'
+  | 'In Process'
+  | 'Closed'
+  | 'pending'
+  | 'inProcess'
+  | 'closed';
+
+export const BIQ_STATUS_COLOR: Readonly<Record<BIQStatus, MantineColor>> = Object.freeze({
   Pending: 'yellow',
   'In Process': 'blue',
   Closed: 'gray',
@@ -18,19 +19,20 @@ export const BIQ_STATUS_COLOR: Readonly<Record<string, string>> = Object.freeze(
 });
 
 export interface BIQBadgeProps extends Omit<BadgeProps, 'color'> {
-  /**
-   * Either a status string from BIQ_STATUS_COLOR, or any Mantine color name.
-   * Unknown values fall through to Mantine's default theming.
-   */
-  color?: string;
-  status?: keyof typeof BIQ_STATUS_COLOR;
+  color?: MantineColor;
+  status?: BIQStatus;
 }
 
 export const BIQBadge = forwardRef<HTMLDivElement, BIQBadgeProps>(function BIQBadge(
   { status, color, variant = 'light', size = 'sm', children, ...rest },
   ref
 ) {
-  const resolved = status ? BIQ_STATUS_COLOR[status] : color;
+  if (import.meta.env.DEV && status !== undefined && color !== undefined) {
+    console.warn(
+      `[BIQBadge] both 'status' (${status}) and 'color' (${color}) provided; 'status' takes precedence.`
+    );
+  }
+  const resolved = status !== undefined ? BIQ_STATUS_COLOR[status] : color;
   return (
     <Badge ref={ref} color={resolved} variant={variant} size={size} {...rest}>
       {children ?? status}

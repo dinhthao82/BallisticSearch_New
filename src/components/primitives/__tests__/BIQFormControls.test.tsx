@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { MantineProvider } from '@mantine/core';
 import { BIQCheckbox, BIQRadio, BIQSwitch, BIQBadge, BIQ_STATUS_COLOR } from '..';
 import { mantineTheme } from '@/theme/mantineTheme';
@@ -78,5 +78,25 @@ describe('BIQBadge', () => {
     expect(BIQ_STATUS_COLOR['pending']).toBe('yellow');
     expect(BIQ_STATUS_COLOR['inProcess']).toBe('blue');
     expect(BIQ_STATUS_COLOR['closed']).toBe('gray');
+  });
+
+  describe('status precedence + dev-warn', () => {
+    afterEach(() => {
+      vi.restoreAllMocks();
+    });
+
+    it('warns and uses status when both status and color are set', () => {
+      const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      render(ui(<BIQBadge status="Pending" color="red" />));
+      expect(screen.getByText('Pending')).toBeInTheDocument();
+      expect(warn).toHaveBeenCalledOnce();
+      expect(warn.mock.calls[0]?.[0]).toMatch(/both 'status'.*and 'color'/);
+    });
+
+    it('uses color silently when only color is set', () => {
+      const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      render(ui(<BIQBadge color="red">Just color</BIQBadge>));
+      expect(warn).not.toHaveBeenCalled();
+    });
   });
 });
