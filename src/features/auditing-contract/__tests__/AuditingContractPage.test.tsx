@@ -55,7 +55,9 @@ const sample: ContractsResponse = {
 };
 
 describe('AuditingContractPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
 
   it('renders title and status filter control', () => {
     mockApi({ items: [], total: 0 });

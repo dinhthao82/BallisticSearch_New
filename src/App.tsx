@@ -1,19 +1,11 @@
 import { lazy, Suspense } from 'react';
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider, Center, Loader } from '@mantine/core';
 import '@mantine/core/styles.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { mantineTheme } from '@/theme/mantineTheme';
 import ProtectedLayout from '@/routes/ProtectedLayout';
 import LoginPage from '@/features/login/LoginPage';
-import SearchAPLPage from '@/features/search-apl/SearchAPLPage';
-import CaseNumberPage from '@/features/case-number/CaseNumberPage';
-import AuditContractInfoPage from '@/features/audit-contract-info/AuditContractInfoPage';
-import SubmitRapidPage from '@/features/submit-rapid/SubmitRapidPage';
-import VCCRedirectPage from '@/features/vcc-redirect/VCCRedirectPage';
-import AuditingContractPage from '@/features/auditing-contract/AuditingContractPage';
-import ComposeEmailPage from '@/features/compose-email/ComposeEmailPage';
-import UploadBulletPage from '@/features/upload-bullet/UploadBulletPage';
 import { BIQToaster } from '@/components/modal';
 import './theme/cssVars.css';
 
@@ -21,12 +13,37 @@ const queryClient = new QueryClient({
   defaultOptions: { queries: { retry: 1, refetchOnWindowFocus: false } },
 });
 
+const SearchAPLPage = lazy(() => import('@/features/search-apl/SearchAPLPage'));
+const CaseNumberPage = lazy(() => import('@/features/case-number/CaseNumberPage'));
+const AuditContractInfoPage = lazy(
+  () => import('@/features/audit-contract-info/AuditContractInfoPage')
+);
+const SubmitRapidPage = lazy(() => import('@/features/submit-rapid/SubmitRapidPage'));
+const VCCRedirectPage = lazy(() => import('@/features/vcc-redirect/VCCRedirectPage'));
+const AuditingContractPage = lazy(
+  () => import('@/features/auditing-contract/AuditingContractPage')
+);
+const ComposeEmailPage = lazy(() => import('@/features/compose-email/ComposeEmailPage'));
+const UploadBulletPage = lazy(() => import('@/features/upload-bullet/UploadBulletPage'));
+
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
   : null;
 const FilterShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/FilterShowcase'))
   : null;
+
+function RouteFallback() {
+  return (
+    <Center h="100%" p="xl">
+      <Loader size="sm" />
+    </Center>
+  );
+}
+
+function Lazy({ children }: { children: React.ReactNode }) {
+  return <Suspense fallback={<RouteFallback />}>{children}</Suspense>;
+}
 
 export default function App() {
   return (
@@ -38,14 +55,70 @@ export default function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/app" element={<ProtectedLayout />}>
               <Route index element={<Navigate to="/app/search-apl" replace />} />
-              <Route path="search-apl" element={<SearchAPLPage />} />
-              <Route path="case-number" element={<CaseNumberPage />} />
-              <Route path="audit-contract-info" element={<AuditContractInfoPage />} />
-              <Route path="submit-rapid" element={<SubmitRapidPage />} />
-              <Route path="vcc-redirect" element={<VCCRedirectPage />} />
-              <Route path="auditing-contract" element={<AuditingContractPage />} />
-              <Route path="compose-email" element={<ComposeEmailPage />} />
-              <Route path="upload-bullet" element={<UploadBulletPage />} />
+              <Route
+                path="search-apl"
+                element={
+                  <Lazy>
+                    <SearchAPLPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="case-number"
+                element={
+                  <Lazy>
+                    <CaseNumberPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="audit-contract-info"
+                element={
+                  <Lazy>
+                    <AuditContractInfoPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="submit-rapid"
+                element={
+                  <Lazy>
+                    <SubmitRapidPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="vcc-redirect"
+                element={
+                  <Lazy>
+                    <VCCRedirectPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="auditing-contract"
+                element={
+                  <Lazy>
+                    <AuditingContractPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="compose-email"
+                element={
+                  <Lazy>
+                    <ComposeEmailPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="upload-bullet"
+                element={
+                  <Lazy>
+                    <UploadBulletPage />
+                  </Lazy>
+                }
+              />
               <Route
                 path="edit-vcc"
                 element={
