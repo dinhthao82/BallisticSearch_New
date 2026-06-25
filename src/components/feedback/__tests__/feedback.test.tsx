@@ -1,19 +1,32 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { MantineProvider } from '@mantine/core';
+import { I18nextProvider, initReactI18next } from 'react-i18next';
+import i18next from 'i18next';
 import { LoadingOverlay, EmptyState, ErrorState } from '../index';
 import { mantineTheme } from '@/theme/mantineTheme';
 
+const testI18n = i18next.createInstance();
+void testI18n.use(initReactI18next).init({
+  lng: 'en',
+  fallbackLng: 'en',
+  resources: { en: { translation: {} } },
+  interpolation: { escapeValue: false },
+});
+
 function renderWithMantine(ui: React.ReactNode) {
-  return render(<MantineProvider theme={mantineTheme}>{ui}</MantineProvider>);
+  return render(
+    <MantineProvider theme={mantineTheme}>
+      <I18nextProvider i18n={testI18n}>{ui}</I18nextProvider>
+    </MantineProvider>
+  );
 }
 
-describe('LoadingOverlay', () => {
+describe('LoadingOverlay (back-compat alias for BIQLoadingOverlay)', () => {
   it('renders when visible', () => {
     renderWithMantine(<LoadingOverlay visible message="Searching..." />);
-    // Mantine's LoadingOverlay portals; just verify it didn't throw
-    // and a loader exists in document
-    expect(document.querySelector('[data-testid="loading-overlay"]')).toBeTruthy();
+    expect(screen.getByTestId('biq-loading-overlay')).toBeInTheDocument();
+    expect(screen.getByText('Searching...')).toBeInTheDocument();
   });
 });
 

@@ -1,3 +1,4 @@
+export { BIQLoadingOverlay, type BIQLoadingOverlayProps } from './BIQLoadingOverlay';
 export { LoadingOverlay } from './LoadingOverlay';
 export { EmptyState } from './EmptyState';
 export { ErrorState } from './ErrorState';

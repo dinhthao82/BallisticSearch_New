@@ -85,7 +85,7 @@
 ### W3: LoadingOverlay (Steps 37-39)
 
 - [x] Step 37 — Analyze EIQ_LoadingUI legacy (docs/migration/loading-overlay.md)
-- [ ] Step 38 — Build BIQLoadingOverlay
+- [x] Step 38 — Build BIQLoadingOverlay (8 new tests, 103 total; LoadingOverlay aliases BIQLoadingOverlay)
 - [ ] Step 39 — Wire to SearchAPL + tests
 
 ### W4: Modal + ConfirmDialog (Steps 40-42)
