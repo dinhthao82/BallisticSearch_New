@@ -118,7 +118,7 @@
 ### W7: Multiselect (Steps 50-52)
 
 - [x] Step 50 — Analyze jquery.multiselect legacy (docs/migration/multiselect.md)
-- [ ] Step 51 — Build BIQMultiselect
+- [x] Step 51 — Build BIQMultiselect w/ withinPortal overflow-fix (6 new tests, 179 total)
 - [ ] Step 52 — Wave A milestone + v0.2.0-foundation tag
 
 ---
