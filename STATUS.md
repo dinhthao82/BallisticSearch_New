@@ -67,7 +67,7 @@
 ### W1: i18n converter (Steps 29-32)
 
 - [x] Step 29 — Audit legacy XML files (5 langs found, not 50; docs/i18n/AUDIT.md)
-- [ ] Step 30 — Build converter script
+- [x] Step 30 — Build converter script (scripts/convertLanguages.ts; npm run i18n:convert)
 - [ ] Step 31 — Run converter for 5 primary langs
 - [ ] Step 32 — Wire i18n loader + tests
 

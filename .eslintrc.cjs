@@ -29,4 +29,10 @@ module.exports = {
     // React Compiler — safe to suppress noise.
     'react-hooks/incompatible-library': 'off',
   },
+  overrides: [
+    {
+      files: ['scripts/**/*.ts'],
+      rules: { 'no-console': 'off' },
+    },
+  ],
 };
