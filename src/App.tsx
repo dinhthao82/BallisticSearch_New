@@ -54,6 +54,14 @@ const GlobalHotlistSharingPage = lazy(() => import('@/features/sharing/GlobalHot
 const SharingProfilesPage = lazy(() => import('@/features/sharing/SharingProfilesPage'));
 const DashboardVCCPage = lazy(() => import('@/features/sharing/DashboardVCCPage'));
 const UserManagementCombinedPage = lazy(() => import('@/features/sharing/UserManagementPage'));
+const EditGalleryPage = lazy(() => import('@/features/galleries/EditGalleryPage'));
+const SearchGalleriesPage = lazy(() => import('@/features/galleries/GalleryListPage'));
+const ViewDetailsPage = lazy(() => import('@/features/galleries/ViewDetailsPage'));
+const SearchCSAUploadedPage = lazy(() => import('@/features/galleries/SearchCSAUploadedPage'));
+const DetectionInfoPage = lazy(() => import('@/features/galleries/DetectionInfoPage'));
+const SummaryPotentialLinksPage = lazy(
+  () => import('@/features/galleries/SummaryPotentialLinksPage')
+);
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -272,6 +280,54 @@ export default function App() {
                 element={
                   <Lazy>
                     <UserManagementCombinedPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="edit-gallery"
+                element={
+                  <Lazy>
+                    <EditGalleryPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="search-galleries"
+                element={
+                  <Lazy>
+                    <SearchGalleriesPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="view-details"
+                element={
+                  <Lazy>
+                    <ViewDetailsPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="search-csa-uploaded"
+                element={
+                  <Lazy>
+                    <SearchCSAUploadedPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="detection-info"
+                element={
+                  <Lazy>
+                    <DetectionInfoPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="summary-potential-links"
+                element={
+                  <Lazy>
+                    <SummaryPotentialLinksPage />
                   </Lazy>
                 }
               />

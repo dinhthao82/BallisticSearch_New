@@ -17,6 +17,12 @@ import {
   mockSharingProfiles,
   mockDashboardVCC,
 } from '@/features/sharing/mockData';
+import {
+  mockGalleries,
+  mockDetectionDetails,
+  mockCSAUploaded,
+  mockPotentialLink,
+} from '@/features/galleries/mockData';
 
 // Minimal cascading location dataset for BIQLocationFilter dev/test runs.
 // Real systems would source these from the backend reference data service.
@@ -196,6 +202,39 @@ export const handlers = [
   http.get('/api/v1/sharing/profiles', () => HttpResponse.json({ items: mockSharingProfiles })),
 
   http.get('/api/v1/dashboard/vcc', () => HttpResponse.json(mockDashboardVCC)),
+
+  http.get('/api/v1/galleries', () =>
+    HttpResponse.json({ items: mockGalleries, total: mockGalleries.length })
+  ),
+
+  http.get('/api/v1/galleries/:id', ({ params }) => {
+    const id = String(params['id']);
+    const g = mockGalleries.find((x) => x.id === id);
+    if (!g) return HttpResponse.json({ error: 'Not found' }, { status: 404 });
+    return HttpResponse.json(g);
+  }),
+
+  http.get('/api/v1/detections/:id', ({ params }) => {
+    const id = String(params['id']);
+    const d = mockDetectionDetails[id] ?? mockDetectionDetails['DET-3000'];
+    return HttpResponse.json({ ...d, id });
+  }),
+
+  http.get('/api/v1/detections/:id/info', ({ params }) => {
+    const id = String(params['id']);
+    const d = mockDetectionDetails[id] ?? mockDetectionDetails['DET-3000'];
+    return HttpResponse.json({ ...d, id });
+  }),
+
+  http.get('/api/v1/csa-uploaded', () =>
+    HttpResponse.json({ items: mockCSAUploaded, total: mockCSAUploaded.length })
+  ),
+
+  http.get('/api/v1/potential-links/:id', ({ params }) => {
+    const id = String(params['id']);
+    const d = mockPotentialLink[id] ?? mockPotentialLink['PL-001'];
+    return HttpResponse.json({ ...d, potentialId: id });
+  }),
 
   http.get('/api/v1/audit/information', ({ request }) => {
     const url = new URL(request.url);

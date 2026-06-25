@@ -23,7 +23,7 @@ describe('MSW APL mock fixtures', () => {
 
   it('handlers registers expected routes (apl + location + rapid + audit + case-number)', () => {
     // MSW v2 stores route info on handler.info
-    expect(handlers).toHaveLength(39);
+    expect(handlers).toHaveLength(45);
     const paths = handlers.map((h) => (h as { info: { method: string; path: string } }).info.path);
     expect(paths.some((p) => p.includes('apl/search'))).toBe(true);
     expect(paths.some((p) => p.includes('location/countries'))).toBe(true);
@@ -58,5 +58,9 @@ describe('MSW APL mock fixtures', () => {
     expect(paths.some((p) => p.includes('sharing/hotlists'))).toBe(true);
     expect(paths.some((p) => p.includes('sharing/profiles'))).toBe(true);
     expect(paths.some((p) => p.includes('dashboard/vcc'))).toBe(true);
+    expect(paths.some((p) => p.endsWith('/galleries'))).toBe(true);
+    expect(paths.some((p) => p.includes('detections'))).toBe(true);
+    expect(paths.some((p) => p.includes('csa-uploaded'))).toBe(true);
+    expect(paths.some((p) => p.includes('potential-links'))).toBe(true);
   });
 });
