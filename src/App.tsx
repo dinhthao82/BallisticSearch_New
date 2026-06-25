@@ -38,6 +38,13 @@ const EditUsersPage = lazy(() => import('@/features/user-mgmt/EditUsersPage'));
 const ManageUserPage = lazy(() => import('@/features/user-mgmt/UserListPage'));
 const ManageAdminPage = lazy(() => import('@/features/user-mgmt/ManageAdminPage'));
 const AddAgencyManagerPage = lazy(() => import('@/features/user-mgmt/AddAgencyManagerPage'));
+const AddAgenciesPage = lazy(() => import('@/features/agency-mgmt/AddAgenciesPage'));
+const EditAgencyPage = lazy(() => import('@/features/agency-mgmt/EditAgencyPage'));
+const AgencySettingPage = lazy(() => import('@/features/agency-mgmt/AgencySettingPage'));
+const ContractManagementPage = lazy(() => import('@/features/agency-mgmt/ContractManagementPage'));
+const ManageSharingAgenciesPage = lazy(
+  () => import('@/features/agency-mgmt/ManageSharingAgenciesPage')
+);
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -144,6 +151,46 @@ export default function App() {
                 element={
                   <Lazy>
                     <AddAgencyManagerPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="add-agencies"
+                element={
+                  <Lazy>
+                    <AddAgenciesPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="edit-agency"
+                element={
+                  <Lazy>
+                    <EditAgencyPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="agency-setting"
+                element={
+                  <Lazy>
+                    <AgencySettingPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="contract-management"
+                element={
+                  <Lazy>
+                    <ContractManagementPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="manage-sharing-agencies"
+                element={
+                  <Lazy>
+                    <ManageSharingAgenciesPage />
                   </Lazy>
                 }
               />

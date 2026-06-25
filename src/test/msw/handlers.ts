@@ -4,6 +4,7 @@ import { mockSearchEventData } from '@/features/search-event/mockData';
 import { mockCSAData } from '@/features/search-csa/mockData';
 import { mockQAData } from '@/features/search-qa/mockData';
 import { mockUserData } from '@/features/user-mgmt/mockData';
+import { mockAgencyData, mockSharingAgencies } from '@/features/agency-mgmt/mockData';
 
 // Minimal cascading location dataset for BIQLocationFilter dev/test runs.
 // Real systems would source these from the backend reference data service.
@@ -113,6 +114,39 @@ export const handlers = [
     void body;
     return HttpResponse.json({ id: String(params['id']) });
   }),
+
+  http.get('/api/v1/agencies', () =>
+    HttpResponse.json({ items: mockAgencyData, total: mockAgencyData.length })
+  ),
+
+  http.get('/api/v1/agencies/:id', ({ params }) => {
+    const id = String(params['id']);
+    const agency = mockAgencyData.find((a) => a.id === id || a.agencyId === id);
+    if (!agency) return HttpResponse.json({ error: 'Not found' }, { status: 404 });
+    return HttpResponse.json(agency);
+  }),
+
+  http.post('/api/v1/agencies', async ({ request }) => {
+    void (await request.json());
+    return HttpResponse.json({ id: `A-${Date.now().toString(36).toUpperCase()}` });
+  }),
+
+  http.put('/api/v1/agencies/:id', async ({ params, request }) => {
+    void (await request.json());
+    return HttpResponse.json({ id: String(params['id']) });
+  }),
+
+  http.put('/api/v1/agencies/settings', async ({ request }) => {
+    void (await request.json());
+    return HttpResponse.json({ id: 'settings-saved' });
+  }),
+
+  http.post('/api/v1/contracts', async ({ request }) => {
+    void (await request.json());
+    return HttpResponse.json({ id: `C-${Date.now().toString(36).toUpperCase()}` });
+  }),
+
+  http.get('/api/v1/sharing/agencies', () => HttpResponse.json({ items: mockSharingAgencies })),
 
   http.post('/api/v1/agency-managers', async ({ request }) => {
     const body = await request.json();
