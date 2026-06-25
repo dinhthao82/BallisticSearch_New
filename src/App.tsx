@@ -30,6 +30,7 @@ const MapOfAgenciesPage = lazy(() => import('@/features/map-agencies/MapOfAgenci
 const MapOfGalleriesPage = lazy(() => import('@/features/map-galleries/MapOfGalleriesPage'));
 const MapItGalleryPage = lazy(() => import('@/features/mapit-gallery/MapItGalleryPage'));
 const MapItPotentialPage = lazy(() => import('@/features/mapit-potential/MapItPotentialPage'));
+const SearchEventPage = lazy(() => import('@/features/search-event/SearchEventPage'));
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -72,6 +73,14 @@ export default function App() {
                 element={
                   <Lazy>
                     <SearchAPLPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="search-event"
+                element={
+                  <Lazy>
+                    <SearchEventPage />
                   </Lazy>
                 }
               />
