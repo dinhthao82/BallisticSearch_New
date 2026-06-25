@@ -17,6 +17,9 @@ const queryClient = new QueryClient({
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
   : null;
+const FilterShowcase = import.meta.env.DEV
+  ? lazy(() => import('@/features/dev/FilterShowcase'))
+  : null;
 
 export default function App() {
   return (
@@ -36,6 +39,16 @@ export default function App() {
                 element={
                   <Suspense fallback={null}>
                     <ModalShowcase />
+                  </Suspense>
+                }
+              />
+            )}
+            {FilterShowcase && (
+              <Route
+                path="/dev/filter-showcase"
+                element={
+                  <Suspense fallback={null}>
+                    <FilterShowcase />
                   </Suspense>
                 }
               />

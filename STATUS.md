@@ -111,7 +111,9 @@
 - [x] Step 46 — BIQDateRangeFilter (Today / Last 7d / Last 30d / Custom; 8 new tests, 148 total)
 - [x] Step 47 — BIQLocationFilter (country/state/city cascade + MSW handlers; 5 new tests, 153 total)
 - [x] Step 48 — BIQCaseFilter (multi-input + alphanumeric+dash inline validation; 11 new tests, 164 total)
-- [ ] Step 49 — Demo + tests
+- [x] Step 49 — Filter showcase (/dev/filter-showcase) + 9 plan scenarios (9 new tests, 173 total)
+
+🎯 **MISSION W6 COMPLETE** (4/4 steps)
 
 ### W7: Multiselect (Steps 50-52)
 
