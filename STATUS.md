@@ -148,19 +148,25 @@
 
 ### W10: 3 Trivial Pages (Steps 59-67)
 
-- [ ] Step 59 — M-040 Input_Case_Number: shell + route
-- [ ] Step 60 — M-040: form + validation
-- [ ] Step 61 — M-040: tests
-- [ ] Step 62 — M-038 AuditContractInfo: shell + GET handler
-- [ ] Step 63 — M-038: display + badges
-- [ ] Step 64 — M-038: tests
-- [ ] Step 65 — M-036 SubmitRapidBallistics: shell + RHF skeleton
-- [ ] Step 66 — M-036: file upload + photo preview
-- [ ] Step 67 — M-036: tests
+- [x] Step 59 — M-040 Input_Case_Number: shell + route + MSW handler (183 tests)
+- [x] Step 60 — M-040: form + validation (RHF + Zod + BIQ primitives; 241.05 KB gzip)
+- [x] Step 61 — M-040: tests (14 new, 197 total)
+- [x] Step 62 — M-038 AuditContractInfo: shell + GET handler + useContractAudit (197 tests)
+- [x] Step 63 — M-038: display + badges + ChangesTable + ContractSidePanel (243.33 KB gzip)
+- [x] Step 64 — M-038: tests (6 new, 203 total)
+- [x] Step 65 — M-036 SubmitRapidBallistics: shell + RHF skeleton (203 tests)
+- [x] Step 66 — M-036: file upload + photo preview (PhotoUpload + Mantine FileInput; 245.94 KB gzip)
+- [x] Step 67 — M-036: tests (13 new, 216 total)
+
+🎯 **MISSION W10 COMPLETE** (9/9 steps)
 
 ### W11: Milestone (Step 68)
 
-- [ ] Step 68 — WAVE_B_RESULT.md + v0.3.0-trivial-pages tag
+- [x] Step 68 — WAVE_B_RESULT.md + v0.3.0-trivial-pages tag
+
+🎯 **MISSION W11 COMPLETE** (1/1 steps)
+🎉 **WAVE B COMPLETE** — All 16 steps done. 216 tests, 245.94 KB gzip, CI/CD active.
+Master plan: 29/80 missions ≈ 36%.
 
 ---
 
