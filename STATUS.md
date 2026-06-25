@@ -237,3 +237,44 @@ Master plan: 29/80 missions ≈ 36%.
 🎯 **MISSION W11 (W12-15 actually) COMPLETE** (16/16 steps)
 🎉 **WAVE C COMPLETE** — All 24 steps done. 265 tests, 196.26 KB gzip initial.
 Master plan: 40/80 missions ≈ 50%.
+
+---
+
+## Wave D: Forensic Core (13/13)
+
+**Plan**: WAVE_D_EXECUTION.md
+**Target tag**: v0.5.0-forensic-core
+
+### W16: M-047 SearchEvent (Steps 93-97)
+
+- [x] Step 93 — schema + types + MSW (POST /search-events, /search-events/export)
+- [x] Step 94-96 — Filter sidebar + result grid + Compare overlay + Export popup (combined commit)
+- [x] Step 97 — SearchEvent tests (17 new, 282 total)
+
+🎯 **MISSION W16 COMPLETE** (3 commits — Step 93, Steps 94-96, Step 97)
+
+### W17: M-048 SearchCSAProcess (Steps 98-100)
+
+- [x] Step 98-100 — full page + tests (single combined commit; 287 tests)
+
+🎯 **MISSION W17 COMPLETE** (1 commit)
+
+### W18: M-050 SearchQAReports (Steps 101-103)
+
+- [x] Step 101-103 — full page + tests (single combined commit; 291 tests)
+
+🎯 **MISSION W18 COMPLETE** (1 commit)
+
+### W19: Integration + audit (Step 104)
+
+- [x] Step 104 — forensic-flow.spec.ts E2E + HomePage 11 cards + LIGHTHOUSE_BATCH.md
+
+🎯 **MISSION W19 COMPLETE** (1 commit)
+
+### W20: Milestone (Step 105)
+
+- [x] Step 105 — WAVE_D_RESULT + v0.5.0-forensic-core tag
+
+🎯 **MISSION W20 COMPLETE** (1 commit)
+🎉 **WAVE D COMPLETE** — All 13 steps done. 291 tests, 196.47 KB gzip initial.
+Master plan: 43/80 missions ≈ 54%.
