@@ -1,5 +1,6 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
+import { useState } from 'react';
 import { MantineProvider } from '@mantine/core';
 import { BIQModal } from '../BIQModal';
 import { BIQButton } from '@/components/primitives';
@@ -82,5 +83,29 @@ describe('BIQModal', () => {
     );
     expect(screen.queryByText('Hidden')).not.toBeInTheDocument();
     expect(screen.queryByText('body')).not.toBeInTheDocument();
+  });
+
+  it('returns focus to the trigger element after close', async () => {
+    function Harness() {
+      const [opened, setOpened] = useState(false);
+      return (
+        <>
+          <button data-testid="trigger" onClick={() => setOpened(true)}>
+            open
+          </button>
+          <BIQModal opened={opened} onClose={() => setOpened(false)} title="X">
+            body
+          </BIQModal>
+        </>
+      );
+    }
+    render(ui(<Harness />));
+    const trigger = screen.getByTestId('trigger');
+    trigger.focus();
+    fireEvent.click(trigger);
+    await screen.findByText('X');
+    fireEvent.keyDown(document.body, { key: 'Escape' });
+    // Mantine's returnFocus restores focus on close (default behavior + we set it).
+    await waitFor(() => expect(document.activeElement).toBe(trigger));
   });
 });

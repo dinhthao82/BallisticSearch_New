@@ -94,7 +94,9 @@
 
 - [x] Step 40 — BIQModal base w/ focus trap (5 new tests, 109 total)
 - [x] Step 41 — BIQConfirmDialog (imperative confirm() → Promise<boolean>; 5 new tests, 114 total)
-- [ ] Step 42 — Demo + tests
+- [x] Step 42 — Demo (/dev/modal-showcase, DEV only) + focus-return test (115 total; 5 scenarios green)
+
+🎯 **MISSION W4 COMPLETE** (3/3 steps)
 
 ### W5: MessageBox (Steps 43-45)
 

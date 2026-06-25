@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
@@ -12,6 +13,10 @@ const queryClient = new QueryClient({
   defaultOptions: { queries: { retry: 1, refetchOnWindowFocus: false } },
 });
 
+const ModalShowcase = import.meta.env.DEV
+  ? lazy(() => import('@/features/dev/ModalShowcase'))
+  : null;
+
 export default function App() {
   return (
     <MantineProvider theme={mantineTheme}>
@@ -23,6 +28,16 @@ export default function App() {
               <Route index element={<Navigate to="/app/search-apl" replace />} />
               <Route path="search-apl" element={<SearchAPLPage />} />
             </Route>
+            {ModalShowcase && (
+              <Route
+                path="/dev/modal-showcase"
+                element={
+                  <Suspense fallback={null}>
+                    <ModalShowcase />
+                  </Suspense>
+                }
+              />
+            )}
             <Route path="*" element={<Navigate to="/login" replace />} />
           </Routes>
         </BrowserRouter>
