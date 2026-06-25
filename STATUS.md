@@ -126,6 +126,38 @@
 
 ---
 
+## Wave B: Cleanup + CI/CD + First Trivial Pages (0/16)
+
+**Backend strategy**: continue MSW mock (TBD)
+**Plan**: WAVE_B_EXECUTION.md
+**Target tag**: v0.3.0-trivial-pages
+
+### W8: Cleanup — 5 W2 code-review findings (Steps 53-55)
+- [ ] Step 53 — BIQBadge fixes (status precedence + unknown warn + type narrowing)
+- [ ] Step 54 — BIQButton polymorphic + BIQCheckbox subcomponent exposure
+- [ ] Step 55 — Cleanup verification + regression tests
+
+### W9: CI/CD GitHub Actions (Steps 56-58)
+- [ ] Step 56 — Base workflow (typecheck/lint/test/build)
+- [ ] Step 57 — Size-limit gate + Lighthouse advisory
+- [ ] Step 58 — Verify CI on dummy PR
+
+### W10: 3 Trivial Pages (Steps 59-67)
+- [ ] Step 59 — M-040 Input_Case_Number: shell + route
+- [ ] Step 60 — M-040: form + validation
+- [ ] Step 61 — M-040: tests
+- [ ] Step 62 — M-038 AuditContractInfo: shell + GET handler
+- [ ] Step 63 — M-038: display + badges
+- [ ] Step 64 — M-038: tests
+- [ ] Step 65 — M-036 SubmitRapidBallistics: shell + RHF skeleton
+- [ ] Step 66 — M-036: file upload + photo preview
+- [ ] Step 67 — M-036: tests
+
+### W11: Milestone (Step 68)
+- [ ] Step 68 — WAVE_B_RESULT.md + v0.3.0-trivial-pages tag
+
+---
+
 ## Issues / Blockers
 
 - (none)
