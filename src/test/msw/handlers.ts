@@ -111,6 +111,39 @@ export const handlers = [
     return HttpResponse.json(cities.map((name) => ({ code: name, name })));
   }),
 
+  http.get('/api/v1/audit/contract-info', ({ request }) => {
+    const url = new URL(request.url);
+    const contractId = url.searchParams.get('contractId') ?? '';
+    if (!contractId) {
+      return HttpResponse.json({ error: 'contractId is required' }, { status: 400 });
+    }
+    return HttpResponse.json({
+      contractId,
+      auditedBy: 'jdoe',
+      auditedAt: '2026-06-20T10:30:00Z',
+      oldContract: {
+        version: 'v1',
+        agency: 'Springfield PD',
+        startDate: '2024-01-01',
+        endDate: '2025-12-31',
+        status: 'Closed',
+        usersLimit: 50,
+      },
+      newContract: {
+        version: 'v2',
+        agency: 'Springfield PD',
+        startDate: '2026-01-01',
+        endDate: '2027-12-31',
+        status: 'In Process',
+        usersLimit: 100,
+      },
+      changes: [
+        { field: 'usersLimit', from: '50', to: '100' },
+        { field: 'endDate', from: '2025-12-31', to: '2027-12-31' },
+      ],
+    });
+  }),
+
   http.post('/api/v1/case-number/submit', async ({ request }) => {
     const body = (await request.json()) as {
       caseNumber?: string;

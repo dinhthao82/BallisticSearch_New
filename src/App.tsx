@@ -8,6 +8,7 @@ import ProtectedLayout from '@/routes/ProtectedLayout';
 import LoginPage from '@/features/login/LoginPage';
 import SearchAPLPage from '@/features/search-apl/SearchAPLPage';
 import CaseNumberPage from '@/features/case-number/CaseNumberPage';
+import AuditContractInfoPage from '@/features/audit-contract-info/AuditContractInfoPage';
 import { BIQToaster } from '@/components/modal';
 import './theme/cssVars.css';
 
@@ -34,6 +35,7 @@ export default function App() {
               <Route index element={<Navigate to="/app/search-apl" replace />} />
               <Route path="search-apl" element={<SearchAPLPage />} />
               <Route path="case-number" element={<CaseNumberPage />} />
+              <Route path="audit-contract-info" element={<AuditContractInfoPage />} />
             </Route>
             {ModalShowcase && (
               <Route

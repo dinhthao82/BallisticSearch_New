@@ -21,16 +21,18 @@ describe('MSW APL mock fixtures', () => {
     }
   });
 
-  it('handlers registers POST /apl/search + GET location/* + POST case-number/submit routes', () => {
+  it('handlers registers POST /apl/search + GET location/* + GET audit + POST case-number routes', () => {
     // MSW v2 stores route info on handler.info
-    expect(handlers).toHaveLength(5);
+    expect(handlers).toHaveLength(6);
     const infos = handlers.map((h) => (h as { info: { method: string; path: string } }).info);
     expect(infos[0]?.method).toBe('POST');
     expect(infos[0]?.path).toContain('apl/search');
     expect(infos[1]?.path).toContain('location/countries');
     expect(infos[2]?.path).toContain('location/states');
     expect(infos[3]?.path).toContain('location/cities');
-    expect(infos[4]?.method).toBe('POST');
-    expect(infos[4]?.path).toContain('case-number/submit');
+    expect(infos[4]?.method).toBe('GET');
+    expect(infos[4]?.path).toContain('audit/contract-info');
+    expect(infos[5]?.method).toBe('POST');
+    expect(infos[5]?.path).toContain('case-number/submit');
   });
 });

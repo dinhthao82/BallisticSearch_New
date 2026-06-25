@@ -43,6 +43,15 @@ export default function ProtectedLayout() {
         <Button component={Link} to="/app/case-number" variant="subtle" fullWidth justify="start">
           Case Number Inquiry
         </Button>
+        <Button
+          component={Link}
+          to="/app/audit-contract-info?contractId=CONTRACT-001"
+          variant="subtle"
+          fullWidth
+          justify="start"
+        >
+          Contract Audit
+        </Button>
       </AppShell.Navbar>
 
       <AppShell.Main>
