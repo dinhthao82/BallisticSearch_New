@@ -117,7 +117,7 @@
 
 ### W7: Multiselect (Steps 50-52)
 
-- [ ] Step 50 — Analyze jquery.multiselect legacy
+- [x] Step 50 — Analyze jquery.multiselect legacy (docs/migration/multiselect.md)
 - [ ] Step 51 — Build BIQMultiselect
 - [ ] Step 52 — Wave A milestone + v0.2.0-foundation tag
 
