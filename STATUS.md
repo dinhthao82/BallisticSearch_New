@@ -92,7 +92,7 @@
 
 ### W4: Modal + ConfirmDialog (Steps 40-42)
 
-- [ ] Step 40 — BIQModal base
+- [x] Step 40 — BIQModal base w/ focus trap (5 new tests, 109 total)
 - [ ] Step 41 — BIQConfirmDialog
 - [ ] Step 42 — Demo + tests
 
