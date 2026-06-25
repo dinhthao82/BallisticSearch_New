@@ -7,6 +7,7 @@ import { mantineTheme } from '@/theme/mantineTheme';
 import ProtectedLayout from '@/routes/ProtectedLayout';
 import LoginPage from '@/features/login/LoginPage';
 import SearchAPLPage from '@/features/search-apl/SearchAPLPage';
+import { BIQToaster } from '@/components/modal';
 import './theme/cssVars.css';
 
 const queryClient = new QueryClient({
@@ -20,6 +21,7 @@ const ModalShowcase = import.meta.env.DEV
 export default function App() {
   return (
     <MantineProvider theme={mantineTheme}>
+      <BIQToaster position="top-right" richColors closeButton />
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Routes>
