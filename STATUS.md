@@ -119,12 +119,13 @@
 
 ## Metrics tracking
 
-| Step    | Bundle initial (gzip) | Notes                                                                    |
-| ------- | --------------------- | ------------------------------------------------------------------------ |
-| Step 2  | ~46 KB                | React + ReactDOM only (no Mantine yet)                                   |
-| Step 7  | ~123 KB               | + Mantine + Router + QueryClient + Zustand                               |
-| Step 15 | ~144 KB               | + i18n + Ky + TanStack Table + feedback (MSW lazy +96KB dev only)        |
-| Step 22 | ~220 KB               | + SearchAPLPage (filter form RHF/Zod + results table + pagination wired) |
+| Step    | Bundle initial (gzip) | Notes                                                                           |
+| ------- | --------------------- | ------------------------------------------------------------------------------- |
+| Step 2  | ~46 KB                | React + ReactDOM only (no Mantine yet)                                          |
+| Step 7  | ~123 KB               | + Mantine + Router + QueryClient + Zustand                                      |
+| Step 15 | ~144 KB               | + i18n + Ky + TanStack Table + feedback (MSW lazy +96KB dev only)               |
+| Step 22 | ~220 KB               | + SearchAPLPage (filter form RHF/Zod + results table + pagination wired)        |
+| Step 32 | ~220.9 KB             | + legacy/login-page ns in i18n.ts (+0.05 KB gzip); 327 legacy JSONs lazy-loaded |
 
 ## Decisions log
 
