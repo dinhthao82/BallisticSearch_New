@@ -25,6 +25,24 @@ const QUICK_ACTIONS: QuickAction[] = [
     icon: IconSearch,
   },
   {
+    to: '/app/search-event',
+    label: 'Search Events',
+    description: 'Multi-criteria forensic event search w/ Compare + Export',
+    icon: IconSearch,
+  },
+  {
+    to: '/app/search-csa',
+    label: 'Search CSA Process',
+    description: 'Browse CSA process records by status / assignee',
+    icon: IconSearch,
+  },
+  {
+    to: '/app/search-qa',
+    label: 'Search QA Reports',
+    description: 'Browse QA reports by result / reviewer',
+    icon: IconSearch,
+  },
+  {
     to: '/app/submit-rapid',
     label: 'Submit Rapid',
     description: 'Submit a rapid ballistics request',
