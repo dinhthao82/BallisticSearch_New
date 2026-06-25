@@ -64,6 +64,10 @@ const SummaryPotentialLinksPage = lazy(
 );
 const UserProfilesPage = lazy(() => import('@/features/user-profile/UserProfilesPage'));
 const GalleryMapPage = lazy(() => import('@/features/gallery-map/GalleryMapPage'));
+const VCCPage = lazy(() => import('@/features/vcc/VCCPage'));
+const ProbeMatchesInfoPage = lazy(() => import('@/features/probe-face/ProbeMatchesInfoPage'));
+const SearchFaceInfoPage = lazy(() => import('@/features/probe-face/SearchFaceInfoPage'));
+const QuickSearchPage = lazy(() => import('@/features/quick-search/QuickSearchPage'));
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -346,6 +350,38 @@ export default function App() {
                 element={
                   <Lazy>
                     <GalleryMapPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="vcc"
+                element={
+                  <Lazy>
+                    <VCCPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="probe-matches-info"
+                element={
+                  <Lazy>
+                    <ProbeMatchesInfoPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="search-face-info"
+                element={
+                  <Lazy>
+                    <SearchFaceInfoPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="quick-search"
+                element={
+                  <Lazy>
+                    <QuickSearchPage />
                   </Lazy>
                 }
               />

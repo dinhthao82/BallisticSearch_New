@@ -249,6 +249,94 @@ export const handlers = [
     return HttpResponse.json({ enabled: true });
   }),
 
+  http.get('/api/v1/vcc', ({ request }) => {
+    const url = new URL(request.url);
+    const search = url.searchParams.get('search')?.toLowerCase() ?? '';
+    const all = [
+      {
+        id: 'VCC-001',
+        caseNumber: 'W200001',
+        status: 'In Process' as const,
+        examiner: 'jdoe',
+        comment: '',
+        createdAt: '2026-06-20T10:00:00Z',
+      },
+      {
+        id: 'VCC-002',
+        caseNumber: 'W200002',
+        status: 'Pending' as const,
+        examiner: 'asmith',
+        comment: '',
+        createdAt: '2026-06-21T10:00:00Z',
+      },
+      {
+        id: 'VCC-003',
+        caseNumber: 'W200003',
+        status: 'Closed' as const,
+        examiner: 'rjones',
+        comment: 'No match.',
+        createdAt: '2026-06-22T10:00:00Z',
+      },
+    ];
+    const filtered = search
+      ? all.filter(
+          (v) => v.caseNumber.toLowerCase().includes(search) || v.examiner.includes(search)
+        )
+      : all;
+    return HttpResponse.json({ items: filtered, total: filtered.length });
+  }),
+
+  http.post('/api/v1/vcc/save', async ({ request }) => {
+    void (await request.json());
+    return HttpResponse.json({ ok: true });
+  }),
+
+  http.get('/api/v1/probe-matches/:id', ({ params }) => {
+    const id = String(params['id']);
+    return HttpResponse.json({
+      probeId: id,
+      caseNumber: 'W300000',
+      topScore: 87.5,
+      matches: [
+        { id: 'M-1', score: 87.5, resource: 'Gallery North' },
+        { id: 'M-2', score: 72.0, resource: 'Gallery South' },
+        { id: 'M-3', score: 65.3, resource: 'Gallery East' },
+      ],
+    });
+  }),
+
+  http.get('/api/v1/face-search/:id', ({ params }) => {
+    const id = String(params['id']);
+    return HttpResponse.json({
+      searchId: id,
+      caseNumber: 'W400000',
+      threshold: 70,
+      candidates: [
+        { id: 'F-1', faceScore: 88.0, demographics: 'M / 30s' },
+        { id: 'F-2', faceScore: 75.5, demographics: 'M / 40s' },
+        { id: 'F-3', faceScore: 62.0, demographics: 'F / 25s' },
+      ],
+    });
+  }),
+
+  http.post('/api/v1/quick-search', async ({ request }) => {
+    void (await request.json());
+    return HttpResponse.json({
+      items: Array.from({ length: 8 }, (_, i) => ({
+        id: `QS-${(500 + i).toString()}`,
+        caseNumber: `W${(500000 + i).toString()}`,
+        score: 60 + (i % 40),
+        type: i % 2 === 0 ? 'BC' : 'CC',
+      })),
+      total: 8,
+    });
+  }),
+
+  http.post('/api/v1/quick-search/possible-match-report', async ({ request }) => {
+    void (await request.json());
+    return HttpResponse.json({ jobId: `PMR-${Date.now().toString(36).toUpperCase()}` });
+  }),
+
   http.get('/api/v1/gallery-map', () =>
     HttpResponse.json({
       items: [
