@@ -9,6 +9,7 @@ import LoginPage from '@/features/login/LoginPage';
 import SearchAPLPage from '@/features/search-apl/SearchAPLPage';
 import CaseNumberPage from '@/features/case-number/CaseNumberPage';
 import AuditContractInfoPage from '@/features/audit-contract-info/AuditContractInfoPage';
+import SubmitRapidPage from '@/features/submit-rapid/SubmitRapidPage';
 import { BIQToaster } from '@/components/modal';
 import './theme/cssVars.css';
 
@@ -36,6 +37,7 @@ export default function App() {
               <Route path="search-apl" element={<SearchAPLPage />} />
               <Route path="case-number" element={<CaseNumberPage />} />
               <Route path="audit-contract-info" element={<AuditContractInfoPage />} />
+              <Route path="submit-rapid" element={<SubmitRapidPage />} />
             </Route>
             {ModalShowcase && (
               <Route

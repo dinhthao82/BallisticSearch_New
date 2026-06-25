@@ -52,6 +52,9 @@ export default function ProtectedLayout() {
         >
           Contract Audit
         </Button>
+        <Button component={Link} to="/app/submit-rapid" variant="subtle" fullWidth justify="start">
+          Submit Rapid
+        </Button>
       </AppShell.Navbar>
 
       <AppShell.Main>

@@ -111,6 +111,20 @@ export const handlers = [
     return HttpResponse.json(cities.map((name) => ({ code: name, name })));
   }),
 
+  http.post('/api/v1/rapid-ballistics', async ({ request }) => {
+    const formData = await request.formData();
+    const caseNumber = formData.get('caseNumber');
+    if (!caseNumber || typeof caseNumber !== 'string' || !caseNumber.trim()) {
+      return HttpResponse.json({ error: 'caseNumber is required' }, { status: 400 });
+    }
+    const photos = formData.getAll('photos').filter((v): v is File => v instanceof File);
+    return HttpResponse.json({
+      submissionId: `RB-${Date.now().toString(36).toUpperCase()}`,
+      photoCount: photos.length,
+      acknowledged: true,
+    });
+  }),
+
   http.get('/api/v1/audit/contract-info', ({ request }) => {
     const url = new URL(request.url);
     const contractId = url.searchParams.get('contractId') ?? '';
