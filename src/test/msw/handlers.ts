@@ -2,6 +2,7 @@ import { http, HttpResponse } from 'msw';
 import { mockAPLData, type APLItem } from './mockData';
 import { mockSearchEventData } from '@/features/search-event/mockData';
 import { mockCSAData } from '@/features/search-csa/mockData';
+import { mockQAData } from '@/features/search-qa/mockData';
 
 // Minimal cascading location dataset for BIQLocationFilter dev/test runs.
 // Real systems would source these from the backend reference data service.
@@ -76,6 +77,41 @@ export const handlers = [
     const total = items.length;
     const paged = items.slice((page - 1) * pageSize, page * pageSize);
     return HttpResponse.json({ items: paged, total, page, pageSize });
+  }),
+
+  http.post('/api/v1/search-qa', async ({ request }) => {
+    const body = (await request.json()) as {
+      caseNumber?: string;
+      dateFrom?: string;
+      dateTo?: string;
+      results?: string[];
+      reviewer?: string;
+      page?: number;
+      pageSize?: number;
+    };
+    let items = [...mockQAData];
+    if (body.caseNumber) {
+      const q = body.caseNumber.toLowerCase();
+      items = items.filter((i) => i.caseNumber.toLowerCase().includes(q));
+    }
+    if (body.dateFrom) items = items.filter((i) => i.reviewedAt >= body.dateFrom!);
+    if (body.dateTo) items = items.filter((i) => i.reviewedAt <= body.dateTo!);
+    if (body.results && body.results.length > 0) {
+      const set = new Set(body.results);
+      items = items.filter((i) => set.has(i.result));
+    }
+    if (body.reviewer) {
+      const q = body.reviewer.toLowerCase();
+      items = items.filter((i) => i.reviewer.toLowerCase().includes(q));
+    }
+    const page = body.page ?? 1;
+    const pageSize = body.pageSize ?? 25;
+    return HttpResponse.json({
+      items: items.slice((page - 1) * pageSize, page * pageSize),
+      total: items.length,
+      page,
+      pageSize,
+    });
   }),
 
   http.post('/api/v1/search-csa', async ({ request }) => {
