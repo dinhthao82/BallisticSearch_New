@@ -13,6 +13,7 @@ import SubmitRapidPage from '@/features/submit-rapid/SubmitRapidPage';
 import VCCRedirectPage from '@/features/vcc-redirect/VCCRedirectPage';
 import AuditingContractPage from '@/features/auditing-contract/AuditingContractPage';
 import ComposeEmailPage from '@/features/compose-email/ComposeEmailPage';
+import UploadBulletPage from '@/features/upload-bullet/UploadBulletPage';
 import { BIQToaster } from '@/components/modal';
 import './theme/cssVars.css';
 
@@ -44,6 +45,7 @@ export default function App() {
               <Route path="vcc-redirect" element={<VCCRedirectPage />} />
               <Route path="auditing-contract" element={<AuditingContractPage />} />
               <Route path="compose-email" element={<ComposeEmailPage />} />
+              <Route path="upload-bullet" element={<UploadBulletPage />} />
               <Route
                 path="edit-vcc"
                 element={

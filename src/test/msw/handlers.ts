@@ -191,6 +191,20 @@ export const handlers = [
     return HttpResponse.json({ items: filtered, total: filtered.length });
   }),
 
+  http.post('/api/v1/bullet/upload', async ({ request }) => {
+    const fd = await request.formData();
+    const caseNumber = fd.get('caseNumber');
+    if (!caseNumber || typeof caseNumber !== 'string' || !caseNumber.trim()) {
+      return HttpResponse.json({ error: 'caseNumber is required' }, { status: 400 });
+    }
+    const photos = fd.getAll('photos').filter((v): v is File => v instanceof File);
+    return HttpResponse.json({
+      bulletRecordId: `BUL-${Date.now().toString(36).toUpperCase()}`,
+      photoCount: photos.length,
+      acknowledged: true,
+    });
+  }),
+
   http.post('/api/v1/email/send', async ({ request }) => {
     const body = (await request.json()) as {
       to?: string[];
