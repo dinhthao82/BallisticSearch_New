@@ -1,10 +1,10 @@
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Textarea, Stack, Group, Checkbox } from '@mantine/core';
+import { Stack, Group } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useTranslation } from 'react-i18next';
 import { IconSearch } from '@tabler/icons-react';
-import { BIQButton } from '@/components/primitives';
+import { BIQButton, BIQTextarea, BIQCheckbox } from '@/components/primitives';
 import { searchAPLFilterSchema, type SearchAPLFilterValues } from './schema';
 
 interface SearchAPLFilterProps {
@@ -27,23 +27,15 @@ export function SearchAPLFilter({
   return (
     <form onSubmit={handleSubmit(onSubmit)} data-testid="search-apl-filter">
       <Stack gap="sm">
-        <Textarea
+        <BIQTextarea
           label={t('filter.apl_ID')}
           placeholder={t('filter.apl_IDPlaceholder')}
-          rows={2}
-          autosize
-          minRows={2}
-          maxRows={5}
           {...register('apl_ID')}
         />
 
-        <Textarea
+        <BIQTextarea
           label={t('filter.caseIncident')}
           placeholder={t('filter.caseIncidentPlaceholder')}
-          rows={2}
-          autosize
-          minRows={2}
-          maxRows={5}
           {...register('caseNumber')}
         />
 
@@ -80,17 +72,17 @@ export function SearchAPLFilter({
           name="reportStatus"
           control={control}
           render={({ field }) => (
-            <Checkbox.Group
+            <BIQCheckbox.Group
               label={t('filter.reportStatus')}
               value={field.value ?? []}
               onChange={(v) => field.onChange(v)}
             >
               <Group mt="xs" gap="xs">
-                <Checkbox value="pending" label={t('status.pending')} />
-                <Checkbox value="inProcess" label={t('status.inProcess')} />
-                <Checkbox value="closed" label={t('status.closed')} />
+                <BIQCheckbox value="pending" label={t('status.pending')} />
+                <BIQCheckbox value="inProcess" label={t('status.inProcess')} />
+                <BIQCheckbox value="closed" label={t('status.closed')} />
               </Group>
-            </Checkbox.Group>
+            </BIQCheckbox.Group>
           )}
         />
 

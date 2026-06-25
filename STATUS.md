@@ -78,7 +78,9 @@
 - [x] Step 33 — BIQButton + BIQInput (2 SearchAPL Button usages migrated; 8 new tests, 79 total)
 - [x] Step 34 — BIQTextarea + BIQSelect (7 new tests, 86 total)
 - [x] Step 35 — BIQCheckbox + BIQRadio + BIQSwitch + BIQBadge (9 new tests, 95 total)
-- [ ] Step 36 — Migrate SearchAPL to BIQ primitives
+- [x] Step 36 — Migrate SearchAPL to BIQ primitives (Textarea/Checkbox/Badge swapped; 95/95 tests pass)
+
+🎯 **MISSION W2 COMPLETE** (4/4 steps)
 
 ### W3: LoadingOverlay (Steps 37-39)
 

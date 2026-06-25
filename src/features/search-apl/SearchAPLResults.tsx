@@ -1,20 +1,14 @@
 import { useMemo } from 'react';
-import { Badge } from '@mantine/core';
 import type { ColumnDef } from '@tanstack/react-table';
 import { useTranslation } from 'react-i18next';
 import { DataTable } from '@/components/data/DataTable';
+import { BIQBadge } from '@/components/primitives';
 import type { APLItem } from '@/api/apl';
 
 interface SearchAPLResultsProps {
   items: APLItem[];
   isLoading?: boolean;
 }
-
-const STATUS_COLOR: Record<APLItem['reportStatus'], string> = {
-  Pending: 'yellow',
-  'In Process': 'blue',
-  Closed: 'gray',
-};
 
 export function SearchAPLResults({ items, isLoading = false }: SearchAPLResultsProps) {
   const { t } = useTranslation('searchAPL');
@@ -36,11 +30,7 @@ export function SearchAPLResults({ items, isLoading = false }: SearchAPLResultsP
         accessorKey: 'reportStatus',
         cell: (info) => {
           const status = info.getValue() as APLItem['reportStatus'];
-          return (
-            <Badge color={STATUS_COLOR[status]} variant="light" size="sm">
-              {status}
-            </Badge>
-          );
+          return <BIQBadge status={status}>{status}</BIQBadge>;
         },
       },
     ],
