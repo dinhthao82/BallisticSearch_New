@@ -295,3 +295,20 @@ Master plan: 43/80 missions ≈ 54%.
 
 🎉 **WAVE E COMPLETE** — 19 pages shipped. 328 tests, 196.47 KB gzip initial.
 Master plan: 62/80 missions ≈ 78%.
+
+---
+
+## Wave F: P6 Beasts (15 pages)
+
+**Plan**: WAVE_F_EXECUTION.md
+**Target tag**: v0.7.0-all-pages
+
+- [x] W27 Gallery/Detection (M-073-078): 6 pages (EditGallery, ViewDetails, SearchCSAUploaded, SearchGalleries, Detection_info, SummaryPotentialLinks)
+- [x] W28 UserProfiles (M-079): tabs for Profile / Change password / Password expired / MFA setup
+- [x] W29 GalleryMap (M-080): Leaflet + S3-imagery placeholder
+- [x] W30+W31+W32 (M-081/082/083/084): VCC + ProbeMatches + SearchFace + QuickSearch
+- [x] W33 ImageEditor (M-085-088): PreviewAnalysis + Compare + 2DCompare + Standardize + BIQCanvas primitive
+- [x] W34 WAVE_F_RESULT + v0.7.0-all-pages tag
+
+🎉 **WAVE F COMPLETE** — All 15 beast pages shipped (POC shells). 352 tests, 198.56 KB gzip.
+Master plan: 77/80 missions ≈ 96%. **All 50/50 pages registered.**
