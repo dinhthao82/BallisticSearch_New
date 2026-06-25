@@ -102,7 +102,9 @@
 
 - [x] Step 43 — Analyze GCTWindow/MessageBox legacy (docs/migration/messagebox.md)
 - [x] Step 44 — Build BIQMessageBox (5 imperative variants + 4 toast variants; 13 new tests, 128 total)
-- [ ] Step 45 — Migration helper + tests
+- [x] Step 45 — GCTWindow legacy adapter + tests (12 new tests, 140 total)
+
+🎯 **MISSION W5 COMPLETE** (3/3 steps)
 
 ### W6: Filters (Steps 46-49)
 
