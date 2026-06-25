@@ -1,0 +1,17 @@
+{
+  "agency-case-number": "Merkez Case Numarası",
+  "booking-id": "Kayıt ID",
+  "frq-score": "FRQ Skoru",
+  "image-reject-info": "Görüntü Reddetme Bilgileri",
+  "image-rejection": "Görüntü Reddetme ",
+  "image-reject-note": "Olası Görüntü Ballistics IQ tarafından reddedildi.",
+  "map-info": "Harita Bilgileri",
+  "nomatch": "Eşleşme Yok",
+  "object": "Obje ID",
+  "possible-image-info": "Olası Eşleşme Bilgileri",
+  "probe-image-info": "Sorgulanmış Görüntü Bilgileri",
+  "reason": "Neden",
+  "reject-by": "Tarafından Reddedildi",
+  "result-image-info": "Görüntü Bilgileri",
+  "scan": "Tarama Tarihi ve Zamanı"
+}

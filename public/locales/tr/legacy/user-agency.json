@@ -1,0 +1,16 @@
+{
+  "probe-images-management": "Yakalanan Görüntü Yönetimi",
+  "possible-images-management": "Olası Eşleşme Yönetimi",
+  "searchface-searchagain": "Yüz Tanıma / Tekrar Ara",
+  "addagencyfailed": "Merkez Ekleme Başarısız",
+  "adduserfailed": "Kullanıcı Ekleme Başarısız",
+  "idwasexisted": "Merkez ID Mevcut ",
+  "copy-user": "Kulllanıcı Hesabı Görüntüle",
+  "addagency-fail-license": "LİSANS UYARISI: Galeri boyutu bu lisans için yetersiz. Yöneticinizle irtibata geçiniz. Evidence IQ size yardımcı oabilir.",
+  "adduser-fail-license": "LİSANS UYARISI: Galeri boyutu bu lisans için yetersiz. Yöneticinizle irtibata geçiniz. Evidence IQ size yardımcı oabilir.",
+  "license-expire": "LİSANS UYARISI! Deneme sürümü sona ermiştir. Yöneticinizle irtibata geçiniz. Evidence IQ size yardımcı oabilir.",
+  "nolicense": "LİSANS UYARISI! Deneme sürümü sona ermiştir. Yöneticinizle irtibata geçiniz. Evidence IQ size yardımcı oabilir.",
+  "adduser-fail-limit": "LİSANS UYARISI! Deneme sürümü sona ermiştir. Yöneticinizle irtibata geçiniz. Evidence IQ size yardımcı oabilir.",
+  "addagencyrsuccessful": "Merkez Ekleme Başarılı",
+  "addusersuccessful": "Kullanıcı Ekleme Başarılı"
+}

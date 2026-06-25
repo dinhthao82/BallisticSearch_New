@@ -1,0 +1,12 @@
+{
+  "title": "No Access",
+  "content-line1": "This record does not belong to you and",
+  "content-line2": "therefore you may not edit or delete the record.",
+  "content-line2-hit": "therefore you may not delete the record.",
+  "content-line3": "therefore you do not have right to verify this record.",
+  "content-line4": "therefore you do not have right to active/inactive this record.",
+  "content-line5": "therefore you do not have right to assign this record.",
+  "content-line6-setavatar": "therefore you do not have right to set avatar for this record.",
+  "delete-gallery": "This record does not belong to you and therefore you may not delete the record.",
+  "edit-gallery": "This record does not belong to you and therefore you may not edit the record."
+}

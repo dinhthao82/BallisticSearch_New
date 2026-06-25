@@ -1,0 +1,13 @@
+{
+  "uploadengine": "Tải lên động cơ",
+  "engine": "Động cơ:",
+  "lastversioninformation": "Lastest Thông tin cơ bản",
+  "versionfsvector": "FSVector Version:",
+  "versionfacesearch": "FaceSearch Version:",
+  "versionlineupapi": "Line Up API Version:",
+  "errorfileupload": "Không có tập tin tải lên không được nén hoặc file rar.",
+  "errorfilelimit": "Kích thước tập tin tải lên của chỉ hơn 100 Bytes",
+  "errorfileinvalid": "Tập tin là không hợp lệ.",
+  "uploadfilesuccessful": "Upload File thành công",
+  "uploadfilefailed": "Upload File Không"
+}

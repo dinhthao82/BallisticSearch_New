@@ -1,0 +1,13 @@
+{
+  "title-view-probe": " Xem Probe Images",
+  "tl-probe-image": "Xem Probe hình ảnh Báo cáo",
+  "infomation": "Thông tin",
+  "report-by": "Báo cáo bởi",
+  "total-probe-image": "Tổng số Probe Images",
+  "total-gallery": "Tổng Gallery Search",
+  "time-search": "Tổng thời để Nhận Kết quả tìm kiếm (Giây)",
+  "probe-image": "Probe ảnh",
+  "result-image": "Kết quả hình ảnh",
+  "export-fail": "Không thể xuất khẩu.",
+  "ms-frq-0": "Không có hồ sơ được tìm thấy, do chất lượng hình ảnh là không đủ để nhận dạng khuôn mặt (FRQ = 0)."
+}

@@ -1,0 +1,21 @@
+{
+  "selectsearchcriteria": "Select View Criteria:",
+  "name": "LineUp Name:",
+  "deletesystemfailed": "Delete LineUp failed.",
+  "nosystemrecords": "There are no LineUp records.",
+  "deletesystem": "Delete LineUp",
+  "areyoudeletesystem": "Are you sure you want to delete this LineUp?",
+  "viewsystemaccount": "View LineUp Infomations",
+  "system": "LineUp:",
+  "editsystem": "Edit LineUp",
+  "updatesystemsuccessful": "Update LineUp successful.",
+  "updatesystemfailed": "Update LineUp failed.",
+  "listsystemsofagency": "List LineUp(s) of Agency:",
+  "nosystemavailable": "No LineUp Available",
+  "listsystems": "List LineUps",
+  "viewlistsystem": "View List LineUps",
+  "addsystem": "Add LineUp",
+  "saveassystem": "Save As LineUp",
+  "saveassystemsuccessful": "Create LineUp successful.",
+  "saveassystemfailed": "Create LineUp failed."
+}

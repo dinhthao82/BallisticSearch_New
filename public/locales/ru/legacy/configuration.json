@@ -1,0 +1,18 @@
+{
+  "mainserver": "Главный сервер",
+  "type": "Тип:",
+  "name": "Имя:",
+  "value": "Стоимость:",
+  "description": "Описание:",
+  "web": "Web",
+  "service": "обслуживание",
+  "vectorservers": "Вектор Серверы",
+  "ipaddress": "Айпи адрес:",
+  "port": "Порт:",
+  "status": "Положение дел:",
+  "active": "активный",
+  "inactive": "Неактивный",
+  "loaderservers": "погрузчик Серверы",
+  "foraserver": "Для сервера",
+  "formultiservers": "Для нескольких серверов"
+}

@@ -1,0 +1,21 @@
+{
+  "selectsearchcriteria": "Выберите Вид Критерии:",
+  "name": "LineUp Имя:",
+  "deletesystemfailed": "Удалить LineUp не удалось.",
+  "nosystemrecords": "Там нет линейке записи.",
+  "deletesystem": "Удалить LineUp",
+  "areyoudeletesystem": "Вы уверены, что хотите удалить этот составе?",
+  "viewsystemaccount": "Посмотреть линейке Информация",
+  "system": "Расстановка:",
+  "editsystem": "Редактировать LineUp",
+  "updatesystemsuccessful": "Обновление LineUp успешным.",
+  "updatesystemfailed": "Обновление LineUp не удалось.",
+  "listsystemsofagency": "Список LineUp (ы) агентства:",
+  "nosystemavailable": "Нет LineUp Доступен",
+  "listsystems": "Список Составы",
+  "viewlistsystem": "Посмотреть Список Составы",
+  "addsystem": "Добавить LineUp",
+  "saveassystem": "Сохранить как модельный ряд",
+  "saveassystemsuccessful": "Создать LineUp успешной.",
+  "saveassystemfailed": "Создать LineUp не удалось."
+}

@@ -68,7 +68,7 @@
 
 - [x] Step 29 — Audit legacy XML files (5 langs found, not 50; docs/i18n/AUDIT.md)
 - [x] Step 30 — Build converter script (scripts/convertLanguages.ts; npm run i18n:convert)
-- [ ] Step 31 — Run converter for 5 primary langs
+- [x] Step 31 — Run converter for 5 primary langs (327 JSON files: en/91, es/58, ru/58, tr/65, vi/55)
 - [ ] Step 32 — Wire i18n loader + tests
 
 ### W2: BIQ Primitives (Steps 33-36)

@@ -1,0 +1,20 @@
+{
+  "machine-id": "Makine ID",
+  "update-license": "Lisans Güncelle",
+  "active-date": "Aktivite Tarihi:",
+  "agency-left": "Merkezden Kalanlar:",
+  "day-left": "Günden Kalanlar:",
+  "expire-date": "Bitiş Tarihi:",
+  "limited": "Limit:",
+  "left": "Kalanlar:",
+  "system-left": "Sistem Kalanlar:",
+  "used": "Kullanılan:",
+  "agency-header": "Merkez Yetkileri",
+  "batch-function": "Toplu Fonksiyonlar:",
+  "limit-glsize": "Galeri Boyu Limiti:",
+  "limit-agency": "Merkez Sayısı Limiti",
+  "limit-user": "KullANICI Sayısı Limiti",
+  "date-time-license": "Zaman Periyotları Limiti",
+  "admin-header": "Sistem Lisans Bilgisi",
+  "unlimited": "Limitsiz"
+}

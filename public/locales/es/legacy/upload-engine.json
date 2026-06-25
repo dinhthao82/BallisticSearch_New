@@ -1,0 +1,13 @@
+{
+  "uploadengine": "Motor:",
+  "engine": "Últimas Información de la versión del motor",
+  "lastversioninformation": "FSVector Version:",
+  "versionfsvector": "FaceSearch Version:",
+  "versionfacesearch": "Line Up API Version:",
+  "versionlineupapi": "No hay archivos de carga que no están archivo ZIP o RAR.",
+  "errorfileupload": "Tamaño de archivo de carga Sólo mayores de 100 Bytes",
+  "errorfilelimit": "El archivo no es válido.",
+  "errorfileinvalid": "Cargar archivo Exitosa",
+  "uploadfilesuccessful": "Error de carga de archivos",
+  "uploadfilefailed": "Servidor Principal"
+}

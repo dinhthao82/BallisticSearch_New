@@ -1,0 +1,7 @@
+{
+  "addusersuccessful": "Bạn đã thêm thành công tài",
+  "addagencyrsuccessful": "Bạn đã thêm thành công Cơ quan",
+  "adduserfailed": "Thêm người dùng không thành công",
+  "addagencyfailed": "Thêm Cơ quan Không",
+  "idwasexisted": "Agency_ID đã tồn tại"
+}

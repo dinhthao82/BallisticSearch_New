@@ -1,0 +1,11 @@
+{
+  "username": "Tên tài khoản",
+  "invalidusername": "Tên sử dụng không hợp lệ!",
+  "invalidpassword": "Mật khẩu không hợp lệ!",
+  "invalidusername_password": "Tên đăng nhập hoặc mật khẩu không hợp lệ.",
+  "fsl-noserver": "Tài khoản này đã không kết nối với bất kỳ máy chủ LineUp",
+  "fsl-disconnect": "Không thể kết nối LineUp này.",
+  "agencyinactive": "Cơ quan tài khoản của bạn nhập đã được vô hiệu hoá. Vui lòng liên hệ tới Administrator",
+  "userinactive": "Các tài khoản người dùng bạn nhập đã được vô hiệu hoá. Hãy liên hệ với Giám đốc Cơ quan Ballistics IQ địa phương của bạn.",
+  "fslinactive": "Các tài khoản LineUp bạn nhập đã được vô hiệu hoá. Hãy liên hệ với Giám đốc Cơ quan Ballistics IQ địa phương của bạn."
+}

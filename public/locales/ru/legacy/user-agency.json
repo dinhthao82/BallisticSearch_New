@@ -1,0 +1,8 @@
+{
+  "addusersuccessful": "Вы успешно добавили пользователя",
+  "addagencyrsuccessful": "Вы успешно добавили агентство",
+  "adduserfailed": "Добавить пользователя удалось",
+  "addagencyfailed": "Добавить агентство удалось",
+  "idwasexisted": "Agency_ID был существовали",
+  "copy-user": "Копировать User Account"
+}

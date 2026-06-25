@@ -1,0 +1,15 @@
+{
+  "searchfile": "Uploaded Files",
+  "timeperiod": "Time Period",
+  "last": "Last",
+  "hours": "Hours",
+  "days": "Days",
+  "from": "From:",
+  "to": "To:",
+  "nofilerecordselected": "No Record Selected.",
+  "recentuploads": "Recent Upload:",
+  "uploadperiod": "Upload Period:",
+  "fileimportrecords": "File Import Records",
+  "nofilerecordfound": "No Record Found.",
+  "no-current-record": "There is no records!"
+}

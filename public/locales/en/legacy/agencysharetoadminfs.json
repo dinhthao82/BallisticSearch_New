@@ -1,0 +1,18 @@
+{
+  "title-main": "Gallery Sharing to Administrator",
+  "lengend-gallerytype": "Assigned Gallery Type",
+  "box-galleries": "Gallery Type(s)",
+  "box-countries": "Country(ies)",
+  "box-states": "State(s)",
+  "but-yes": "Yes",
+  "but-no": "No",
+  "but-ok": "OK",
+  "but-update": "Update",
+  "but-cancel": "Cancel",
+  "msg-success": "Successful",
+  "msg-failed": "Failed",
+  "msg-processing": "Processing",
+  "title-popup": "Agency Share To Administrator",
+  "error-no-select": "Please select Country, State for sharing.",
+  "asking-update": "Do you want to update?"
+}

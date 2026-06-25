@@ -1,0 +1,7 @@
+{
+  "header": "Обмен данными на карте",
+  "national-map": "Национальный Обмен данными на карте",
+  "map-explain": "\n\t\tThe below map represents a list of Law Enforcement Agencies using Ballistics IQ technologies.<br>Click on a representing 'Tic' mark and data sharing by contacting the Agency.\n    ",
+  "shared-agency": "Агентство Shared Data",
+  "notshare-agency": "Доли не имеет Агентство данных"
+}

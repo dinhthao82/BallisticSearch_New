@@ -1,0 +1,9 @@
+{
+  "select-agency": "--Select Agency--",
+  "placeholder-search-agency": "Search...",
+  "audit-contract": "Auditing Contract",
+  "require-select-action": "Please select at least one action for searching.",
+  "add-contract": "Create Contract",
+  "edit-contract": "Edit Contract",
+  "delete-contract": "Delete Contract"
+}

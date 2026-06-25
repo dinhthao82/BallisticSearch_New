@@ -1,0 +1,15 @@
+{
+  "ok": "ĐƯỢC",
+  "assign-button": "Chỉ định",
+  "fullname": "Tên",
+  "personalid": "Obj_ID",
+  "advance-button": "Nâng cao",
+  "find-button": "Tìm thấy",
+  "findexistedhotlist": "Tìm một người hiện có trong Gallery",
+  "hotfaceresult": "Gallery Face (s) kết quả",
+  "assign-success": "Chỉ định thành công!",
+  "assign-fail": "Gán Fail! Vui lòng thử lại hoặc liên hệ với admin để giải quyết vấn đề này.",
+  "assign-nopermission": "Bạn không có quyền để Gán cho Probe này!",
+  "assign-title": "Ballistics IQ - Gán",
+  "hotlist-inactive": "Hồ sơ này là không hoạt động, nó Cana € ™ t được giao. Vui lòng chọn hồ sơ khác!"
+}

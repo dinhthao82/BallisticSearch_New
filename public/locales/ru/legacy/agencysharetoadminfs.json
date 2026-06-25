@@ -1,0 +1,15 @@
+{
+  "title-main": "Галерея Обмен Администратору",
+  "lengend-gallerytype": "Назначенный Галерея Тип",
+  "box-galleries": "Галерея Тип (ы)",
+  "box-countries": "Страна (страны)",
+  "box-states": "Состояния)",
+  "but-yes": "Да",
+  "but-no": "Нет",
+  "but-ok": "Хорошо",
+  "but-update": "Обновить",
+  "but-cancel": "Отмена",
+  "msg-success": "успешный",
+  "msg-failed": "Не смогли",
+  "msg-processing": "обработка"
+}

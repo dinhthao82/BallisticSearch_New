@@ -1,0 +1,18 @@
+{
+  "errurlrequired": "'Nhập URL' là bắt buộc.",
+  "title": "Gửi XML Alert",
+  "titleedit": "Sửa Agency URL",
+  "titlenew": "Thêm Cơ quan New URL",
+  "enterurl": "Nhập URL",
+  "selecturl": "Chọn URL",
+  "errselecturlpls": "Vui lòng chọn URL",
+  "empty": "- Empty -",
+  "inserturlsuccessful": "Chèn Url thành công",
+  "inserturlfailed": "Chèn Url Không",
+  "select": "Lựa chọn",
+  "errsiteurlisrequire": "'Nhập Url' là bắt buộc.",
+  "plsselectupdate": "Vui lòng chọn ít nhất một mục để cập nhật!",
+  "checkconnectsuccess": "Kiểm tra kết nối thành công",
+  "checkconnectfailed": "Kiểm tra kết nối không thành công",
+  "invalidurl": "\\ 'Nhập URL \\' là không hợp lệ."
+}

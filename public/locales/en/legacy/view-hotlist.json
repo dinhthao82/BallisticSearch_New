@@ -1,0 +1,12 @@
+{
+  "edit-firing-pin-ak-ar": "Please change FiringPin to Circular.",
+  "require-aperture-shear": "Please select Aperture Shear Marks (Y/N) for this cartridge case.",
+  "title": "Search Gallery",
+  "searchrecords": "Search Records",
+  "edithotlist": "Edit Hot List",
+  "addnewhotlist": "Add New Hot List",
+  "addnewsuccessful": "Add New Hot List Successful",
+  "addnewfailed": "Add New Hot List Failed",
+  "nohotlistrecord": "No Hot List record.",
+  "hotlistrecords": "Hot List Records"
+}

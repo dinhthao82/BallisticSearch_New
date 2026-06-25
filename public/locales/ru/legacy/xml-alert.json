@@ -1,0 +1,18 @@
+{
+  "errurlrequired": "'Введите URL' требуется.",
+  "title": "Отправить уведомление XML",
+  "titleedit": "Ссылка Редактировать агентство",
+  "titlenew": "Добавить новое агентство URL",
+  "enterurl": "Введите URL",
+  "selecturl": "Выберите URL",
+  "errselecturlpls": "Пожалуйста, выберите URL",
+  "empty": "- Пустой -",
+  "inserturlsuccessful": "Вставить URL Успешная",
+  "inserturlfailed": "Вставить URL удалось",
+  "select": "Выбрать",
+  "errsiteurlisrequire": "\"Введите URL\" требуется.",
+  "plsselectupdate": "Пожалуйста, выберите по крайней мере, один элемент Обновление!",
+  "checkconnectsuccess": "Проверьте соединение Успешная",
+  "checkconnectfailed": "Проверьте соединение удалось",
+  "invalidurl": "\\ 'Введите URL \\ \"является недопустимым."
+}

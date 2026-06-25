@@ -1,0 +1,14 @@
+{
+  "export-fail": "Çıkartılamadı.",
+  "ms-frq-0": "Yüz Tanıma Kalitesi(FRQ) bu arama için=0. Fotoğraf yüz tanıma için uygun değil.",
+  "infomation": "Bilgi",
+  "probe-image": "Soruşturulan Fotoğraf",
+  "report-by": "tarafından Rapolandı",
+  "result-image": "Sonuç Fotoğrafları",
+  "title-view-probe": "Soruşturma fotoğrafı ara",
+  "total-gallery": "Tüm Galeri",
+  "total-probe-image": "Tüm soruşturulan fotoğraflar",
+  "time-search": "Arama sonuçları için beklenecek zaman(saniyeler)",
+  "title-report": "Toplu arama raporu Görüntüle",
+  "tl-probe-image": "Toplu arama raporu Görüntüle"
+}

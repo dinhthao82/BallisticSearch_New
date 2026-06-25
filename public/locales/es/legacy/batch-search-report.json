@@ -1,0 +1,14 @@
+{
+  "title-view-probe": " Ver Probe Imágenes",
+  "tl-probe-image": "Ver Probe Imágenes Reportar",
+  "infomation": "Infomation",
+  "report-by": "Informe de",
+  "total-probe-image": "Total de Probe Imágenes",
+  "total-gallery": "Galeria Numero",
+  "time-search": "Tiempo total para Obtener Resultados de la búsqueda (segundos)",
+  "probe-image": "Sonda Imagen",
+  "result-image": "Resultados Imágenes",
+  "export-fail": "No se puede exportar.",
+  "ms-frq-0": "No hay resultados récord, debido a la calidad de imagen no es suficiente para el reconocimiento facial (FRQ = 0).",
+  "title-report": ""
+}

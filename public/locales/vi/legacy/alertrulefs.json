@@ -1,0 +1,23 @@
+{
+  "settingforalertrule": "Thiết lập cho Rule Alert",
+  "alertrulecombinegallerygroup": "Rule cảnh báo: Kết hợp Gallery Nhóm và Máy ảnh",
+  "lineup": "Xếp hàng",
+  "cameraselection": "Máy ảnh Selection",
+  "gallerygroup": "Gallery Nhóm",
+  "cameras": "Máy ảnh",
+  "selectall": "Chọn Tất Cả",
+  "notification": "Thông báo",
+  "notifyviaemail": "Thông báo qua email",
+  "notifyviaurl": "Thông báo cho Via URL",
+  "btn-update": "Cập nhật",
+  "btn-close": "Gần",
+  "selectlineup": "Chọn LineUp",
+  "nolineup": "Không LineUp",
+  "nogallerygroup": "Rule Update Alert",
+  "updatealertrule": "Rule Update Alert",
+  "alertrule": "Rule cảnh báo",
+  "err-emailstandard": "Email phải phù hợp với một địa chỉ thư điện tử chuẩn.",
+  "ask-assignlineup": "Vui lòng chọn LineUp giao",
+  "msg-updatealertrulesuccess": "Cập nhật Alert Rule thành công.",
+  "msg-updatealertrulefailed": "Cập nhật Alert Rule Falied. Vui lòng kiểm tra lại."
+}

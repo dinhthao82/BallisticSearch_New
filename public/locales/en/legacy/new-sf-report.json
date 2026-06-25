@@ -1,0 +1,22 @@
+{
+  "possible-match-image": "Potential Link Image",
+  "comparison-image": "Comparison Image",
+  "search-date-time": "Search Date/Time",
+  "agency-information": "Search Information",
+  "agency-case-number": "Agency Case Number",
+  "reason": "Reason",
+  "scan": "Search Date/Time",
+  "map-info": "Map Information",
+  "object": "Object ID",
+  "image-reject-info": "Image Rejection Information",
+  "frq-score": "CRQ Score",
+  "reject-by": "Rejected by",
+  "image-rejection": "Image Rejection",
+  "image-reject-note": "This Probe Image is rejected by Ballistics IQ.",
+  "probe-image-info": "Probe Image Information",
+  "possible-image-info": "Potential Link Information",
+  "booking-id": "Booking ID",
+  "result-image-info": "Resulting Image Information",
+  "nomatch": "No Match",
+  "warning-nomatch": "You have chosen NOT to save this Probe to the No Match gallery for potential link at a later date. <br> Do you wish to apply this change?"
+}

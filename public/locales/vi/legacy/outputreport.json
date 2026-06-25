@@ -1,0 +1,20 @@
+{
+  "reportpdfdetails": "Báo cáo - PDF (Xem chi tiết)",
+  "reportxls": "Báo cáo - XLS",
+  "reportpdfimages": "Báo cáo - PDF (hình ảnh)",
+  "enhancement-column-xls": "Lịch sử Enhancement",
+  "view-search-face": "Xem Báo Cáo  Search Face",
+  "gallery-face-information": "Thông tin gallery",
+  "view-search-face-image": "Xem Báo Cáo Search Face Image",
+  "gallery-facesearch-result": "Kết quả tìm kiếm",
+  "randomized-photo-report": "Báo Cáo Randomized Photo Array",
+  "search-face-detail": "Báo Cáo Search Face",
+  "view-probe-detail": "Xem Báo Cáo Probe Detail",
+  "view-possible-detail": "Xem Báo Cáo Possible Detail",
+  "view-alert-detail": "Xem Báo Cáo Alert",
+  "view-probe-image": "Xem Probe Image Report",
+  "view-probe-report": "Xem Probe Report",
+  "no-enhancement": "Không chỉnh sửa ảnh",
+  "view-possible-match": "Xem Possible Matches Report",
+  "view-possible-match-detail": "Xem Possible Matches Detail Report"
+}

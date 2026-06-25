@@ -1,0 +1,11 @@
+{
+  "system-management": "Configuración LineUp",
+  "fslite-config": "Configuración LineUp",
+  "fslite-assign-gallerytype": "Compartiendo Galería Tipo a la alineación",
+  "checkconnection": "Compruebe la conexión",
+  "editsystemsuccessful": "Ha actualizado correctamente esta alineación",
+  "addsystemsuccessful": "Ha agregado nueva alineación",
+  "warning-notconnect": "Esta cuenta no se ha conectado a cualquier servidor LineUp",
+  "fslite-management": "Gestión LineUp",
+  "require-checkconnect": "Para Administrar servidor de alineación, debe introducir la dirección IP o nombre de dominio y haga clic en Confirmar la conexión. ¡Compruébelo por favor!"
+}

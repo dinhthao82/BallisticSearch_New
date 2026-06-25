@@ -1,0 +1,23 @@
+{
+  "settingforalertrule": "Установка для правила оповещения",
+  "alertrulecombinegallerygroup": "Предупреждение Правило: Комбинация Галерея группы и фотокамеры",
+  "lineup": "Расстановка",
+  "cameraselection": "Выбор камеры",
+  "gallerygroup": "Галерея Группа",
+  "cameras": "камеры",
+  "selectall": "Выбрать все",
+  "notification": "уведомление",
+  "notifyviaemail": "Сообщите по электронной почте",
+  "notifyviaurl": "Сообщите Via URL",
+  "btn-update": "Обновить",
+  "btn-close": "Закрыть",
+  "selectlineup": "Выберите LineUp",
+  "nolineup": "Нет LineUp",
+  "nogallerygroup": "Правило обновления оповещения",
+  "updatealertrule": "Правило обновления оповещения",
+  "alertrule": "Предупреждение Правило",
+  "err-emailstandard": "\"E-mail\" должны соответствовать стандартным адрес электронной почты.",
+  "ask-assignlineup": "Пожалуйста, выберите назначенный LineUp",
+  "msg-updatealertrulesuccess": "Обновление оповещения Правило успешно.",
+  "msg-updatealertrulefailed": "Обновление оповещения Правило Falied. Пожалуйста, проверьте еще раз."
+}

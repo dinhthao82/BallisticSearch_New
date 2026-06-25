@@ -1,0 +1,15 @@
+{
+  "searchfile": "Посмотреть загруженные файлы",
+  "timeperiod": "Временной период",
+  "last": "Последний",
+  "hours": "часов",
+  "days": "дней",
+  "from": "Из:",
+  "to": "Для:",
+  "nofilerecordselected": "Нет Запись не выбран.",
+  "recentuploads": "Последние загрузки:",
+  "uploadperiod": "Загрузить Период:",
+  "fileimportrecords": "Импорт файла записей",
+  "nofilerecordfound": "Нет Запись не найдена.",
+  "no-current-record": ""
+}

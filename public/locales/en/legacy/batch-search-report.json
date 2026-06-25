@@ -1,0 +1,14 @@
+{
+  "title-view-probe": "Search History",
+  "tl-probe-image": "View Batch Search Report",
+  "infomation": "Infomation",
+  "report-by": "Report By",
+  "total-probe-image": "Total Probe Images",
+  "total-gallery": "Total Gallery",
+  "time-search": "Total Time to Get Search Result (Seconds)",
+  "probe-image": "Probe Image",
+  "result-image": "Result Images",
+  "export-fail": "Can not export.",
+  "ms-frq-0": "CartridgeCase Recognition Quality (CRQ) for this probe = 0. The following image is not suitable for ballistic match searching.",
+  "title-report": "View Batch Search Report"
+}

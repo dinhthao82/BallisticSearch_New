@@ -1,0 +1,20 @@
+{
+  "total-import": "Toplam Kullanıcı içe Aktar",
+  "add-success": "Ekleme Başarılı",
+  "add-fail": "Akleme Başarısız",
+  "username-exist": "Kullanıcı adı zaten var.",
+  "invalid-info": "Geçersiz bilgi.",
+  "limit-license": "Kullanıcı Lisans sayısı Limiti aşıldı.",
+  "limit-agency": "Kullanıcı Lisans sayısı Limiti aşıldı.",
+  "note1": "Sutun da detayları görüntüle",
+  "guide": "Çok kullanıcılı yüklemeye izin ver. Şablon dosyasını indirmek için şablon indir buttonuna basınız.",
+  "import-fail": "Kullanıcı Oluşturulamaz.",
+  "download": "İndir",
+  "import-warning": "Yüklenecek dosya xml veya csv formatında olmalıdır.",
+  "header-template": "Kullanıcı şablonu yükle",
+  "statistic": "İstatistik Yükle",
+  "selectfile": "Kullanıcıalrdan dosya seç",
+  "import-users-success": "Başarıyla kullanıcı oluşturdunuz(0)",
+  "import-user-success": "Başarıyla 1 kullanıcı oluşturdunuz.",
+  "lack-header": "Yüklemek istediğiniz CSV dosyanında bilgileri içeren başlık kısmı ilk satırda olmalıldır."
+}

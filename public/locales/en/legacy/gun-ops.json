@@ -1,0 +1,11 @@
+{
+  "address": "Address",
+  "latitude": "Latitude",
+  "longitude": "Longitude",
+  "erroraddress": "Please input the Address to continue.",
+  "errorlatitude": "Please input the Latitude to continue.",
+  "errorlongitude": "Please input the Longitude to continue.",
+  "error-sent-to-gunops": "Error send to GunOps. Please try again.",
+  "successful-sent-to-gunops": "Send to GunOps successful.",
+  "error-account-gunops": "The GunOps Account Not Found. Please contact your Administrator."
+}

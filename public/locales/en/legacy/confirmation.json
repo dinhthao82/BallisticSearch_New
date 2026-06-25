@@ -1,0 +1,21 @@
+{
+  "confirmation": "Confirmation",
+  "confirmation-report": "Confirmation Report",
+  "require-comment": "Please input Comment.",
+  "require-name": "Please input Report Name.",
+  "rp-name": "Report Name",
+  "create-by": "Create By",
+  "create-date-time": "Create Date/Time",
+  "notify-to-exam": "Notify To Examiner(s)",
+  "select-exam": "-- Select Examiner --",
+  "additional-image-s": "Additional Image(s)",
+  "additional-pdf-s": "Additional Document(s)",
+  "additional-email-s": "Additional Email(s)",
+  "drop-here": "Select image(s) or drop here",
+  "drop-here-pdf": "Select document(s) or drop here",
+  "more-image": "More Images",
+  "more-pdf": "More Documents",
+  "download-report": "Download Report",
+  "save-download": "Save and Download",
+  "error": "An unexpected system error occurred when creating Confirmation Report. Please contact Evidence IQ Support to help to fix this issue."
+}

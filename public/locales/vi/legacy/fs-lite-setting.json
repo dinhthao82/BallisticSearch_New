@@ -1,0 +1,11 @@
+{
+  "system-management": "Cấu hình LineUp",
+  "fslite-config": "Cấu hình LineUp",
+  "fslite-assign-gallerytype": "Chia sẻ Gallery Loại Để LineUp",
+  "checkconnection": "Kiểm tra kết nối",
+  "editsystemsuccessful": "Bạn đã cập nhật thành công LineUp này",
+  "addsystemsuccessful": "Bạn đã thêm thành công LineUp mới",
+  "warning-notconnect": "Tài khoản này đã không kết nối với bất kỳ máy chủ LineUp",
+  "fslite-management": "Quản lý LineUp",
+  "require-checkconnect": "Quản lý máy chủ LineUp, Bạn phải nhập địa chỉ IP hoặc tên miền và nhấn Kiểm tra kết nối. Xin vui lòng kiểm tra xem nó!"
+}

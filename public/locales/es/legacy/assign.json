@@ -1,0 +1,15 @@
+{
+  "ok": "OK",
+  "assign-button": "Asignar",
+  "fullname": "Nombre",
+  "personalid": "Obj_ID",
+  "advance-button": "Avanzado",
+  "find-button": "Encontrar",
+  "findexistedhotlist": "Encontrar una persona existente en la Galería",
+  "hotfaceresult": "Galería de rostros (s) resultado",
+  "assign-success": "Asignar con éxito!",
+  "assign-fail": "Asignar fallan! Agrada inténtelo de nuevo o póngase en contacto con el administrador para resolver este problema.",
+  "assign-nopermission": "Usted no tiene permiso para asignar para esta sonda!",
+  "assign-title": "Ballistics IQ - Asignar",
+  "hotlist-inactive": "Este registro está inactivo, puede ‰ asignará Ûªt. Por favor seleccione otro registro!"
+}

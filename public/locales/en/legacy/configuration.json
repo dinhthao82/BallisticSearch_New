@@ -1,0 +1,18 @@
+{
+  "mainserver": "Main Server",
+  "type": "Type:",
+  "name": "Name:",
+  "value": "Value:",
+  "description": "Description:",
+  "web": "Web",
+  "service": "Service",
+  "vectorservers": "Vector Servers",
+  "ipaddress": "IP Address:",
+  "port": "Port:",
+  "status": "Status:",
+  "active": "Active",
+  "inactive": "Inactive",
+  "loaderservers": "Loader Servers",
+  "foraserver": "For a Server",
+  "formultiservers": "For Multiple Servers"
+}

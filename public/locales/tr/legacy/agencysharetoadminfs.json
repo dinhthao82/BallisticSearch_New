@@ -1,0 +1,18 @@
+{
+  "asking-update": "Güncellemek İstiyor musunuz?",
+  "title-popup": "Yöneticiyle Merkezi Paylaş",
+  "lengend-gallerytype": "Galeri Tipi Ata",
+  "but-cancel": "İptal",
+  "box-countries": "Ülkeler",
+  "msg-failed": "Başarısız",
+  "title-main": "Yönetici ile Galeriyi Paylaş",
+  "box-galleries": "Galeri Tipleri",
+  "but-no": "Hayır",
+  "but-ok": "Ok",
+  "error-no-select": "Lütfen Galeri Tipi, Ülke ve Paylaşılacak şehri seçiniz.",
+  "msg-processing": "İşleniyor",
+  "box-states": "Şehirler",
+  "msg-success": "Başarılı",
+  "but-update": "Güncelle",
+  "but-yes": "Evet"
+}

@@ -1,0 +1,15 @@
+{
+  "ok": "OK",
+  "assign-button": "Assign",
+  "fullname": "Name",
+  "personalid": "Obj_ID",
+  "advance-button": "Advanced",
+  "find-button": "Find",
+  "findexistedhotlist": "Find an existing person in Gallery",
+  "hotfaceresult": "Gallery Image(s)",
+  "assign-success": "Assign Successfully!",
+  "assign-fail": "Assign Fail! Pleases try again or contact with admin to resolve this problem.",
+  "assign-nopermission": "You don't have permission to Assign for this Probe!",
+  "assign-title": "Ballistics IQ - Assign",
+  "hotlist-inactive": "This record is inactive, it can’t be assigned. Please select other record!"
+}

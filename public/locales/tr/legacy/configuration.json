@@ -1,0 +1,18 @@
+{
+  "active": "Aktif",
+  "description": "Açıklama:",
+  "foraserver": "Sunucu için",
+  "formultiservers": "Çoklu Sunucular İçin",
+  "inactive": "Pasif",
+  "ipaddress": "IP Adresi :",
+  "loaderservers": "Yükleyici Sunucular",
+  "mainserver": "Ana Sunucu",
+  "name": "Ad:",
+  "port": "Port:",
+  "service": "Servis:",
+  "status": "Durum:",
+  "type": "Tip",
+  "value": "Değer:",
+  "vectorservers": "Vektör Sunucular",
+  "web": "Web"
+}

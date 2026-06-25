@@ -1,0 +1,23 @@
+{
+  "cameramanagement": "Управление камерой",
+  "datafilter": "Фильтр данных",
+  "no.": "Нет.",
+  "cameraname": "Имя камеры",
+  "lineup": "Расстановка",
+  "nolineup": "Нет LineUp",
+  "selectlineup": "Выберите LineUp",
+  "gallerygroup": "Галерея Группа",
+  "connectionstatus": "Состояние подключения",
+  "lastconnectiontime": "Последнее время соединения",
+  "cameradetail": "Подробности камеры",
+  "faceboxid": "Лицо Коробка ID",
+  "cameraid": "ID камеры",
+  "cameraip": "IP-камера",
+  "all": "Все",
+  "connecting": "соединяющий",
+  "disconnect": "Отключить",
+  "nogalleryavailable": "Нет Галерея Доступен",
+  "nogallerygroupfound": "Нет Галерея Группа Найдено",
+  "nocamerafound": "Нет камеры Найдено",
+  "notapplyrule": "Не применять правила"
+}

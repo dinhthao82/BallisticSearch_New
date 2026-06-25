@@ -1,0 +1,23 @@
+{
+  "cameramanagement": "Camera Management",
+  "datafilter": "Filtro de datos",
+  "no.": "No.",
+  "cameraname": "Nombre de la cámara",
+  "lineup": "Póngase en fila",
+  "nolineup": "No LineUp",
+  "selectlineup": "Seleccione LineUp",
+  "gallerygroup": "Galería de Grupo",
+  "connectionstatus": "Estado de la conexión",
+  "lastconnectiontime": "Último tiempo de conexion",
+  "cameradetail": "Detalle de la cámara",
+  "faceboxid": "Cara Box ID",
+  "cameraid": "ID de cámara",
+  "cameraip": "Cámara IP",
+  "all": "Todos",
+  "connecting": "Conexión",
+  "disconnect": "Desconectar",
+  "nogalleryavailable": "Sin Galería Disponible",
+  "nogallerygroupfound": "Sin Grupo Galería Encontrado",
+  "nocamerafound": "No se ha encontrado una cámara",
+  "notapplyrule": "No Aplicar Regla"
+}

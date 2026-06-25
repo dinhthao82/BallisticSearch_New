@@ -1,0 +1,10 @@
+{
+  "my-agency": "My Agency",
+  "my-scanner": "My Scanner",
+  "req-identify-select": "Please select only one evidence to identify.",
+  "req-classify-select": "Please select only one evidence to classify.",
+  "galleries": "Galleries",
+  "standardize": "Standardize",
+  "delete-confirm": "Are you sure you want to delete this gallery?",
+  "re-upload-confirm": "Are you sure you want to re-upload this gallery?"
+}

@@ -1,0 +1,18 @@
+{
+  "empty": "Boş",
+  "invalidurl": "URL Geçersiz",
+  "titlenew": "Yeni bir merkez URL si ekle",
+  "checkconnectfailed": "Bağlantı Kontrol Başarısız",
+  "checkconnectsuccess": "Bağlantı Kontrol Başarılı",
+  "titleedit": "Merkez URL si Düzenle",
+  "enterurl": "URL Gir",
+  "errsiteurlisrequire": "URL Girişi Gerekli",
+  "errurlrequired": "URL Girişi Gerekli",
+  "inserturlfailed": "URL Girişi Başarısız",
+  "inserturlsuccessful": "URL Girişi Başarılı",
+  "plsselectupdate": "Lütfen güncellenecek en az bir seçim yapın",
+  "errselecturlpls": "URL Seç ",
+  "select": "Seç",
+  "selecturl": "URL Seç ",
+  "title": "XML Uyarısı Gönder."
+}

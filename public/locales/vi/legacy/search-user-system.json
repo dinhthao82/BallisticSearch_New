@@ -1,0 +1,21 @@
+{
+  "selectsearchcriteria": "Chọn Xem Tiêu chí:",
+  "name": "LineUp Tên:",
+  "deletesystemfailed": "Xóa LineUp thất bại.",
+  "nosystemrecords": "Không có hồ sơ LineUp.",
+  "deletesystem": "Xóa LineUp",
+  "areyoudeletesystem": "Bạn có chắc chắn muốn xóa LineUp này?",
+  "viewsystemaccount": "Thông tin cần biết Xem LineUp",
+  "system": "Xếp hàng:",
+  "editsystem": "Sửa LineUp",
+  "updatesystemsuccessful": "Cập nhật LineUp thành công.",
+  "updatesystemfailed": "Cập nhật LineUp thất bại.",
+  "listsystemsofagency": "Danh sách LineUp (s) của Cơ quan:",
+  "nosystemavailable": "Không LineUp có sẵn",
+  "listsystems": "Danh sách đội hình",
+  "viewlistsystem": "Xem danh sách đội hình",
+  "addsystem": "Thêm LineUp",
+  "saveassystem": "Save As LineUp",
+  "saveassystemsuccessful": "Tạo LineUp thành công.",
+  "saveassystemfailed": "Tạo LineUp thất bại."
+}

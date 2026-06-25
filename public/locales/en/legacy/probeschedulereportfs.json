@@ -1,0 +1,20 @@
+{
+  "addnew": "Add New Schedule",
+  "err-namerequired": "Schedule name is required.",
+  "err-emailrequired": "Emails is required.",
+  "err-specialcharacters": "Schedule name cannot contain any of these characters",
+  "err-length": "Schedule name must be less than 128 characters!",
+  "err-emailstandard": "\"Email\" must conform to a standard email address.",
+  "msg-addsuccess": "Add New Schedule successful.",
+  "msg-addfailed": "Add New Schedule failed.",
+  "msg-updatesuccess": "Update Schedule successful.",
+  "msg-updatefailed": "Update Schedule failed.",
+  "msg-deletesuccess": "Delete Schedule successful.",
+  "msg-deletefailed": "Delete Schedule failed.",
+  "err-deleteno": "No Schedule to delete.",
+  "ask-deleteschedule": "Do you want to delete Schedule?",
+  "ask-updateschedule": "Do you want to update Schedule?",
+  "but-cancel": "Cancel",
+  "but-continue": "Continue",
+  "but-close": "Close"
+}

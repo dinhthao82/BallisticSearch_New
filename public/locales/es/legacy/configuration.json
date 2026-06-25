@@ -1,0 +1,18 @@
+{
+  "mainserver": "Tipo:",
+  "type": "Nombre:",
+  "name": "Valor:",
+  "value": "Descripción:",
+  "description": "Estado:",
+  "web": "Servicio",
+  "service": "Servidores del vector",
+  "vectorservers": "Dirección IP:",
+  "ipaddress": "Puerto:",
+  "port": "Descripción:",
+  "status": "Vivo",
+  "active": "Inactivo",
+  "inactive": "Servidores Loader",
+  "loaderservers": "Para un servidor",
+  "foraserver": "Por varios servidores",
+  "formultiservers": "Sin acceso"
+}

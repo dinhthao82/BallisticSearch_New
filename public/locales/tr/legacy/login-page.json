@@ -1,0 +1,20 @@
+{
+  "fsl-disconnect": "Bu LineUp a bağlanılamaz.",
+  "error-database": "Veri tabanı bir sebepten değişmiş. Lütfen Sistem Uzmanınıza başvurunuz.",
+  "invalidpassword": "Geçerisz Parola!",
+  "invalidusername": "Geçersiz Kullanıcı Adı!",
+  "license-expire": "LİSANS UYARISI! Deneme sürümü sona ermiştir. Yöneticinizle irtibata geçiniz. Evidence IQ size yardımcı oabilir.",
+  "nolicense": "Bu sistem için lisans bulunamadı. Yöneticinizle irtibata geçiniz. Evidence IQ size yardımcı oabilir.",
+  "login": "Oturum Aç",
+  "passempty": "Parola Boş",
+  "agencyinactive": "Merkez hesabı pasif durumdadır. Ballistics IQ Admin ile irtibata geçiniz.",
+  "agencydeleted": "Merkez hesabı silinmiştir. Ballistics IQ Admin ile irtibata geçiniz.",
+  "fslinactive": "LineUp hesabı pasif durumdadır. Lütfen Yerel Ballistics IQ Merkez Yöneticinizle irtibata geçiniz.",
+  "userinactive": "Kullanıcı hesabı pasif durumdadır. Lütfen Yerel Ballistics IQ Merkez Yöneticinizle irtibata geçiniz.",
+  "userdeleted": "Hesabınız silinmiştir. Lütfen Yerel Ballistics IQ Merkez Yöneticinizle irtibata geçiniz.",
+  "fsl-noserver": "Bu hesap hiçbir LineUp sunucusuna bağlanmadı.",
+  "username": "Kullanıcı Adı",
+  "userpassempty": "Kullanıcı Adı ve Parola boş",
+  "usernameempty": "Kullanıcı Adı Boş",
+  "invalidusername_password": "Kullanıcı Adı ve Parola geçersiz"
+}

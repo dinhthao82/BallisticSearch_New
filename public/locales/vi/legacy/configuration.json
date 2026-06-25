@@ -1,0 +1,18 @@
+{
+  "mainserver": "Máy chủ chính",
+  "type": "Loại:",
+  "name": "Tên:",
+  "value": "Giá trị:",
+  "description": "Mô tả:",
+  "web": "Web",
+  "service": "Dịch vụ",
+  "vectorservers": "Máy chủ Vector",
+  "ipaddress": "Địa chỉ IP:",
+  "port": "Port:",
+  "status": "Tình trạng:",
+  "active": "Hoạt động",
+  "inactive": "Không hoạt động",
+  "loaderservers": "Máy chủ Loader",
+  "foraserver": "Đối với một máy chủ",
+  "formultiservers": "Đối với nhiều máy chủ"
+}

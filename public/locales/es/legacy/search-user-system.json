@@ -1,0 +1,21 @@
+{
+  "selectsearchcriteria": "LineUp Nombre:",
+  "name": "Eliminar LineUp falló.",
+  "deletesystemfailed": "Añadir LineUp",
+  "nosystemrecords": "Eliminar LineUp",
+  "deletesystem": "¿Seguro que quieres eliminar esta alineación?",
+  "areyoudeletesystem": "Infomations Ver LineUp",
+  "viewsystemaccount": "Póngase en fila:",
+  "system": "Editar LineUp",
+  "editsystem": "Actualización LineUp éxito.",
+  "updatesystemsuccessful": "Actualización LineUp falló.",
+  "updatesystemfailed": "LineUp (s) Lista de Agencia:",
+  "listsystemsofagency": "No LineUp Disponible",
+  "nosystemavailable": "Lista Alineaciones",
+  "listsystems": "Ver Lista Alineaciones",
+  "viewlistsystem": "Eliminar LineUp falló.",
+  "addsystem": "Guardar como LineUp",
+  "saveassystem": "Crear LineUp éxito.",
+  "saveassystemsuccessful": "Crear LineUp falló.",
+  "saveassystemfailed": "Subir Motor"
+}

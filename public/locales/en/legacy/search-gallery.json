@@ -1,0 +1,6 @@
+{
+  "gallery-s": "Gallery",
+  "address-api": "Google API Address",
+  "require-find-in-map": "Please check the address input on the map before update Location of Incident.",
+  "title-select-address": "Select location of incident to apply with google API information"
+}

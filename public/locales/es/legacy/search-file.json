@@ -1,0 +1,15 @@
+{
+  "searchfile": "Período de tiempo",
+  "timeperiod": "Último",
+  "last": "Horas",
+  "hours": "Días",
+  "days": "Desde:",
+  "from": "A:",
+  "to": "Sin registro seleccionado.",
+  "nofilerecordselected": "Subir reciente:",
+  "recentuploads": "Sube Periodo:",
+  "uploadperiod": "Archivo Importar registros",
+  "fileimportrecords": "Ningún record fue encontrado.",
+  "nofilerecordfound": "Registros de Carga",
+  "no-current-record": ""
+}

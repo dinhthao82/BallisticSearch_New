@@ -1,0 +1,22 @@
+{
+  "gallerysize": "Galería Tamaño",
+  "allowbatchimport": "Permitir lotes función Galería Importación FTP",
+  "special-character": "Carácter especial",
+  "expire-password": "Período de caducidad",
+  "min-length": "Longitud mínima",
+  "state": "",
+  "viewtopresult": "",
+  "select-func-probe": "",
+  "select-func-probe-admin": "",
+  "select-func-possible": "",
+  "select-func-possible-admin": "",
+  "highlight-func-probe": "",
+  "highlight-func-possible": "",
+  "highlight-func-alert": "",
+  "active-sync": "",
+  "includena": "",
+  "function-gl": "",
+  "add-to-exist": "",
+  "find-exist": "",
+  "internal": ""
+}

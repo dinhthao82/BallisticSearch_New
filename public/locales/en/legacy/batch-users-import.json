@@ -1,0 +1,21 @@
+{
+  "statistic": "Import's Statistic",
+  "note1": "(View Details in Status Column).",
+  "guide": "Allow import multiple users. Please click on the following 'Template File' button to download template file.",
+  "download": "Download",
+  "header-template": "Import Users Template",
+  "import-warning": "Import file must be csv format or xml format file!",
+  "selectfile": "Please select file to import users!",
+  "import-users-success": "You have successfull created {0} Users!",
+  "import-user-success": "You have successfull created one User!",
+  "import-fail": "Batch Users Import is not successful. Please check statistical results.",
+  "lack-header": "Your CSV file must have header information in first line to import!",
+  "total-import": "Total user(s) import",
+  "add-success": "Adding successful",
+  "add-fail": "Adding Failed",
+  "username-exist": "Invalid: Username already exists",
+  "invalid-info": "Invalid information",
+  "limit-license": "The limit on number of users for this license has been reached",
+  "limit-agency": "The limit on number of users for this license has been reached",
+  "email-exist": "Invaild: Email already exists."
+}

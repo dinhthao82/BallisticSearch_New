@@ -1,0 +1,12 @@
+{
+  "title": "Compose Email",
+  "placeholder-search-agency": "Search...",
+  "send-email-success": "Email has been sent successfully.",
+  "send-email-fail": "Email send failed.",
+  "require-subject": "Please input Subject.",
+  "require-recipients": "Please input at least one recipient.",
+  "require-to-recipients": "Please input \\\"To\\\" recipient.",
+  "require-content": "Please input content of the email.",
+  "require-unique-recipients": "Please input unique recipients between To, Cc and Bcc.",
+  "attach-large": "Please select files below 10MB."
+}

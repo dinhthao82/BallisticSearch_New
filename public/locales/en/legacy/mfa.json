@@ -1,0 +1,15 @@
+{
+  "mfa": "Verification",
+  "email-verify-success": "Email verified",
+  "verify-success": "Verify success",
+  "verify-fail": "Verification code is incorrect",
+  "verify-require": "Verification Required",
+  "verify-code": "Verify Code",
+  "enter-code-from-email": "Verification code has been sent to your email.",
+  "enter-code-from-sms": "Verification code has been sent to your phone.",
+  "resend-code": "Resend Code",
+  "change-to-verify-by-sms": "Receive your verification code via SMS",
+  "change-to-verify-by-email": "Receive your verification code via Email",
+  "verify-code-incorrect": "Your verification code is incorrect.",
+  "require-valid-email": "Please verify your Email to enable Multifactor Authentification feature."
+}

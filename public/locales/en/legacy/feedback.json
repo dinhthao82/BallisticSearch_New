@@ -1,0 +1,13 @@
+{
+  "send": "Sending...",
+  "senddone": "Send successful. The Feedback has been sent to supporter",
+  "sendfail": "Failed to send mail",
+  "titleempty": "Please input title",
+  "feedbackempty": "Please input feedback",
+  "inputfeedback": "Input your feedback",
+  "3dtooltip": "This is still under development. Please share any feedback.",
+  "lockmodeltooltip": "Lock the models to display.",
+  "feedback-tooltip": "Share your feedback.",
+  "capture3d-tooltip": " Capture the current 3D view on screen to put in the report.",
+  "img-capture3d-tooltip": "View images captured."
+}

@@ -1,0 +1,21 @@
+{
+  "addsystem": "LineUp Ekle",
+  "areyoudeletesystem": "Bu LineUpı silmek istediğinizden emin misiniz?",
+  "saveassystemfailed": "LineUp Oluşturma Başarısız.",
+  "saveassystemsuccessful": "LineUp Oluşturma Başarılı.",
+  "deletesystem": "LineUp Sil",
+  "deletesystemfailed": "Line Silme Başarısız.",
+  "editsystem": "LineUp Düzenle",
+  "name": "LineUp Adı:",
+  "system": "LineUp:",
+  "listsystemsofagency": "Merkez LineUp ları:",
+  "listsystems": "LineUp Listesi",
+  "nosystemavailable": "Uygun LineUp Yok",
+  "saveassystem": "LineUp Farklı Kaydet",
+  "selectsearchcriteria": "Seçim Kriteri Görüntüle",
+  "nosystemrecords": "LineUp Kaydı Yok.",
+  "updatesystemfailed": "LineUp Güncelleme Başarısız.",
+  "updatesystemsuccessful": "LineUp Güncelleme Başarılı.",
+  "viewsystemaccount": "LineUp Bilgilerini Görüntüle",
+  "viewlistsystem": "LineuP Listesi Görüntüle"
+}

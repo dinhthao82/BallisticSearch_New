@@ -1,0 +1,13 @@
+{
+  "uploadengine": "Upload Engine",
+  "engine": "Engine:",
+  "lastversioninformation": "Lastest Engine Version Information",
+  "versionfsvector": "FSVector Version:",
+  "versionfacesearch": "Ballistics IQ Version:",
+  "versionlineupapi": "Line Up API Version:",
+  "errorfileupload": "No upload files that are not zip or rar file.",
+  "errorfilelimit": "Only upload file's size greater 100 Bytes",
+  "errorfileinvalid": "File is not valid.",
+  "uploadfilesuccessful": "Upload File Successful",
+  "uploadfilefailed": "Upload File Failed"
+}

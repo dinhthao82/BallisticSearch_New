@@ -1,0 +1,13 @@
+{
+  "uploadengine": "Загрузить двигателя",
+  "engine": "Двигатель:",
+  "lastversioninformation": "Последнее данных двигателя Версия",
+  "versionfsvector": "FSVector Версия:",
+  "versionfacesearch": "FaceSearch Версия:",
+  "versionlineupapi": "Line Up API Версия:",
+  "errorfileupload": "Нет загружать файлы, которые не ZIP или RAR файл.",
+  "errorfilelimit": "Размер только файл для загрузки в 100 байт больше",
+  "errorfileinvalid": "Файл не является действительным.",
+  "uploadfilesuccessful": "Загрузить файл Успешный",
+  "uploadfilefailed": "Не удалось загрузить файл"
+}

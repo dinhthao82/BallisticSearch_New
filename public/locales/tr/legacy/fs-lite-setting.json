@@ -1,0 +1,11 @@
+{
+  "checkconnection": "Bağlantıyı Kontrol Et",
+  "system-management": "LineUp Konfigürasyonu",
+  "fslite-config": "LineUp Konfigürasyonu",
+  "fslite-management": "LineUp Yönetimi",
+  "fslite-assign-gallerytype": "Galeri Tipini LineUp İle Paylaş",
+  "warning-notconnect": "Bu hesap hiçbir LineUp sunucusuna bağlanmadı.",
+  "require-checkconnect": "LineUp sunucusunu yönetmek için, IP Adresi Domain İsmi girip \"Bağlantıyı Kontrol Et\" e tıklayınız.",
+  "addsystemsuccessful": "Başarıyla Yeni bir LineUp eklediniz.",
+  "editsystemsuccessful": "LineUp ı başarıyla güncellediniz."
+}

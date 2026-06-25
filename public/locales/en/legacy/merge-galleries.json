@@ -1,0 +1,13 @@
+{
+  "merge-image": "Merge Images",
+  "merge": "Merge",
+  "primary-image": "Primary Image",
+  "merge-galleries": "Merge Images",
+  "merge-galleries-success": "Merge Images Successful",
+  "merge-galleries-fail": "Merge Images Failed",
+  "select-record": "Please select records for merge images",
+  "select-one-primary": "Please select only one Primary Image to merge",
+  "select-primary": "Please select Primary Image to merge",
+  "select-nomatch": "Please select No Match Gallery to merge",
+  "error-merge-share-gallery": "You can not merge sharing gallery"
+}

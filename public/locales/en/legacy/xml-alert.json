@@ -1,0 +1,18 @@
+{
+  "errurlrequired": "'Enter URL' is required.",
+  "title": "Send XML Alert",
+  "titleedit": "Edit Agency URL",
+  "titlenew": "Add New Agency URL",
+  "enterurl": "Enter URL",
+  "selecturl": "Select URL",
+  "errselecturlpls": "Please select URL",
+  "empty": "-- Empty --",
+  "inserturlsuccessful": "Insert Url Successful",
+  "inserturlfailed": "Insert Url Failed",
+  "select": "Select",
+  "errsiteurlisrequire": "'Enter Url' is required.",
+  "plsselectupdate": "Please choose at least one item to Update!",
+  "checkconnectsuccess": "Check Connect Successful",
+  "checkconnectfailed": "Check Connect Failed",
+  "invalidurl": "\\'Enter URL\\' is invalid."
+}

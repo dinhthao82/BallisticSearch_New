@@ -1,0 +1,12 @@
+{
+  "cancel-withoutsaving": "Bạn có chắc chắn muốn Hủy bỏ mà không lưu thay đổi?",
+  "limit-email-character": "Email phải ít hơn 255 ký tự!",
+  "limit-name-character": "Tên phải được ít hơn 100 ký tự!",
+  "password-notspace": "Mật khẩu không phải có thư không gian!",
+  "limit-password-character": "Mật khẩu phải có ít hơn 255 ký tự!",
+  "confirm-notspace": "Xác nhận mật khẩu không phải có thư không gian!",
+  "limit-confirm-character": "Xác nhận Mật khẩu phải có ít hơn 255 ký tự!",
+  "limit-username-character": "Tên đăng nhập phải ít hơn 50 ký tự!",
+  "limit-address-character": "Địa chỉ phải được ít hơn 255 ký tự!",
+  "limit-description-character": "Mô tả phải ít hơn 255 ký tự!"
+}

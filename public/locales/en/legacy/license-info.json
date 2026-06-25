@@ -1,0 +1,21 @@
+{
+  "require-input": "Please input your license key!",
+  "admin-header": "System License Information",
+  "agency-header": "Agency Permissions",
+  "date-time-license": "Limit on period of time:",
+  "active-date": "- Active Date:",
+  "expire-date": "- Expire Date:",
+  "day-left": "- Day Remaining:",
+  "limit-glsize": "Limit on gallery size:",
+  "limited": "- Limited:",
+  "used": "- Used:",
+  "agency-left": "- Agency Remaining:",
+  "system-left": "- System Remaining:",
+  "left": "- Remaining:",
+  "limit-agency": "Limit on number of agencies:",
+  "limit-user": "Limit on number of users:",
+  "unlimited": "Unlimited",
+  "batch-function": "Batch Functions:",
+  "machine-id": "Machine ID",
+  "update-license": "Update License"
+}

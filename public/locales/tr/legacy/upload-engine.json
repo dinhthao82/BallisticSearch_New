@@ -1,0 +1,13 @@
+{
+  "engine": "Çalışma:",
+  "versionfacesearch": "FaceSearch Versiyon:",
+  "errorfileinvalid": "Dosya Geçerisiz",
+  "versionfsvector": "FSVektör Versiyon:",
+  "lastversioninformation": "Son Çalışma Bilgileri",
+  "versionlineupapi": "LineUp API Versiyonu:",
+  "errorfileupload": "Zip Veya Rar şeklinde dosya yüklenmemiş",
+  "errorfilelimit": "Sadece 100 Byte tan büyük dosyalar yüklenebilir",
+  "uploadengine": "Yükleme Motoru",
+  "uploadfilefailed": "Dosya Yükleme Başarısız",
+  "uploadfilesuccessful": "Dosya Yükleme Başarılı"
+}

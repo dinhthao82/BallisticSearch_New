@@ -1,0 +1,17 @@
+{
+  "filters": "Filters",
+  "agency": "Agency:",
+  "agencyusers": "Agency Users:",
+  "country": "Country:",
+  "alerttype": "Gallery Type:",
+  "state": "State:",
+  "county": "County/City",
+  "msa": "Metro Area:",
+  "gender": "Gender:",
+  "race": "Race:",
+  "hotlistsource": "Hot List Source",
+  "owner": "Owner",
+  "alert": "Gallery Type",
+  "state2": "State",
+  "searchtype": "Search Type"
+}

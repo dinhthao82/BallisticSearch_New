@@ -1,0 +1,23 @@
+{
+  "cameramanagement": "Quản lý camera",
+  "datafilter": "Lọc dữ liệu",
+  "no.": "Không.",
+  "cameraname": "Máy ảnh Tên",
+  "lineup": "Xếp hàng",
+  "nolineup": "Không LineUp",
+  "selectlineup": "Chọn LineUp",
+  "gallerygroup": "Gallery Nhóm",
+  "connectionstatus": "Connection Status",
+  "lastconnectiontime": "Cuối cùng kết nối Time",
+  "cameradetail": "Máy ảnh chi tiết",
+  "faceboxid": "Mặt Box ID",
+  "cameraid": "Máy ảnh ID",
+  "cameraip": "Camera IP",
+  "all": "Tất cả",
+  "connecting": "Kết nối",
+  "disconnect": "Ngắt kết nối",
+  "nogalleryavailable": "Không Gallery có sẵn",
+  "nogallerygroupfound": "Không Gallery Nhóm Tìm thấy",
+  "nocamerafound": "Không có máy ảnh Tìm thấy",
+  "notapplyrule": "Không Áp dụng Rule"
+}

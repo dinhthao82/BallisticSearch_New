@@ -1,0 +1,11 @@
+{
+  "8000": "An unexpected system error occurred when search Potential Link. Please contact Evidence IQ Support to help to fix this issue. - 8000",
+  "8001": "An unexpected system error occurred when creating search Potential Link. Please contact Evidence IQ Support to help to fix this issue. - 8001",
+  "8002": "An unexpected system error occurred when creating search Potential Link. Please contact Evidence IQ Support to help to fix this issue. - 8002",
+  "8003": "An unexpected system error occurred when creating search Potential Link. Please contact Evidence IQ Support to help to fix this issue. - 8003",
+  "8004": "An unexpected system error occurred when creating search Potential Link. Please contact Evidence IQ Support to help to fix this issue. - 8004",
+  "send-result-email-mess": "Do you want to wait for your PL search result or be notified via email when completed?",
+  "notify-send-result-email-mess": "The result will be sent to your email when completed.",
+  "search-pl": "Search Potential Link",
+  "pl-offline-wrong-account": "Please log in to <strong>{0}</strong> to view the Search Potential Link result."
+}

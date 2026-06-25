@@ -1,0 +1,18 @@
+{
+  "errurlrequired": "Se requiere 'Enter URL .",
+  "title": "Enviar Alerta XML",
+  "titleedit": "Editar Agencia URL",
+  "titlenew": "Añadir Nueva Agencia URL",
+  "enterurl": "Introducir URL",
+  "selecturl": "Seleccione URL",
+  "errselecturlpls": "Por favor, seleccione URL",
+  "empty": "- Vacío -",
+  "inserturlsuccessful": "Inserte Url Exitosa",
+  "inserturlfailed": "Insertar Url Falló",
+  "select": "Seleccionar",
+  "errsiteurlisrequire": "Se requiere 'Enter URL .",
+  "plsselectupdate": "Por favor, elija al menos un elemento de actualizar!",
+  "checkconnectsuccess": "Compruebe Conectar con éxito",
+  "checkconnectfailed": "Compruebe Conectar Falló",
+  "invalidurl": "\\ Enter URL \\ 'no es válido."
+}

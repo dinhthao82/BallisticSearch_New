@@ -1,0 +1,23 @@
+{
+  "settingforalertrule": "Configuración de la Regla Alerta",
+  "alertrulecombinegallerygroup": "Regla de alerta: Combinación Galería Group y Cámaras",
+  "lineup": "Póngase en fila",
+  "cameraselection": "Selección de Cámara",
+  "gallerygroup": "Galería de Grupo",
+  "cameras": "Cámaras",
+  "selectall": "Seleccionar Todo",
+  "notification": "Notificación",
+  "notifyviaemail": "Notificarme por correo electrónico",
+  "notifyviaurl": "Vía URL",
+  "btn-update": "Actualización",
+  "btn-close": "Cerrar",
+  "selectlineup": "Seleccione LineUp",
+  "nolineup": "No LineUp",
+  "nogallerygroup": "Regla Alerta Actualización",
+  "updatealertrule": "Regla Alerta Actualización",
+  "alertrule": "Regla de Alerta",
+  "err-emailstandard": "Email debe ajustarse a una dirección de correo electrónico estándar.",
+  "ask-assignlineup": "Por favor, seleccione LineUp asignado",
+  "msg-updatealertrulesuccess": "Actualización Alerta Regla éxito.",
+  "msg-updatealertrulefailed": "Alerta Actualización Regla falied. Por favor revisa otra vez."
+}

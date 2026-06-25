@@ -1,0 +1,11 @@
+{
+  "system-management": "LineUp Configuration",
+  "fslite-config": "LineUp Configuration",
+  "fslite-assign-gallerytype": "Sharing Gallery Type To LineUp",
+  "checkconnection": "Check Connection",
+  "editsystemsuccessful": "You have successfully updated this LineUp",
+  "addsystemsuccessful": "You have successfully added new LineUp",
+  "warning-notconnect": "This account has not connected to any LineUp Server",
+  "fslite-management": "LineUp Management",
+  "require-checkconnect": "To Manage LineUp server, You must enter IP Address or Domain Name and click \"Check Connection\". Please check it!"
+}

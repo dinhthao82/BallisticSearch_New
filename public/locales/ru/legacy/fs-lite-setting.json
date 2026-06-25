@@ -1,0 +1,11 @@
+{
+  "system-management": "LineUp конфигурации",
+  "fslite-config": "LineUp конфигурации",
+  "fslite-assign-gallerytype": "Совместное галерейного типа к линейке",
+  "checkconnection": "Проверьте подключение",
+  "editsystemsuccessful": "Вы успешно обновили этот LineUp",
+  "addsystemsuccessful": "Вы успешно добавили новую линейку",
+  "warning-notconnect": "Эта учетная запись не подключен к любому серверу линейке",
+  "fslite-management": "LineUp управления",
+  "require-checkconnect": "Управлять линейке сервер, Вы должны ввести IP-адрес или доменное имя и нажмите \"Проверить подключение\". Пожалуйста, проверь это!"
+}

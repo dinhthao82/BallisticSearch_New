@@ -1,0 +1,13 @@
+{
+  "sanitize-background": "Standardize Background",
+  "manual-position": "Manual Position",
+  "print": "Print",
+  "page-size": "Page Size",
+  "no": "No.",
+  "sanitize-error": "Can not sanitize background",
+  "sanitize-busy": "This function is busy. Please try again few minute later.",
+  "time-left": "Time left",
+  "title": "PhoTo Array",
+  "standardizing": "Standardizing Background...",
+  "printarray": "Print Array"
+}

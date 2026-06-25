@@ -1,0 +1,18 @@
+{
+  "update-fail": "You have failure updated Agency expiration",
+  "update-error": "The update has been stop for unknown reason",
+  "update-success": "You have successfully updated Agency expiration",
+  "expiration": "Expiration",
+  "startdate": "Start Date",
+  "update-expire": "Update Expiration",
+  "activedate": "Activation Date",
+  "enddate": "End Date",
+  "expirydate": "Expiry Date",
+  "trialperiod": "Trial Period",
+  "missing-startdate": "Please input \\'Start Date\\'.",
+  "missing-enddate": "Please input \\'End Date\\'.",
+  "error-startdate-limit": " \\'End Date\\' must be greater than \\'Start Date\\'.",
+  "error-enddate-limit": "\\'End Date\\' must be a date in the future.",
+  "warning-active-expiry": "This Agency trial period has expired. Please update a new trial period or remove trial period for changing this agency to non-expired agency.",
+  "warning-active-unactivation": "This Agency was not activated the trial yet. Please update a new trial period or remove trial period for changing this agency to non-expired agency."
+}

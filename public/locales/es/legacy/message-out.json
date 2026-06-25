@@ -1,0 +1,13 @@
+{
+  "cancel-withoutsaving": "¿Seguro que quieres cancelar sin guardar los cambios?",
+  "limit-email-character": "Correo electrónico debe ser menos de 255 caracteres!",
+  "limit-name-character": "El nombre debe ser inferior a 100 caracteres!",
+  "password-notspace": "La contraseña no debe tener carta de espacio!",
+  "limit-password-character": "La contraseña debe tener menos de 255 caracteres!",
+  "confirm-notspace": "Confirmar contraseña no debe tener carta de espacio!",
+  "limit-confirm-character": "Confirmar contraseña debe tener menos de 255 caracteres!",
+  "limit-username-character": "Nombre de usuario debe ser inferior a 50 caracteres!",
+  "limit-address-character": "Dirección debe tener menos de 255 caracteres!",
+  "limit-description-character": "La descripción debe tener menos de 255 caracteres!",
+  "limit-fslname-character": ""
+}

@@ -1,0 +1,15 @@
+{
+  "advance-button": "Gelişmiş",
+  "assign-button": "Atama",
+  "assign-fail": "Atama başarısız.! Lütfen tekrar deneyiniz veya yönetici ile iletişime geçiniz.",
+  "assign-success": "Atama Başarılı!",
+  "assign-title": "FaceSearch- Atama",
+  "find-button": "Bul",
+  "findexistedhotlist": "Galeriden kişi bul",
+  "hotfaceresult": "Galeride ki Yüz Sonuçları",
+  "fullname": "Ad",
+  "personalid": "Personel ID",
+  "ok": "Ok",
+  "hotlist-inactive": "Bu kayıt inaktif durumdadır, atanamaz. Lütfen başka bir kayıt seçiniz.",
+  "assign-nopermission": "Bu işlemi yaomak için yetkiniz yok."
+}
