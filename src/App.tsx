@@ -13,6 +13,7 @@ const queryClient = new QueryClient({
   defaultOptions: { queries: { retry: 1, refetchOnWindowFocus: false } },
 });
 
+const HomePage = lazy(() => import('@/features/home/HomePage'));
 const SearchAPLPage = lazy(() => import('@/features/search-apl/SearchAPLPage'));
 const CaseNumberPage = lazy(() => import('@/features/case-number/CaseNumberPage'));
 const AuditContractInfoPage = lazy(
@@ -25,6 +26,10 @@ const AuditingContractPage = lazy(
 );
 const ComposeEmailPage = lazy(() => import('@/features/compose-email/ComposeEmailPage'));
 const UploadBulletPage = lazy(() => import('@/features/upload-bullet/UploadBulletPage'));
+const MapOfAgenciesPage = lazy(() => import('@/features/map-agencies/MapOfAgenciesPage'));
+const MapOfGalleriesPage = lazy(() => import('@/features/map-galleries/MapOfGalleriesPage'));
+const MapItGalleryPage = lazy(() => import('@/features/mapit-gallery/MapItGalleryPage'));
+const MapItPotentialPage = lazy(() => import('@/features/mapit-potential/MapItPotentialPage'));
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -54,7 +59,14 @@ export default function App() {
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/app" element={<ProtectedLayout />}>
-              <Route index element={<Navigate to="/app/search-apl" replace />} />
+              <Route
+                index
+                element={
+                  <Lazy>
+                    <HomePage />
+                  </Lazy>
+                }
+              />
               <Route
                 path="search-apl"
                 element={
@@ -116,6 +128,38 @@ export default function App() {
                 element={
                   <Lazy>
                     <UploadBulletPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="map-of-agencies"
+                element={
+                  <Lazy>
+                    <MapOfAgenciesPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="map-of-galleries"
+                element={
+                  <Lazy>
+                    <MapOfGalleriesPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="mapit-gallery"
+                element={
+                  <Lazy>
+                    <MapItGalleryPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="mapit-potential"
+                element={
+                  <Lazy>
+                    <MapItPotentialPage />
                   </Lazy>
                 }
               />
