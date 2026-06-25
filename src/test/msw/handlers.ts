@@ -3,6 +3,7 @@ import { mockAPLData, type APLItem } from './mockData';
 import { mockSearchEventData } from '@/features/search-event/mockData';
 import { mockCSAData } from '@/features/search-csa/mockData';
 import { mockQAData } from '@/features/search-qa/mockData';
+import { mockUserData } from '@/features/user-mgmt/mockData';
 
 // Minimal cascading location dataset for BIQLocationFilter dev/test runs.
 // Real systems would source these from the backend reference data service.
@@ -77,6 +78,46 @@ export const handlers = [
     const total = items.length;
     const paged = items.slice((page - 1) * pageSize, page * pageSize);
     return HttpResponse.json({ items: paged, total, page, pageSize });
+  }),
+
+  http.get('/api/v1/users', ({ request }) => {
+    const url = new URL(request.url);
+    const role = url.searchParams.get('role');
+    const search = url.searchParams.get('search');
+    let items = [...mockUserData];
+    if (role) items = items.filter((u) => u.role === role);
+    if (search) {
+      const q = search.toLowerCase();
+      items = items.filter(
+        (u) => u.username.toLowerCase().includes(q) || u.email.toLowerCase().includes(q)
+      );
+    }
+    return HttpResponse.json({ items, total: items.length });
+  }),
+
+  http.get('/api/v1/users/:id', ({ params }) => {
+    const id = String(params['id']);
+    const user = mockUserData.find((u) => u.id === id);
+    if (!user) return HttpResponse.json({ error: 'Not found' }, { status: 404 });
+    return HttpResponse.json(user);
+  }),
+
+  http.post('/api/v1/users', async ({ request }) => {
+    const body = await request.json();
+    void body;
+    return HttpResponse.json({ id: `U-${Date.now().toString(36).toUpperCase()}` });
+  }),
+
+  http.put('/api/v1/users/:id', async ({ params, request }) => {
+    const body = await request.json();
+    void body;
+    return HttpResponse.json({ id: String(params['id']) });
+  }),
+
+  http.post('/api/v1/agency-managers', async ({ request }) => {
+    const body = await request.json();
+    void body;
+    return HttpResponse.json({ id: `AM-${Date.now().toString(36).toUpperCase()}` });
   }),
 
   http.post('/api/v1/search-qa', async ({ request }) => {

@@ -33,6 +33,11 @@ const MapItPotentialPage = lazy(() => import('@/features/mapit-potential/MapItPo
 const SearchEventPage = lazy(() => import('@/features/search-event/SearchEventPage'));
 const SearchCSAPage = lazy(() => import('@/features/search-csa/SearchCSAPage'));
 const SearchQAPage = lazy(() => import('@/features/search-qa/SearchQAPage'));
+const AddUsersPage = lazy(() => import('@/features/user-mgmt/AddUsersPage'));
+const EditUsersPage = lazy(() => import('@/features/user-mgmt/EditUsersPage'));
+const ManageUserPage = lazy(() => import('@/features/user-mgmt/UserListPage'));
+const ManageAdminPage = lazy(() => import('@/features/user-mgmt/ManageAdminPage'));
+const AddAgencyManagerPage = lazy(() => import('@/features/user-mgmt/AddAgencyManagerPage'));
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -99,6 +104,46 @@ export default function App() {
                 element={
                   <Lazy>
                     <SearchQAPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="add-users"
+                element={
+                  <Lazy>
+                    <AddUsersPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="edit-users"
+                element={
+                  <Lazy>
+                    <EditUsersPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="manage-users"
+                element={
+                  <Lazy>
+                    <ManageUserPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="manage-admins"
+                element={
+                  <Lazy>
+                    <ManageAdminPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="add-agency-manager"
+                element={
+                  <Lazy>
+                    <AddAgencyManagerPage />
                   </Lazy>
                 }
               />

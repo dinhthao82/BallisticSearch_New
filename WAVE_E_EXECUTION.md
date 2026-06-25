@@ -8,14 +8,14 @@ Scope: 19 P5 pages across User Management, Agency Management, Audit, and Sharing
 
 Pages are simpler than P4 because they're list-style or single-form pattern. Reuse: PageBody / DataFilter / DataResult, BIQ primitives, RHF+Zod, TanStack Query against MSW. No new primitives.
 
-| Mission | Steps | Pages | Pattern |
-|---|---|---|---|
-| W21: User Management | 106-110 | AddUsers, EditUsers, ManageUser, ManageAdmin, AddAgencyManager | Form / List+Edit |
-| W22: Agency Management | 111-115 | AddAgencies, EditAgency, AgencySetting, ContractManagement, ManageSharingAgencies | Form |
-| W23: Audit | 116-118 | AuditAllTransactions, LoginAuditing, InformationAuditing | List+filter |
-| W24: Sharing + Dashboard | 119-124 | AdminShareToAgencies, AgencyShareToAdmin, GlobalHotlistSharing, SharingProfiles, DashboardVCC, UserManagement | Mix |
-| W25: Cross-page E2E + audit | 125 | — | Playwright admin flow + Lighthouse batch update |
-| W26: Milestone | 126 | — | WAVE_E_RESULT + v0.6.0 tag |
+| Mission                     | Steps   | Pages                                                                                                         | Pattern                                         |
+| --------------------------- | ------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| W21: User Management        | 106-110 | AddUsers, EditUsers, ManageUser, ManageAdmin, AddAgencyManager                                                | Form / List+Edit                                |
+| W22: Agency Management      | 111-115 | AddAgencies, EditAgency, AgencySetting, ContractManagement, ManageSharingAgencies                             | Form                                            |
+| W23: Audit                  | 116-118 | AuditAllTransactions, LoginAuditing, InformationAuditing                                                      | List+filter                                     |
+| W24: Sharing + Dashboard    | 119-124 | AdminShareToAgencies, AgencyShareToAdmin, GlobalHotlistSharing, SharingProfiles, DashboardVCC, UserManagement | Mix                                             |
+| W25: Cross-page E2E + audit | 125     | —                                                                                                             | Playwright admin flow + Lighthouse batch update |
+| W26: Milestone              | 126     | —                                                                                                             | WAVE_E_RESULT + v0.6.0 tag                      |
 
 Each page step commits via: `feat: Step N — M-XXX <PageName>` with schema/page/MSW/test files.
 
