@@ -9,8 +9,10 @@ import AxeBuilder from '@axe-core/playwright';
 
 async function loginAndGo(page: import('@playwright/test').Page, path: string) {
   await page.goto('/login');
-  await page.getByRole('button', { name: /login/i }).click();
-  await expect(page).toHaveURL(/\/app/);
+  await page.getByRole('textbox', { name: /username/i }).fill('a11y');
+  await page.getByLabel(/password/i).fill('secret');
+  await page.getByRole('button', { name: /^login$/i }).click();
+  await expect(page).toHaveURL(/\/app($|\/)/);
   if (path !== '/app' && path !== '/app/') {
     await page.goto(path);
   }
