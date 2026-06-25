@@ -107,10 +107,9 @@ export function SearchEventFilter({ onSubmit, isSubmitting }: SearchEventFilterP
               render={({ field }) => (
                 <BIQSelect
                   label="Site (Admin only)"
-                  data={SITE_OPTIONS}
+                  data={[{ value: '', label: 'Any site' }, ...SITE_OPTIONS]}
                   value={field.value ?? ''}
-                  onChange={(v) => field.onChange(v ?? '')}
-                  clearable
+                  onChange={(e) => field.onChange(e.currentTarget.value)}
                 />
               )}
             />
@@ -120,10 +119,9 @@ export function SearchEventFilter({ onSubmit, isSubmitting }: SearchEventFilterP
               render={({ field }) => (
                 <BIQSelect
                   label="User (Admin only)"
-                  data={USER_OPTIONS}
+                  data={[{ value: '', label: 'Any user' }, ...USER_OPTIONS]}
                   value={field.value ?? ''}
-                  onChange={(v) => field.onChange(v ?? '')}
-                  clearable
+                  onChange={(e) => field.onChange(e.currentTarget.value)}
                 />
               )}
             />
