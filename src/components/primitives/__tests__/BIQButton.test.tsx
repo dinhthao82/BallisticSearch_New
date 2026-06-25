@@ -34,7 +34,13 @@ describe('BIQButton', () => {
   });
 
   it('supports polymorphic component prop (renders as anchor)', () => {
-    render(ui(<BIQButton component="a" href="/dest">Linked</BIQButton>));
+    render(
+      ui(
+        <BIQButton component="a" href="/dest">
+          Linked
+        </BIQButton>
+      )
+    );
     const link = screen.getByRole('link', { name: /linked/i });
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute('href', '/dest');

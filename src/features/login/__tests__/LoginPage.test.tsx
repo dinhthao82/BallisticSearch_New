@@ -12,7 +12,10 @@ function renderLogin(initialPath = '/login') {
       <MemoryRouter initialEntries={[initialPath]}>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/app/search-apl" element={<div data-testid="apl-landing">APL landing</div>} />
+          <Route
+            path="/app/search-apl"
+            element={<div data-testid="apl-landing">APL landing</div>}
+          />
         </Routes>
       </MemoryRouter>
     </MantineProvider>

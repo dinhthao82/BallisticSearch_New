@@ -37,13 +37,7 @@ export default function ProtectedLayout() {
         <Title order={5} mb="sm">
           Navigation
         </Title>
-        <Button
-          component={Link}
-          to="/app/search-apl"
-          variant="subtle"
-          fullWidth
-          justify="start"
-        >
+        <Button component={Link} to="/app/search-apl" variant="subtle" fullWidth justify="start">
           Search APL Process
         </Button>
       </AppShell.Navbar>

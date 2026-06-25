@@ -36,8 +36,7 @@ export const tokens = {
     sizeBase: '0.875rem',
     sizeTitle: '1.5rem',
     sizeSmall: '0.75rem',
-    family:
-      'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    family: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     weightNormal: 400,
     weightMedium: 500,
     weightBold: 600,

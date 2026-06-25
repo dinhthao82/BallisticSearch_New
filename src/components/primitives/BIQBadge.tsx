@@ -1,13 +1,7 @@
 import { forwardRef } from 'react';
 import { Badge, type BadgeProps, type MantineColor } from '@mantine/core';
 
-export type BIQStatus =
-  | 'Pending'
-  | 'In Process'
-  | 'Closed'
-  | 'pending'
-  | 'inProcess'
-  | 'closed';
+export type BIQStatus = 'Pending' | 'In Process' | 'Closed' | 'pending' | 'inProcess' | 'closed';
 
 export const BIQ_STATUS_COLOR: Readonly<Record<BIQStatus, MantineColor>> = Object.freeze({
   Pending: 'yellow',

@@ -133,16 +133,19 @@
 **Target tag**: v0.3.0-trivial-pages
 
 ### W8: Cleanup — 5 W2 code-review findings (Steps 53-55)
+
 - [x] Step 53 — BIQBadge fixes (status precedence + dev-warn + type narrowing; 181 tests)
 - [x] Step 54 — BIQButton polymorphic + BIQCheckbox subcomponents (183 tests)
 - [x] Step 55 — Cleanup verified, all 5 W2 findings closed (235.52 KB gzip)
 
 ### W9: CI/CD GitHub Actions (Steps 56-58)
+
 - [ ] Step 56 — Base workflow (typecheck/lint/test/build)
 - [ ] Step 57 — Size-limit gate + Lighthouse advisory
 - [ ] Step 58 — Verify CI on dummy PR
 
 ### W10: 3 Trivial Pages (Steps 59-67)
+
 - [ ] Step 59 — M-040 Input_Case_Number: shell + route
 - [ ] Step 60 — M-040: form + validation
 - [ ] Step 61 — M-040: tests
@@ -154,6 +157,7 @@
 - [ ] Step 67 — M-036: tests
 
 ### W11: Milestone (Step 68)
+
 - [ ] Step 68 — WAVE_B_RESULT.md + v0.3.0-trivial-pages tag
 
 ---

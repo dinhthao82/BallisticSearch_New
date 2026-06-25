@@ -33,9 +33,7 @@ describe('toApiFilter', () => {
   });
 
   it('takes the first non-empty APL_ID from multi-line', () => {
-    expect(
-      toApiFilter({ apl_ID: '\n1000005\n1000006' })
-    ).toEqual({ apl_ID: '1000005' });
+    expect(toApiFilter({ apl_ID: '\n1000005\n1000006' })).toEqual({ apl_ID: '1000005' });
   });
 
   it('takes the first non-empty caseNumber from comma-separated', () => {
@@ -45,9 +43,10 @@ describe('toApiFilter', () => {
   });
 
   it('passes dates through', () => {
-    expect(
-      toApiFilter({ dateFrom: '2026-01-01', dateTo: '2026-06-30' })
-    ).toEqual({ dateFrom: '2026-01-01', dateTo: '2026-06-30' });
+    expect(toApiFilter({ dateFrom: '2026-01-01', dateTo: '2026-06-30' })).toEqual({
+      dateFrom: '2026-01-01',
+      dateTo: '2026-06-30',
+    });
   });
 
   it('passes reportStatus only when non-empty', () => {

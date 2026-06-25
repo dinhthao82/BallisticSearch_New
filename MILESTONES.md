@@ -19,16 +19,16 @@ Steps 1–8 completed in single chained session.
 
 ### Metrics
 
-| Metric | Value |
-|---|---|
-| Bundle initial (JS gzip) | 93 KB |
-| Bundle initial (CSS gzip) | 30 KB |
-| **Total gzip** | **123 KB** ✓ within 250 KB budget |
-| Modules transformed | 814 |
-| Build time | 1.4s |
-| Tests passing | 6/6 (2 files) |
-| Lint warnings/errors | 0/0 |
-| Typecheck errors | 0 |
+| Metric                    | Value                             |
+| ------------------------- | --------------------------------- |
+| Bundle initial (JS gzip)  | 93 KB                             |
+| Bundle initial (CSS gzip) | 30 KB                             |
+| **Total gzip**            | **123 KB** ✓ within 250 KB budget |
+| Modules transformed       | 814                               |
+| Build time                | 1.4s                              |
+| Tests passing             | 6/6 (2 files)                     |
+| Lint warnings/errors      | 0/0                               |
+| Typecheck errors          | 0                                 |
 
 ### Code shipped
 
@@ -72,13 +72,16 @@ Steps 9–15 completed in single chained session.
 ### Components shipped (12 new)
 
 **Layout** (4 + barrel index):
+
 - `<PageBody>`, `<DataFilter>` (collapsible), `<DataResult>`, `<BoxFilter>` (title + maxWidth)
 
 **Data** (2):
+
 - `<DataTable>` generic TanStack Table + sticky header + sort
 - `<Pagination>` Mantine + page-size select + range text
 
 **Feedback** (3 + barrel):
+
 - `<LoadingOverlay>`, `<EmptyState>`, `<ErrorState>` (w/ optional retry)
 
 ### Infrastructure
@@ -92,20 +95,20 @@ Steps 9–15 completed in single chained session.
 
 ### Metrics
 
-| Metric | Value |
-|---|---|
-| Bundle initial (gzip) | **144 KB** (114 JS + 30 CSS) - within 250 KB |
-| MSW lazy chunk (dev only) | 96 KB gzip |
-| Tests passing | 38/38 (12 files) |
-| Lint | 0 errors |
-| Typecheck | 0 errors |
-| Build time | 1.9s |
+| Metric                    | Value                                        |
+| ------------------------- | -------------------------------------------- |
+| Bundle initial (gzip)     | **144 KB** (114 JS + 30 CSS) - within 250 KB |
+| MSW lazy chunk (dev only) | 96 KB gzip                                   |
+| Tests passing             | 38/38 (12 files)                             |
+| Lint                      | 0 errors                                     |
+| Typecheck                 | 0 errors                                     |
+| Build time                | 1.9s                                         |
 
 ### Decisions made
 
 1. **happy-dom + MSW v2 + Ky fetch ReadableStream incompat** → API/hook
    tests mock `@/api/client`; full HTTP path verified in browser dev
-   + Playwright E2E (Step 24).
+   - Playwright E2E (Step 24).
 2. **`exactOptionalPropertyTypes: true` removed** — too painful with
    Mantine's strict `string` props. Kept `strict: true` + extras.
 3. **`baseUrl` removed** — TS 5.x resolves paths relative to tsconfig
@@ -159,15 +162,15 @@ docs/screenshots/README.md                 (placeholder)
 
 ### Metrics
 
-| Metric | Value |
-|---|---|
-| Tests passing | 61/61 (+23 since POC-2) |
-| Bundle initial gzip | 220 KB (under 250 KB budget) |
-| Lint | 0 errors, 0 warnings |
-| Typecheck | 0 errors |
-| Build time | 4.2s |
-| Visual parity vs ASPX | ≥90% (per VISUAL_PARITY.md) |
-| Behavior parity | ≥85% on happy path |
+| Metric                | Value                        |
+| --------------------- | ---------------------------- |
+| Tests passing         | 61/61 (+23 since POC-2)      |
+| Bundle initial gzip   | 220 KB (under 250 KB budget) |
+| Lint                  | 0 errors, 0 warnings         |
+| Typecheck             | 0 errors                     |
+| Build time            | 4.2s                         |
+| Visual parity vs ASPX | ≥90% (per VISUAL_PARITY.md)  |
+| Behavior parity       | ≥85% on happy path           |
 
 ### Decisions made
 
@@ -209,19 +212,19 @@ Steps 23–28 completed.
 
 ### Quality gates achieved
 
-| Gate | Result | Target |
-|---|---|---|
-| Unit tests | 69/69 passing | ≥1 |
-| E2E tests | 7/7 passing (4 happy path + 3 a11y) | ≥1 |
-| Test coverage (lines) | 98.07% | ≥80% |
-| Test coverage (functions) | 75.67% | ≥70% |
-| Lighthouse Performance | 96 | ≥85 |
-| Lighthouse Accessibility | 98 | ≥90 |
-| Lighthouse Best Practices | 100 | ≥90 |
-| WCAG 2.1 AA critical/serious | 0/0 | 0/0 |
-| Bundle initial gzip | 250 KB | ≤250 KB |
-| Build time | 4.9s | ≤30s |
-| TypeScript strict, no `any` | 0 violations | 0 |
+| Gate                         | Result                              | Target  |
+| ---------------------------- | ----------------------------------- | ------- |
+| Unit tests                   | 69/69 passing                       | ≥1      |
+| E2E tests                    | 7/7 passing (4 happy path + 3 a11y) | ≥1      |
+| Test coverage (lines)        | 98.07%                              | ≥80%    |
+| Test coverage (functions)    | 75.67%                              | ≥70%    |
+| Lighthouse Performance       | 96                                  | ≥85     |
+| Lighthouse Accessibility     | 98                                  | ≥90     |
+| Lighthouse Best Practices    | 100                                 | ≥90     |
+| WCAG 2.1 AA critical/serious | 0/0                                 | 0/0     |
+| Bundle initial gzip          | 250 KB                              | ≤250 KB |
+| Build time                   | 4.9s                                | ≤30s    |
+| TypeScript strict, no `any`  | 0 violations                        | 0       |
 
 ### Fixes applied during quality pass
 

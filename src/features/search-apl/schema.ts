@@ -36,9 +36,15 @@ export function toApiFilter(values: SearchAPLFilterValues): {
   reportStatus?: string[];
 } {
   const out: ReturnType<typeof toApiFilter> = {};
-  const apl = values.apl_ID?.split(/[\n,]/).map((s) => s.trim()).filter(Boolean)[0];
+  const apl = values.apl_ID
+    ?.split(/[\n,]/)
+    .map((s) => s.trim())
+    .filter(Boolean)[0];
   if (apl) out.apl_ID = apl;
-  const cn = values.caseNumber?.split(/[\n,]/).map((s) => s.trim()).filter(Boolean)[0];
+  const cn = values.caseNumber
+    ?.split(/[\n,]/)
+    .map((s) => s.trim())
+    .filter(Boolean)[0];
   if (cn) out.caseNumber = cn;
   if (values.dateFrom) out.dateFrom = values.dateFrom;
   if (values.dateTo) out.dateTo = values.dateTo;

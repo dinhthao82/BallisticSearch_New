@@ -71,11 +71,7 @@ export function DataTable<T>({
                 const sortDir = h.column.getIsSorted();
                 const canSort = enableSorting && h.column.getCanSort();
                 const ariaSort =
-                  sortDir === 'asc'
-                    ? 'ascending'
-                    : sortDir === 'desc'
-                      ? 'descending'
-                      : 'none';
+                  sortDir === 'asc' ? 'ascending' : sortDir === 'desc' ? 'descending' : 'none';
                 const thProps: Omit<React.ComponentProps<typeof Table.Th>, 'children'> = {
                   'aria-sort': ariaSort,
                 };
