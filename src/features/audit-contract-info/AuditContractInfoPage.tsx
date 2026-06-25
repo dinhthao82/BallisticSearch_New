@@ -1,6 +1,8 @@
-import { Container, Stack, Title, Text } from '@mantine/core';
+import { Container, Stack, Title, Text, Group, SimpleGrid } from '@mantine/core';
 import { useSearchParams } from 'react-router-dom';
 import { EmptyState, ErrorState } from '@/components/feedback';
+import { ContractSidePanel } from './ContractSidePanel';
+import { ChangesTable } from './ChangesTable';
 import { useContractAudit } from './useContractAudit';
 
 export default function AuditContractInfoPage() {
@@ -39,15 +41,36 @@ export default function AuditContractInfoPage() {
     );
   }
 
+  const data = query.data;
+  if (!data) return null;
+
   return (
-    <Container size="md" py="xl">
-      <Stack gap="md">
-        <Title order={3} c="biq.7">
-          Contract Audit
-        </Title>
-        <Text size="sm" c="dimmed">
-          Contract ID: <strong>{contractId}</strong>
-        </Text>
+    <Container size="lg" py="xl">
+      <Stack gap="lg">
+        <Stack gap="xs">
+          <Title order={3} c="biq.7">
+            Contract Audit
+          </Title>
+          <Group gap="md">
+            <Text size="sm" c="dimmed">
+              Contract: <strong>{data.contractId}</strong>
+            </Text>
+            <Text size="sm" c="dimmed">
+              Audited by <strong>{data.auditedBy}</strong> on{' '}
+              {new Date(data.auditedAt).toLocaleString()}
+            </Text>
+          </Group>
+        </Stack>
+
+        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
+          <ContractSidePanel label="Old contract" contract={data.oldContract} />
+          <ContractSidePanel label="New contract" contract={data.newContract} />
+        </SimpleGrid>
+
+        <Stack gap="xs">
+          <Title order={5}>Changes</Title>
+          <ChangesTable changes={data.changes} />
+        </Stack>
       </Stack>
     </Container>
   );
