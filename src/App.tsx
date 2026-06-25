@@ -48,6 +48,12 @@ const ManageSharingAgenciesPage = lazy(
 const AuditAllTransactionsPage = lazy(() => import('@/features/audit/AuditAllTransactionsPage'));
 const LoginAuditingPage = lazy(() => import('@/features/audit/LoginAuditingPage'));
 const InformationAuditingPage = lazy(() => import('@/features/audit/InformationAuditingPage'));
+const AdminShareToAgenciesPage = lazy(() => import('@/features/sharing/AdminShareToAgenciesPage'));
+const AgencyShareToAdminPage = lazy(() => import('@/features/sharing/AgencyShareToAdminPage'));
+const GlobalHotlistSharingPage = lazy(() => import('@/features/sharing/GlobalHotlistSharingPage'));
+const SharingProfilesPage = lazy(() => import('@/features/sharing/SharingProfilesPage'));
+const DashboardVCCPage = lazy(() => import('@/features/sharing/DashboardVCCPage'));
+const UserManagementCombinedPage = lazy(() => import('@/features/sharing/UserManagementPage'));
 
 const ModalShowcase = import.meta.env.DEV
   ? lazy(() => import('@/features/dev/ModalShowcase'))
@@ -218,6 +224,54 @@ export default function App() {
                 element={
                   <Lazy>
                     <InformationAuditingPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="admin-share-to-agencies"
+                element={
+                  <Lazy>
+                    <AdminShareToAgenciesPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="agency-share-to-admin"
+                element={
+                  <Lazy>
+                    <AgencyShareToAdminPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="global-hotlist-sharing"
+                element={
+                  <Lazy>
+                    <GlobalHotlistSharingPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="sharing-profiles"
+                element={
+                  <Lazy>
+                    <SharingProfilesPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="dashboard-vcc"
+                element={
+                  <Lazy>
+                    <DashboardVCCPage />
+                  </Lazy>
+                }
+              />
+              <Route
+                path="user-management"
+                element={
+                  <Lazy>
+                    <UserManagementCombinedPage />
                   </Lazy>
                 }
               />

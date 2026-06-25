@@ -10,6 +10,13 @@ import {
   mockLoginAuditData,
   mockInfoAuditData,
 } from '@/features/audit/mockData';
+import {
+  mockAdminShareEntries,
+  mockAgencyShareEntries,
+  mockHotlistData,
+  mockSharingProfiles,
+  mockDashboardVCC,
+} from '@/features/sharing/mockData';
 
 // Minimal cascading location dataset for BIQLocationFilter dev/test runs.
 // Real systems would source these from the backend reference data service.
@@ -175,6 +182,20 @@ export const handlers = [
     if (search) items = items.filter((i) => i.user.toLowerCase().includes(search));
     return HttpResponse.json({ items, total: items.length });
   }),
+
+  http.get('/api/v1/sharing/admin-to-agencies', () =>
+    HttpResponse.json({ items: mockAdminShareEntries })
+  ),
+
+  http.get('/api/v1/sharing/agency-to-admin', () =>
+    HttpResponse.json({ items: mockAgencyShareEntries })
+  ),
+
+  http.get('/api/v1/sharing/hotlists', () => HttpResponse.json({ items: mockHotlistData })),
+
+  http.get('/api/v1/sharing/profiles', () => HttpResponse.json({ items: mockSharingProfiles })),
+
+  http.get('/api/v1/dashboard/vcc', () => HttpResponse.json(mockDashboardVCC)),
 
   http.get('/api/v1/audit/information', ({ request }) => {
     const url = new URL(request.url);
