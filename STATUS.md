@@ -65,39 +65,46 @@
 **Plan**: WAVE_A_EXECUTION.md
 
 ### W1: i18n converter (Steps 29-32)
-- [ ] Step 29 — Audit legacy XML files
+
+- [x] Step 29 — Audit legacy XML files (5 langs found, not 50; docs/i18n/AUDIT.md)
 - [ ] Step 30 — Build converter script
 - [ ] Step 31 — Run converter for 5 primary langs
 - [ ] Step 32 — Wire i18n loader + tests
 
 ### W2: BIQ Primitives (Steps 33-36)
+
 - [ ] Step 33 — BIQButton + BIQInput
 - [ ] Step 34 — BIQTextarea + BIQSelect
 - [ ] Step 35 — BIQCheckbox + BIQRadio + BIQSwitch + BIQBadge
 - [ ] Step 36 — Migrate SearchAPL to BIQ primitives
 
 ### W3: LoadingOverlay (Steps 37-39)
+
 - [ ] Step 37 — Analyze EIQ_LoadingUI legacy
 - [ ] Step 38 — Build BIQLoadingOverlay
 - [ ] Step 39 — Wire to SearchAPL + tests
 
 ### W4: Modal + ConfirmDialog (Steps 40-42)
+
 - [ ] Step 40 — BIQModal base
 - [ ] Step 41 — BIQConfirmDialog
 - [ ] Step 42 — Demo + tests
 
 ### W5: MessageBox (Steps 43-45)
+
 - [ ] Step 43 — Analyze GCTWindow legacy
 - [ ] Step 44 — Build BIQMessageBox
 - [ ] Step 45 — Migration helper + tests
 
 ### W6: Filters (Steps 46-49)
+
 - [ ] Step 46 — BIQDateRangeFilter
 - [ ] Step 47 — BIQLocationFilter
 - [ ] Step 48 — BIQCaseFilter
 - [ ] Step 49 — Demo + tests
 
 ### W7: Multiselect (Steps 50-52)
+
 - [ ] Step 50 — Analyze jquery.multiselect legacy
 - [ ] Step 51 — Build BIQMultiselect
 - [ ] Step 52 — Wave A milestone + v0.2.0-foundation tag
@@ -110,12 +117,12 @@
 
 ## Metrics tracking
 
-| Step   | Bundle initial (gzip) | Notes                                  |
-| ------ | --------------------- | -------------------------------------- |
-| Step 2 | ~46 KB                | React + ReactDOM only (no Mantine yet) |
-| Step 7 | ~123 KB               | + Mantine + Router + QueryClient + Zustand |
-| Step 15 | ~144 KB              | + i18n + Ky + TanStack Table + feedback (MSW lazy +96KB dev only) |
-| Step 22 | ~220 KB              | + SearchAPLPage (filter form RHF/Zod + results table + pagination wired) |
+| Step    | Bundle initial (gzip) | Notes                                                                    |
+| ------- | --------------------- | ------------------------------------------------------------------------ |
+| Step 2  | ~46 KB                | React + ReactDOM only (no Mantine yet)                                   |
+| Step 7  | ~123 KB               | + Mantine + Router + QueryClient + Zustand                               |
+| Step 15 | ~144 KB               | + i18n + Ky + TanStack Table + feedback (MSW lazy +96KB dev only)        |
+| Step 22 | ~220 KB               | + SearchAPLPage (filter form RHF/Zod + results table + pagination wired) |
 
 ## Decisions log
 
