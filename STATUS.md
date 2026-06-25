@@ -84,7 +84,7 @@
 
 ### W3: LoadingOverlay (Steps 37-39)
 
-- [ ] Step 37 — Analyze EIQ_LoadingUI legacy
+- [x] Step 37 — Analyze EIQ_LoadingUI legacy (docs/migration/loading-overlay.md)
 - [ ] Step 38 — Build BIQLoadingOverlay
 - [ ] Step 39 — Wire to SearchAPL + tests
 
