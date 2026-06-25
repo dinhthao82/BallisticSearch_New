@@ -10,6 +10,7 @@ import SearchAPLPage from '@/features/search-apl/SearchAPLPage';
 import CaseNumberPage from '@/features/case-number/CaseNumberPage';
 import AuditContractInfoPage from '@/features/audit-contract-info/AuditContractInfoPage';
 import SubmitRapidPage from '@/features/submit-rapid/SubmitRapidPage';
+import VCCRedirectPage from '@/features/vcc-redirect/VCCRedirectPage';
 import { BIQToaster } from '@/components/modal';
 import './theme/cssVars.css';
 
@@ -38,6 +39,15 @@ export default function App() {
               <Route path="case-number" element={<CaseNumberPage />} />
               <Route path="audit-contract-info" element={<AuditContractInfoPage />} />
               <Route path="submit-rapid" element={<SubmitRapidPage />} />
+              <Route path="vcc-redirect" element={<VCCRedirectPage />} />
+              <Route
+                path="edit-vcc"
+                element={
+                  <div style={{ padding: '2rem' }}>
+                    VCC editor placeholder (P6 beast — not in Wave C scope).
+                  </div>
+                }
+              />
             </Route>
             {ModalShowcase && (
               <Route

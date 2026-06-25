@@ -12,36 +12,36 @@
 
 🎯 **All 4 missions complete (16/16 steps)** — every step's acceptance gate green before commit (typecheck/lint/format/test/build/size). No `console.log` / `debugger;` left behind. CI now enforces the same gates on every PR.
 
-| Mission | Steps | Outcome |
-|---|---|---|
-| W8: Cleanup (5 W2 findings) | 53-55 | BIQBadge typed + warn / BIQButton polymorphic / BIQCheckbox subcomponents |
-| W9: CI/CD GitHub Actions | 56-58 | quality job (typecheck/lint/format/test/build) + size-limit gate 260 KB / 40 KB + Lighthouse advisory |
-| W10: 3 Trivial Pages | 59-67 | M-040 Input_Case_Number + M-038 AuditContractInfo + M-036 SubmitRapidBallistics shipped |
-| W11: Milestone | 68 | this report + v0.3.0-trivial-pages tag |
+| Mission                     | Steps | Outcome                                                                                               |
+| --------------------------- | ----- | ----------------------------------------------------------------------------------------------------- |
+| W8: Cleanup (5 W2 findings) | 53-55 | BIQBadge typed + warn / BIQButton polymorphic / BIQCheckbox subcomponents                             |
+| W9: CI/CD GitHub Actions    | 56-58 | quality job (typecheck/lint/format/test/build) + size-limit gate 260 KB / 40 KB + Lighthouse advisory |
+| W10: 3 Trivial Pages        | 59-67 | M-040 Input_Case_Number + M-038 AuditContractInfo + M-036 SubmitRapidBallistics shipped               |
+| W11: Milestone              | 68    | this report + v0.3.0-trivial-pages tag                                                                |
 
 ## Test count progression
 
-| Stage | Tests at completion |
-|---|---|
-| Wave B start (v0.2.0) | 179 |
-| After W8 (Step 55) | 183 (+4) |
-| After W9 (Step 58) | 183 (no test deltas — CI infra) |
-| After M-040 (Step 61) | 197 (+14) |
-| After M-038 (Step 64) | 203 (+6) |
-| **After M-036 (Step 67)** | **216** (+13) |
+| Stage                     | Tests at completion             |
+| ------------------------- | ------------------------------- |
+| Wave B start (v0.2.0)     | 179                             |
+| After W8 (Step 55)        | 183 (+4)                        |
+| After W9 (Step 58)        | 183 (no test deltas — CI infra) |
+| After M-040 (Step 61)     | 197 (+14)                       |
+| After M-038 (Step 64)     | 203 (+6)                        |
+| **After M-036 (Step 67)** | **216** (+13)                   |
 
 Net Wave B delta: **+37 tests** (179 → 216). Files: +5 test files (BIQBadge precedence, M-040 schema + page, M-038 page, M-036 schema + page).
 
 ## Bundle size progression (gzip, initial route, no MSW chunk)
 
-| After | Bundle | Δ from prior | Notes |
-|---|---|---|---|
-| Wave A end (v0.2.0) | 235.49 KB | — | baseline |
-| W8 Step 55 | 235.52 KB | +0.03 | polymorphic Button (negligible) |
-| W9 Step 58 | 235.52 KB | 0 | CI/CD infra only |
-| M-040 Step 60 | 241.05 KB | +5.53 | + case-number page + RHF resolver tree |
-| M-038 Step 64 | 243.33 KB | +2.28 | + audit-contract-info shell + display |
-| **M-036 Step 67** | **245.94 KB** | **+2.61** | + submit-rapid page + PhotoUpload |
+| After               | Bundle        | Δ from prior | Notes                                  |
+| ------------------- | ------------- | ------------ | -------------------------------------- |
+| Wave A end (v0.2.0) | 235.49 KB     | —            | baseline                               |
+| W8 Step 55          | 235.52 KB     | +0.03        | polymorphic Button (negligible)        |
+| W9 Step 58          | 235.52 KB     | 0            | CI/CD infra only                       |
+| M-040 Step 60       | 241.05 KB     | +5.53        | + case-number page + RHF resolver tree |
+| M-038 Step 64       | 243.33 KB     | +2.28        | + audit-contract-info shell + display  |
+| **M-036 Step 67**   | **245.94 KB** | **+2.61**    | + submit-rapid page + PhotoUpload      |
 
 Net Wave B bundle delta: **+10.45 KB gzip** (235.49 → 245.94). Within size-limit budget (260 KB JS) with 14 KB headroom for next missions.
 
@@ -58,6 +58,7 @@ Net Wave B bundle delta: **+10.45 KB gzip** (235.49 → 245.94). Within size-lim
 ## Code-review findings still open
 
 Light pass over new pages found no ship-blockers. The lowest-priority items worth noting:
+
 - M-038 AuditContractInfoPage: locale-formatted date uses browser default; for a forensic UI we should pin to ISO-like with explicit timezone (defer to i18n pass).
 - M-036 PhotoUpload: removing a photo doesn't reset the underlying input.value (Mantine `<FileInput value={[]}>` already nulls). Same-name re-upload still works because the array is rebuilt fresh on every add.
 - M-040 messageBox.success on submit then form.reset — if user rapidly double-clicks Continue, both submits race. The mutation key is stable so TanStack dedupes, but UX could disable Submit during isSubmitting (already does via `loading={isSubmitting}`); the modal flicker is harmless.
@@ -70,14 +71,14 @@ Light pass over new pages found no ship-blockers. The lowest-priority items wort
 
 ## Master plan progress vs initial plan
 
-| Phase | Status entering Wave B | After Wave B |
-|---|---|---|
-| P0 Bootstrap | 8/8 ✓ | 8/8 ✓ |
-| P1 Component Library | 13/15 | 13/15 (no new components) |
-| P2 API + Auth | 4/10 | 4/10 |
-| P3 Trivial Pages | 0/11 | **3/11** (M-036, M-038, M-040) |
-| P4 Core | 1/12 (M-049 from POC) | 1/12 |
-| P5-P7 | 0/40 | 0/40 |
+| Phase                | Status entering Wave B | After Wave B                   |
+| -------------------- | ---------------------- | ------------------------------ |
+| P0 Bootstrap         | 8/8 ✓                  | 8/8 ✓                          |
+| P1 Component Library | 13/15                  | 13/15 (no new components)      |
+| P2 API + Auth        | 4/10                   | 4/10                           |
+| P3 Trivial Pages     | 0/11                   | **3/11** (M-036, M-038, M-040) |
+| P4 Core              | 1/12 (M-049 from POC)  | 1/12                           |
+| P5-P7                | 0/40                   | 0/40                           |
 
 **Total**: 29/80 missions ≈ **36%**.
 
@@ -93,6 +94,7 @@ Decisions to make before Wave C kickoff (suggested):
 4. **CI Lighthouse threshold**: currently advisory; consider promoting Performance ≥ 85 to fail-the-build once page count > 10.
 
 Recommended Wave C kickoff order:
+
 - W12 — 5 remaining non-map trivial pages (~15 steps)
 - W13 — `<BIQMap>` primitive (1 step) + 3 map-based trivial pages (~9 steps)
 - W14 — M-045 Login + M-046 HomePage (with real auth shape via MSW)

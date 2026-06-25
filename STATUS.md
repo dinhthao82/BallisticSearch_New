@@ -176,6 +176,7 @@ Master plan: 29/80 missions ≈ 36%.
 **Target tag**: v0.4.0-pre-core
 
 ### W12: 4 non-map trivials (Steps 69-77)
+
 - [ ] Step 69 — M-037 EditVCC_Redirect
 - [ ] Step 70 — M-039 AuditingContract page + GET handler
 - [ ] Step 71 — M-039 tests
@@ -187,6 +188,7 @@ Master plan: 29/80 missions ≈ 36%.
 - [ ] Step 77 — M-042 tests
 
 ### W13: BIQMap + 4 maps (Steps 78-86)
+
 - [ ] Step 78 — BIQMap primitive (react-leaflet)
 - [ ] Step 79 — M-034 MapOfAgencies page
 - [ ] Step 80 — M-034 tests
@@ -198,6 +200,7 @@ Master plan: 29/80 missions ≈ 36%.
 - [ ] Step 86 — M-044 tests
 
 ### W14: Login + HomePage (Steps 87-91)
+
 - [ ] Step 87 — M-045 Login full form
 - [ ] Step 88 — M-045 tests
 - [ ] Step 89 — M-046 HomePage dashboard
@@ -205,6 +208,7 @@ Master plan: 29/80 missions ≈ 36%.
 - [ ] Step 91 — Cross-page E2E
 
 ### W15: Milestone (Step 92)
+
 - [ ] Step 92 — WAVE_C_RESULT.md + v0.4.0-pre-core tag
 
 ---
