@@ -68,7 +68,9 @@ describe('userFormSchema', () => {
 });
 
 describe('AddUsersPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
 
   it('renders Add User title + required fields', () => {
     ui(<AddUsersPage />);
@@ -85,7 +87,9 @@ describe('AddUsersPage', () => {
 });
 
 describe('EditUsersPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
 
   it('shows empty state when no userId', () => {
     ui(<EditUsersPage />);
@@ -111,7 +115,9 @@ describe('EditUsersPage', () => {
 });
 
 describe('ManageUserPage (UserListPage)', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
 
   it('renders title and Add button', () => {
     mockGet({ items: [], total: 0 });
@@ -145,7 +151,9 @@ describe('ManageUserPage (UserListPage)', () => {
 });
 
 describe('ManageAdminPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
 
   it('renders Manage Admins title', () => {
     mockGet({ items: [], total: 0 });
@@ -155,7 +163,9 @@ describe('ManageAdminPage', () => {
 });
 
 describe('AddAgencyManagerPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
 
   it('renders title + agencyId field', () => {
     ui(<AddAgencyManagerPage />);

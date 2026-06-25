@@ -32,7 +32,9 @@ function ui(node: React.ReactNode) {
 }
 
 describe('AdminShareToAgenciesPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders rows on success', async () => {
     mockGet({
       items: [
@@ -56,7 +58,9 @@ describe('AdminShareToAgenciesPage', () => {
 });
 
 describe('AgencyShareToAdminPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders title', async () => {
     mockGet({ items: [] });
     ui(<AgencyShareToAdminPage />);
@@ -65,7 +69,9 @@ describe('AgencyShareToAdminPage', () => {
 });
 
 describe('GlobalHotlistSharingPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders hotlist rows on success', async () => {
     mockGet({
       items: [
@@ -88,7 +94,9 @@ describe('GlobalHotlistSharingPage', () => {
 });
 
 describe('SharingProfilesPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders profile + permissions badges', async () => {
     mockGet({
       items: [
@@ -111,7 +119,9 @@ describe('SharingProfilesPage', () => {
 });
 
 describe('DashboardVCCPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders 4 metric cards + by-agency table', async () => {
     mockGet({
       totalVCC: 100,
@@ -130,7 +140,9 @@ describe('DashboardVCCPage', () => {
 });
 
 describe('UserManagementPage (consolidated)', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders 4 tabs', () => {
     mockGet({ items: [], total: 0 });
     ui(<UserManagementPage />);

@@ -29,7 +29,9 @@ function ui(node: React.ReactNode) {
 }
 
 describe('AuditAllTransactionsPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders title and rows', async () => {
     mockGet({
       items: [
@@ -53,7 +55,9 @@ describe('AuditAllTransactionsPage', () => {
 });
 
 describe('LoginAuditingPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders Success badge and reason column', async () => {
     mockGet({
       items: [
@@ -85,7 +89,9 @@ describe('LoginAuditingPage', () => {
 });
 
 describe('InformationAuditingPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders title and details column', async () => {
     mockGet({
       items: [

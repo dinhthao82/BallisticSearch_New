@@ -73,7 +73,9 @@ describe('agency schemas', () => {
 });
 
 describe('AddAgenciesPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders Add Agency form', () => {
     ui(<AddAgenciesPage />);
     expect(screen.getByText('Add Agency')).toBeInTheDocument();
@@ -82,7 +84,9 @@ describe('AddAgenciesPage', () => {
 });
 
 describe('EditAgencyPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('shows empty state when no agencyId', () => {
     ui(<EditAgencyPage />);
     expect(screen.getByText(/no agency selected/i)).toBeInTheDocument();
@@ -105,7 +109,9 @@ describe('EditAgencyPage', () => {
 });
 
 describe('AgencySettingPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders settings form', () => {
     ui(<AgencySettingPage />);
     expect(screen.getByText('Agency Settings')).toBeInTheDocument();
@@ -114,7 +120,9 @@ describe('AgencySettingPage', () => {
 });
 
 describe('ContractManagementPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders contract form', () => {
     ui(<ContractManagementPage />);
     expect(screen.getByText('Contract Management')).toBeInTheDocument();
@@ -128,7 +136,9 @@ describe('ContractManagementPage', () => {
 });
 
 describe('ManageSharingAgenciesPage', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
   it('renders rows on success', async () => {
     mockGet({
       items: [
