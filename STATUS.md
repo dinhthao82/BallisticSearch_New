@@ -133,9 +133,9 @@
 **Target tag**: v0.3.0-trivial-pages
 
 ### W8: Cleanup — 5 W2 code-review findings (Steps 53-55)
-- [ ] Step 53 — BIQBadge fixes (status precedence + unknown warn + type narrowing)
-- [ ] Step 54 — BIQButton polymorphic + BIQCheckbox subcomponent exposure
-- [ ] Step 55 — Cleanup verification + regression tests
+- [x] Step 53 — BIQBadge fixes (status precedence + dev-warn + type narrowing; 181 tests)
+- [x] Step 54 — BIQButton polymorphic + BIQCheckbox subcomponents (183 tests)
+- [x] Step 55 — Cleanup verified, all 5 W2 findings closed (235.52 KB gzip)
 
 ### W9: CI/CD GitHub Actions (Steps 56-58)
 - [ ] Step 56 — Base workflow (typecheck/lint/test/build)
