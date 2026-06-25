@@ -14,8 +14,8 @@ export default function AuditContractInfoPage() {
     return (
       <Container size="md" py="xl">
         <EmptyState
-          title="No contract selected"
-          description='Provide a contractId via the URL (e.g. "?contractId=CONTRACT-001").'
+          message="No contract selected"
+          hint='Provide a contractId via the URL (e.g. "?contractId=CONTRACT-001").'
         />
       </Container>
     );
@@ -33,9 +33,9 @@ export default function AuditContractInfoPage() {
     return (
       <Container size="md" py="xl">
         <ErrorState
-          title="Failed to load contract audit"
-          message={query.error instanceof Error ? query.error.message : 'Unknown error'}
-          onRetry={() => query.refetch()}
+          message="Failed to load contract audit"
+          detail={query.error instanceof Error ? query.error.message : 'Unknown error'}
+          onRetry={() => void query.refetch()}
         />
       </Container>
     );
