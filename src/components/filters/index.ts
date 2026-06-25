@@ -9,3 +9,10 @@ export {
   type BIQLocationFilterProps,
   type LocationValue,
 } from './BIQLocationFilter';
+export {
+  BIQCaseFilter,
+  parseCaseNumbers,
+  invalidCaseNumbers,
+  isValidCaseInput,
+  type BIQCaseFilterProps,
+} from './BIQCaseFilter';
