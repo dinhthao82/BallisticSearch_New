@@ -158,6 +158,39 @@ export const handlers = [
     });
   }),
 
+  http.get('/api/v1/audit/contracts', ({ request }) => {
+    const url = new URL(request.url);
+    const status = url.searchParams.get('status');
+    const all = [
+      {
+        contractId: 'CONTRACT-001',
+        agency: 'Springfield PD',
+        startDate: '2024-01-01',
+        endDate: '2025-12-31',
+        status: 'Closed',
+        auditedAt: '2026-06-20T10:30:00Z',
+      },
+      {
+        contractId: 'CONTRACT-002',
+        agency: 'Riverside Sheriff',
+        startDate: '2025-06-01',
+        endDate: '2027-05-31',
+        status: 'In Process',
+        auditedAt: '2026-06-18T14:00:00Z',
+      },
+      {
+        contractId: 'CONTRACT-003',
+        agency: 'Metro DA Office',
+        startDate: '2026-01-01',
+        endDate: '2028-12-31',
+        status: 'Pending',
+        auditedAt: '2026-06-15T09:15:00Z',
+      },
+    ];
+    const filtered = status ? all.filter((c) => c.status === status) : all;
+    return HttpResponse.json({ items: filtered, total: filtered.length });
+  }),
+
   http.post('/api/v1/case-number/submit', async ({ request }) => {
     const body = (await request.json()) as {
       caseNumber?: string;

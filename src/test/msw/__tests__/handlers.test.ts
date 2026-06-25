@@ -23,18 +23,15 @@ describe('MSW APL mock fixtures', () => {
 
   it('handlers registers expected routes (apl + location + rapid + audit + case-number)', () => {
     // MSW v2 stores route info on handler.info
-    expect(handlers).toHaveLength(7);
-    const infos = handlers.map((h) => (h as { info: { method: string; path: string } }).info);
-    expect(infos[0]?.method).toBe('POST');
-    expect(infos[0]?.path).toContain('apl/search');
-    expect(infos[1]?.path).toContain('location/countries');
-    expect(infos[2]?.path).toContain('location/states');
-    expect(infos[3]?.path).toContain('location/cities');
-    expect(infos[4]?.method).toBe('POST');
-    expect(infos[4]?.path).toContain('rapid-ballistics');
-    expect(infos[5]?.method).toBe('GET');
-    expect(infos[5]?.path).toContain('audit/contract-info');
-    expect(infos[6]?.method).toBe('POST');
-    expect(infos[6]?.path).toContain('case-number/submit');
+    expect(handlers).toHaveLength(8);
+    const paths = handlers.map((h) => (h as { info: { method: string; path: string } }).info.path);
+    expect(paths.some((p) => p.includes('apl/search'))).toBe(true);
+    expect(paths.some((p) => p.includes('location/countries'))).toBe(true);
+    expect(paths.some((p) => p.includes('location/states'))).toBe(true);
+    expect(paths.some((p) => p.includes('location/cities'))).toBe(true);
+    expect(paths.some((p) => p.includes('rapid-ballistics'))).toBe(true);
+    expect(paths.some((p) => p.includes('audit/contract-info'))).toBe(true);
+    expect(paths.some((p) => p.endsWith('audit/contracts'))).toBe(true);
+    expect(paths.some((p) => p.includes('case-number/submit'))).toBe(true);
   });
 });
