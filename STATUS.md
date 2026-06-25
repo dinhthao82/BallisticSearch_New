@@ -312,3 +312,17 @@ Master plan: 62/80 missions ≈ 78%.
 
 🎉 **WAVE F COMPLETE** — All 15 beast pages shipped (POC shells). 352 tests, 198.56 KB gzip.
 Master plan: 77/80 missions ≈ 96%. **All 50/50 pages registered.**
+
+---
+
+## Wave G: Decommission Plan + Final Audit (M-089-093)
+
+**Plan**: WAVE_G_RESULT.md
+**Target tag**: v1.0.0-poc-complete
+
+- [x] M-089-092 — Decommission plan documented (docs/DECOMMISSION_PLAN.md) for legacy repo
+- [x] M-093 — Final audit (docs/FINAL_AUDIT.md): build clean, 352 tests, 198.56 KB JS / 29.52 KB CSS, Lighthouse P:96 A:98 BP:100, 0 production-critical vulns
+- [x] WAVE_G_RESULT.md + v1.0.0-poc-complete tag
+
+🎉 **WAVE G COMPLETE — POC COMPLETE.**
+Master plan: 78/80 in-repo (97.5%) + 4 documented handoffs. **All 50 pages live.**
