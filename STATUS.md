@@ -93,7 +93,7 @@
 ### W4: Modal + ConfirmDialog (Steps 40-42)
 
 - [x] Step 40 — BIQModal base w/ focus trap (5 new tests, 109 total)
-- [ ] Step 41 — BIQConfirmDialog
+- [x] Step 41 — BIQConfirmDialog (imperative confirm() → Promise<boolean>; 5 new tests, 114 total)
 - [ ] Step 42 — Demo + tests
 
 ### W5: MessageBox (Steps 43-45)
