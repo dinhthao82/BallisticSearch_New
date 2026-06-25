@@ -100,7 +100,7 @@
 
 ### W5: MessageBox (Steps 43-45)
 
-- [ ] Step 43 — Analyze GCTWindow legacy
+- [x] Step 43 — Analyze GCTWindow/MessageBox legacy (docs/migration/messagebox.md)
 - [ ] Step 44 — Build BIQMessageBox
 - [ ] Step 45 — Migration helper + tests
 
