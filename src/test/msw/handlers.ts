@@ -1,5 +1,6 @@
 import { http, HttpResponse } from 'msw';
 import { mockAPLData, type APLItem } from './mockData';
+import { mockSearchEventData } from '@/features/search-event/mockData';
 
 // Minimal cascading location dataset for BIQLocationFilter dev/test runs.
 // Real systems would source these from the backend reference data service.
@@ -41,7 +42,53 @@ interface SearchAPLBody {
   pageSize?: number;
 }
 
+interface SearchEventBody {
+  minScore?: number;
+  topN?: number;
+  searchBy?: string;
+  caseNumbers?: string[];
+  dateFrom?: string;
+  dateTo?: string;
+  site?: string;
+  user?: string;
+  page?: number;
+  pageSize?: number;
+}
+
 export const handlers = [
+  http.post('/api/v1/search-events', async ({ request }) => {
+    const body = (await request.json()) as SearchEventBody;
+    let items = [...mockSearchEventData];
+    if (body.minScore !== undefined) items = items.filter((i) => i.score >= body.minScore!);
+    if (body.caseNumbers && body.caseNumbers.length > 0) {
+      const set = new Set(body.caseNumbers.map((c) => c.toLowerCase()));
+      items = items.filter((i) => set.has(i.caseNumber.toLowerCase()));
+    }
+    if (body.dateFrom) items = items.filter((i) => i.eventDate >= body.dateFrom!);
+    if (body.dateTo) items = items.filter((i) => i.eventDate <= body.dateTo!);
+    if (body.site) items = items.filter((i) => i.site === body.site);
+    if (body.user) items = items.filter((i) => i.user === body.user);
+    if (body.topN) items = items.slice(0, body.topN);
+
+    const page = body.page ?? 1;
+    const pageSize = body.pageSize ?? 25;
+    const total = items.length;
+    const paged = items.slice((page - 1) * pageSize, page * pageSize);
+    return HttpResponse.json({ items: paged, total, page, pageSize });
+  }),
+
+  http.post('/api/v1/search-events/export', async ({ request }) => {
+    const body = (await request.json()) as { ids?: string[]; format?: 'excel' | 'pdf' };
+    if (!body.ids || body.ids.length === 0) {
+      return HttpResponse.json({ error: 'No ids provided' }, { status: 400 });
+    }
+    return HttpResponse.json({
+      jobId: `EXP-${Date.now().toString(36).toUpperCase()}`,
+      format: body.format ?? 'excel',
+      count: body.ids.length,
+    });
+  }),
+
   http.post('/api/v1/apl/search', async ({ request }) => {
     const body = (await request.json()) as SearchAPLBody;
 
