@@ -108,7 +108,7 @@
 
 ### W6: Filters (Steps 46-49)
 
-- [ ] Step 46 — BIQDateRangeFilter
+- [x] Step 46 — BIQDateRangeFilter (Today / Last 7d / Last 30d / Custom; 8 new tests, 148 total)
 - [ ] Step 47 — BIQLocationFilter
 - [ ] Step 48 — BIQCaseFilter
 - [ ] Step 49 — Demo + tests
