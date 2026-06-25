@@ -237,4 +237,69 @@ export const handlers = [
       acknowledged: true,
     });
   }),
+
+  http.get('/api/v1/map/agencies', () => {
+    return HttpResponse.json({
+      items: [
+        {
+          id: 'AG-001',
+          name: 'Springfield PD',
+          lat: 40.7128,
+          lng: -74.006,
+          address: '123 Main St',
+        },
+        {
+          id: 'AG-002',
+          name: 'Riverside Sheriff',
+          lat: 34.0522,
+          lng: -118.2437,
+          address: '456 LA Ave',
+        },
+        {
+          id: 'AG-003',
+          name: 'Metro DA Office',
+          lat: 41.8781,
+          lng: -87.6298,
+          address: '789 Chicago Blvd',
+        },
+        {
+          id: 'AG-004',
+          name: 'Capitol Forensics',
+          lat: 38.9072,
+          lng: -77.0369,
+          address: '101 Capitol Way',
+        },
+      ],
+    });
+  }),
+
+  http.get('/api/v1/map/galleries', () => {
+    return HttpResponse.json({
+      items: [
+        { id: 'GAL-001', name: 'Gallery North', lat: 47.6062, lng: -122.3321, count: 1532 },
+        { id: 'GAL-002', name: 'Gallery South', lat: 29.7604, lng: -95.3698, count: 894 },
+        { id: 'GAL-003', name: 'Gallery East', lat: 39.9526, lng: -75.1652, count: 2103 },
+      ],
+    });
+  }),
+
+  http.get('/api/v1/map/gallery/:id', ({ params }) => {
+    return HttpResponse.json({
+      id: params['id'],
+      name: `Gallery ${String(params['id']).toUpperCase()}`,
+      lat: 40.7128,
+      lng: -74.006,
+      address: '500 Gallery St',
+    });
+  }),
+
+  http.get('/api/v1/map/potential/:id', ({ params }) => {
+    return HttpResponse.json({
+      id: params['id'],
+      caseNumber: `CASE-${String(params['id']).toUpperCase()}`,
+      lat: 34.0522,
+      lng: -118.2437,
+      occurredAt: '2026-04-12T08:30:00Z',
+    });
+  }),
 ];
